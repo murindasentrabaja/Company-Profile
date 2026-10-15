@@ -31,10 +31,10 @@
   --m7:url('img/Mesin/Machine_7.jpg'); --m8:url('img/Mesin/Machine_8.jpg'); --m9:url('img/Mesin/Machine_9.jpg');
   --m10:url('img/Mesin/Machine_10.jpg');
   /* Layanan */
-  --foto-layanan-1:url('img/Area Workshop/Area_Fabrikasi_Komponen_Alat_Berat_2.jpeg');
-  --foto-layanan-2:url('img/Area Workshop/Area_Fabrikasi_Builtup.png');
+  --foto-layanan-1:url('img/Product/Bucket Excavator/Bucket Excavator (1).jpeg');
+  --foto-layanan-2:url('img/Product/Built-Up/Builtup (1).jpeg');
   --foto-layanan-3:url('img/Mesin/Machine_8.jpg');
-  --foto-layanan-4:url('ERP/ERP.png');
+  --foto-layanan-4:url('img/ERP/ERP.png');
   --foto-layanan-5:url('img/Inspection/UT.png');
   /* Tim */
   --foto-tim-1:url('img/Tim/Sofian_Halim.png');
@@ -44,8 +44,20 @@
   --foto-tim-5:url('img/Tim/ASEW_Widodo.png');
   --foto-tim-6:url('img/Tim/Petrus_Suhandoyo.png');
   /* Foto lain */
-  --foto-erp:url('ERP/ERP.png');
+  --foto-erp:url('img/ERP/ERP.png');
   --foto-qc:url('img/Inspection/UT.png');
+  /* Slideshow */
+  --s-dump:url('img/Slideshow/Dumtruck.jpg');
+  --s-komatsu:url('img/Slideshow/Excavator Komatsu.jpg');
+  --s-sumitomo:url('img/Slideshow/Excavator Sumitomo.jpg');
+  /* Produk */
+  --p-bucket1:url('img/Product/Bucket Excavator/Bucket Excavator (1).jpeg');
+  --p-bucket3:url('img/Product/Bucket Excavator/Bucket Excavator (3).jpeg');
+  --p-cw2:url('img/Product/Counterweight/Counterweight (2).jpeg');
+  --p-cw5:url('img/Product/Counterweight/Counterweight (5).jpeg');
+  --p-bu1:url('img/Product/Built-Up/Builtup (1).jpeg');
+  --p-bu2:url('img/Product/Built-Up/Builtup (2).jpeg');
+  --p-vessel:url('img/Product/Vessel Dumtruck/Vessel Dumtruck.png');
 }
 
 /* ===== TOKEN DESAIN ===== */
@@ -341,6 +353,9 @@ main{position:relative}
 .pcap .big{font:700 3.2rem/.9 var(--display);color:var(--navy);min-width:3.2rem}
 .pcap b{display:block;font:700 1.45rem/1.1 var(--display);color:var(--navy-d)}
 .pcap span{font-size:.88rem;color:var(--soft);line-height:1.4;display:block}
+.cf.ss{overflow:hidden}
+.ss .ph{position:absolute;inset:0;border-radius:0;opacity:0;transition:opacity 1.1s var(--e)}
+.ss .ph.on{opacity:1}
 .ptabs{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:clamp(12px,2vh,22px)}
 .ptab{height:2.5rem;padding:0 1.1rem;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.7);font:inherit;font-size:.9rem;font-weight:500;color:var(--navy);cursor:pointer;transition:background .2s,color .2s,transform .2s}
 .ptab:hover{transform:translateY(-2px)}
@@ -996,7 +1011,7 @@ footer.panel{background-position:0 -200px}
       </div>
     </div>
     <div class="collage hcol" id="collage" style="--d:.55s" aria-hidden="true">
-      <div class="cf f1 ph fit" style="--foto:var(--a-plant)" data-label="Foto plant"></div>
+      <div class="cf f1 ss"><div class="ph fit vis on" style="--foto:var(--a-plant)" data-label="Foto plant"></div><div class="ph vis" style="--foto:var(--s-dump)" data-label="Dump truck"></div><div class="ph vis" style="--foto:var(--s-komatsu)" data-label="Excavator Komatsu"></div><div class="ph vis" style="--foto:var(--s-sumitomo)" data-label="Excavator Sumitomo"></div></div>
       <div class="cf f2 ph" style="--foto:var(--m8)" data-label="Mesin CNC"></div>
       <div class="cf f3 ph" style="--foto:var(--a-builtup)" data-label="Built-up"></div>
       <div class="cb glass"><b>ISO</b><div><strong>ISO 9001</strong><span>Sistem manajemen mutu</span></div></div>
@@ -1113,7 +1128,7 @@ footer.panel{background-position:0 -200px}
 <!-- ================= FASILITAS ================= -->
 <section class="panel tint" id="fasilitas" data-toc="Fasilitas"><div class="wrap">
   <div class="sh"><div><h2 class="sp-h">Fasilitas dan mesin produksi</h2></div><div><p class="lead rv">Area kerja dan mesin utama di plant Kalijati, dari pemotongan dan pengelasan sampai penyelesaian akhir. Klik foto untuk memperbesar.</p>
-    <div class="filt rv" role="group" aria-label="Saring foto" style="margin-top:1.2rem"><button type="button" aria-pressed="true" data-f="all">Semua</button><button type="button" aria-pressed="false" data-f="area">Area workshop</button><button type="button" aria-pressed="false" data-f="mesin">Mesin</button></div></div></div>
+    <div class="filt rv" role="group" aria-label="Saring foto" style="margin-top:1.2rem"><button type="button" aria-pressed="true" data-f="all">Semua</button><button type="button" aria-pressed="false" data-f="area">Area workshop</button><button type="button" aria-pressed="false" data-f="mesin">Mesin</button><button type="button" aria-pressed="false" data-f="produk">Produk</button></div></div></div>
   <div class="gal" id="gal">
     <figure class="gt big" tabindex="0" role="button" data-g="area" aria-label="Plant PT Murinda Sentra Baja, tampak dari atas"><div class="ph fit" style="--foto:var(--a-plant)" data-label="MSB_Plant"></div><figcaption>Plant PT Murinda Sentra Baja, tampak dari atas</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Area fabrikasi built-up (profil H-beam)"><div class="ph" style="--foto:var(--a-builtup)" data-label="Area_Fabrikasi_Builtup"></div><figcaption>Area fabrikasi built-up (profil H-beam)</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
@@ -1130,6 +1145,13 @@ footer.panel{background-position:0 -200px}
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong CNC Ficep Gemini HPE"><div class="ph" style="--foto:var(--m8)" data-label="Machine_8"></div><figcaption>Mesin potong CNC Ficep Gemini HPE</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Fasilitas paint booth"><div class="ph" style="--foto:var(--m9)" data-label="Machine_9"></div><figcaption>Fasilitas paint booth</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong gas portabel di atas rel"><div class="ph" style="--foto:var(--m10)" data-label="Machine_10"></div><figcaption>Mesin potong gas portabel di atas rel</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt big" tabindex="0" role="button" data-g="produk" aria-label="Bucket excavator"><div class="ph" style="--foto:var(--p-bucket1)" data-label="Bucket excavator"></div><figcaption>Bucket excavator</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Bucket excavator, tampak samping"><div class="ph" style="--foto:var(--p-bucket3)" data-label="Bucket excavator, tampak samping"></div><figcaption>Bucket excavator, tampak samping</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight excavator"><div class="ph" style="--foto:var(--p-cw2)" data-label="Counterweight excavator"></div><figcaption>Counterweight excavator</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight excavator, tampak depan"><div class="ph" style="--foto:var(--p-cw5)" data-label="Counterweight excavator, tampak depan"></div><figcaption>Counterweight excavator, tampak depan</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Profil built-up (H-beam)"><div class="ph" style="--foto:var(--p-bu1)" data-label="Profil built-up (H-beam)"></div><figcaption>Profil built-up (H-beam)</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Pemeriksaan profil built-up"><div class="ph" style="--foto:var(--p-bu2)" data-label="Pemeriksaan profil built-up"></div><figcaption>Pemeriksaan profil built-up</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt wide" tabindex="0" role="button" data-g="produk" aria-label="Vessel dump truck"><div class="ph fit" style="--foto:var(--p-vessel)" data-label="Vessel dump truck"></div><figcaption>Vessel dump truck</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
   </div>
 </div></section>
 
@@ -1389,6 +1411,7 @@ function buildProc(i){ti=i;const T=TRK[i];
   steps=$$('.pstep',pc);shots=$$('.pshot',pc);pcur=-1;
   steps.forEach((s,j)=>s.addEventListener('click',()=>goStep(j)))}
 buildProc(0);
+$$('.ss').forEach(el=>{const ps=$$('.ph',el);if(ps.length<2||RM)return;let i=0;setInterval(()=>{ps[i].classList.remove('on');i=(i+1)%ps.length;ps[i].classList.add('on')},4500)});
 $$('.ptab',pc).forEach(b=>b.addEventListener('click',()=>{const i=+b.dataset.i;if(i===ti)return;buildProc(i);
   if(innerWidth>900&&pc.getBoundingClientRect().top<0)scrollTo({top:pc.getBoundingClientRect().top+scrollY,behavior:'auto'});on()}));
 
