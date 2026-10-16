@@ -1,3 +1,1005 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PT Murinda Sentra Baja | Company Profile</title>
+<meta name="description" content="Company profile PT Murinda Sentra Baja: fabrikasi komponen alat berat dan struktur baja dari plant terintegrasi di Kalijati, Subang. ISO 9001.">
+<meta name="theme-color" content="#f4f6ff">
+<link rel="icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion:reduce)').matches)document.documentElement.classList.add('rm')</script>
+<style>
+/* =====================================================================
+   PENGATURAN FOTO — semua foto diatur di sini (satu folder dengan index.html)
+   Ganti nama file di bawah. Jika file belum ada, kotak bergaris dengan label akan tampil.
+   Logo header: <img class="logo"> (msb-logo.png). Ikon tab: <link rel="icon"> di <head>.
+   Logo klien: bagian #klien (komatsu.png, sumitomo.png, sany.png, vr.png).
+   ===================================================================== */
+:root{
+  /* Area workshop */
+  --a-plant:url('img/Area Workshop/MSB_Plant.jpeg');
+  --a-builtup:url('img/Area Workshop/Area_Fabrikasi_Builtup.png');
+  --a-komp1:url('img/Area Workshop/Area_Fabrikasi_Komponen_Alat_Berat_1.jpeg');
+  --a-komp2:url('img/Area Workshop/Area_Fabrikasi_Komponen_Alat_Berat_2.jpeg');
+  --a-rak:url('img/Area Workshop/Area_Komponen.jpg');
+  /* Mesin */
+  --m1:url('img/Mesin/Machine_1.jpg'); --m2:url('img/Mesin/Machine_2.jpg'); --m3:url('img/Mesin/Machine_3.jpg');
+  --m4:url('img/Mesin/Machine_4.jpg'); --m5:url('img/Mesin/Machine_5.jpg'); --m6:url('img/Mesin/Machine_6.jpg');
+  --m7:url('img/Mesin/Machine_7.jpg'); --m8:url('img/Mesin/Machine_8.jpg'); --m9:url('img/Mesin/Machine_9.jpg');
+  --m10:url('img/Mesin/Machine_10.jpg');
+  /* Layanan */
+  --foto-layanan-1:url('img/Product/Bucket Excavator/Bucket Excavator (1).jpeg');
+  --foto-layanan-2:url('img/Product/Built-Up/Builtup (1).jpeg');
+  --foto-layanan-3:url('img/Mesin/Machine_8.jpg');
+  --foto-layanan-4:url('img/ERP/ERP.png');
+  --foto-layanan-5:url('img/Inspection/UT/UT Inspection (17).jpeg');
+  /* Tim */
+  --foto-tim-1:url('img/Tim/Sofian_Halim.png');
+  --foto-tim-2:url('img/Tim/Condro_Sugihanto.png');
+  --foto-tim-3:url('img/Tim/Benidiktus_Kosim.png');
+  --foto-tim-4:url('img/Tim/Titus_Krisna.jpeg');
+  --foto-tim-5:url('img/Tim/ASEW_Widodo.png');
+  --foto-tim-6:url('img/Tim/Petrus_Suhandoyo.png');
+  /* Foto lain */
+  --foto-erp:url('img/ERP/ERP.png');
+  --foto-qc:url('img/Inspection/UT/UT Inspection (17).jpeg');
+  /* Slideshow */
+  --s-dump:url('img/Slideshow/Dumtruck.jpg');
+  --s-komatsu:url('img/Slideshow/Excavator Komatsu.jpg');
+  --s-sumitomo:url('img/Slideshow/Excavator Sumitomo.jpg');
+  /* Produk */
+  --p-bucket1:url('img/Product/Bucket Excavator/Bucket Excavator (1).jpeg');
+  --p-bucket3:url('img/Product/Bucket Excavator/Bucket Excavator (3).jpeg');
+  --p-cw2:url('img/Product/Counterweight/Counterweight (2).jpeg');
+  --p-cw5:url('img/Product/Counterweight/Counterweight (5).jpeg');
+  --p-bu1:url('img/Product/Built-Up/Builtup (1).jpeg');
+  --p-bu2:url('img/Product/Built-Up/Builtup (2).jpeg');
+  --p-vessel:url('img/Product/Vessel Dumtruck/Vessel Dumtruck.png');
+}
+
+/* ===== TOKEN DESAIN ===== */
+:root{
+  --navy:#1f3b70; --navy-d:#10224a; --ink:#1c2a4a; --soft:#52607f;
+  --yellow:#9bbbe8; --yellow-d:#5f86c4; --red:#4a76b8; --blue:#5b94c4; --blue-ink:#2b6598;
+  --line:rgba(31,59,112,.14);
+  --w:min(1760px,100% - clamp(32px,7vw,176px));
+  --rad:clamp(28px,3.6vw,64px);
+  --display:'Barlow Condensed','Arial Narrow',sans-serif;
+  --body:'Public Sans',system-ui,'Segoe UI',Arial,sans-serif;
+  --e:cubic-bezier(.2,.8,.2,1);
+}
+
+/* ===== DASAR ===== */
+*,::before,::after{box-sizing:border-box}
+*{margin:0}
+html{font-size:clamp(16px,.5vw + 11.2px,20.5px);-webkit-text-size-adjust:100%}
+body{font:400 1rem/1.7 var(--body);color:var(--ink);background:#f4f7fd;min-height:100vh}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+img{max-width:100%;height:auto}
+ul{padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--blue-ink);outline-offset:3px}
+.wrap{width:var(--w);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.02;letter-spacing:-.003em;color:var(--navy-d)}
+h2{font-size:clamp(2.5rem,4.7vw,5.2rem)}
+h3{font-size:1.7rem}
+h2::after{content:"";display:block;width:76px;height:6px;margin-top:.9rem;border-radius:9px;background:linear-gradient(90deg,var(--yellow),var(--red));transition:width .9s var(--e) .35s}
+.lead{font-size:1.14rem;color:var(--soft);max-width:60ch}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* latar halaman: gradasi lembut transparan */
+.latar{position:fixed;inset:0;z-index:-2;pointer-events:none;background:
+  radial-gradient(62% 52% at 10% 6%,rgba(66,133,244,.28),transparent 70%),
+  radial-gradient(56% 50% at 92% 10%,rgba(110,140,210,.25),transparent 70%),
+  radial-gradient(60% 55% at 86% 94%,rgba(63,106,166,.2),transparent 70%),
+  radial-gradient(54% 50% at 8% 90%,rgba(120,170,255,.22),transparent 70%),
+  linear-gradient(180deg,#f6f8ff 0%,#f6f9ff 55%,#f6f8ff 100%)}
+
+/* kaca */
+.glass{position:relative;background:linear-gradient(145deg,rgba(255,255,255,.84),rgba(255,255,255,.58));
+  -webkit-backdrop-filter:blur(20px) saturate(125%);backdrop-filter:blur(20px) saturate(125%);
+  border:1px solid rgba(255,255,255,.78);border-radius:28px;
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.85),0 18px 44px rgba(31,59,112,.13)}
+@supports not (backdrop-filter:blur(1px)){.glass{background:rgba(255,255,255,.92)}}
+
+/* tombol */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.65em;height:3.2rem;padding:0 1.75rem;border-radius:99px;font-weight:600;font-size:.98rem;line-height:1;white-space:nowrap;cursor:pointer;
+  color:var(--navy);background:rgba(255,255,255,.72);border:1px solid rgba(31,59,112,.22);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:transform .25s var(--e),box-shadow .25s,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(31,59,112,.18)}
+.btn.main{color:var(--navy-d);background:linear-gradient(180deg,#dbe8fb,var(--yellow));border-color:rgba(255,255,255,.7);box-shadow:inset 0 1px 0 #fffb,0 10px 24px rgba(120,160,225,.38)}
+.btn svg{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:translate .25s var(--e)}
+.btn:hover svg{translate:3px 0}
+
+/* placeholder / foto: gambar dimuat saat mendekati layar (kelas .vis) */
+.ph{position:relative;overflow:hidden;isolation:isolate;background:repeating-linear-gradient(135deg,#d9e1f1 0 14px,#e6ecf8 14px 28px)}
+.ph::after{content:attr(data-label);position:absolute;inset:0;z-index:0;display:grid;place-items:center;padding:12px;text-align:center;font-size:.82rem;color:#6b7896}
+.ph::before{content:"";position:absolute;inset:0;z-index:1;background-position:center;background-size:cover;background-repeat:no-repeat;transition:scale 1.4s var(--e)}
+.ph.vis::before{background-image:var(--foto)}
+.ph.contain::before{background-size:contain}
+
+/* ===== PEMBUKA (layar muat) ===== */
+.intro{display:none}
+.js:not(.rm) .intro{position:fixed;inset:0;z-index:300;display:grid;place-items:center;overflow:hidden;background:#f4f7fd;clip-path:inset(0);transition:clip-path 1.15s cubic-bezier(.77,0,.18,1) .45s,visibility 0s 1.7s}
+.js.ready .intro{clip-path:inset(0 0 100% 0);visibility:hidden;pointer-events:none}
+.ld-g{position:absolute;inset:-48px;background-image:linear-gradient(rgba(31,59,112,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(31,59,112,.07) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse at center,#000 25%,transparent 75%);mask-image:radial-gradient(ellipse at center,#000 25%,transparent 75%);animation:ld-pan 6s linear infinite}
+@keyframes ld-pan{to{translate:48px 48px}}
+.ld-o{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
+.ld-o.o1{width:38vmax;height:38vmax;left:-10vmax;top:-12vmax;background:#9dbcf2}
+.ld-o.o2{width:30vmax;height:30vmax;right:-8vmax;bottom:-10vmax;background:#ffc59a}
+.intro-in{position:relative;display:grid;justify-items:center;gap:1rem;grid-template-columns:minmax(0,1fr);width:min(440px,86vw);container-type:inline-size;text-align:center;transition:opacity .45s,translate .8s var(--e)}
+.js.ready .intro-in{opacity:0;translate:0 -18px}
+.intro-in img{height:auto;width:auto;max-width:72%;max-height:clamp(52px,7vw,78px);object-fit:contain;animation:ov-word .8s var(--e) .05s both}
+.ov-t{max-width:100%;white-space:nowrap;font:700 clamp(1.3rem,6vw,2.2rem)/1.1 var(--display);font-size:min(2.3rem,7.6cqw);letter-spacing:.03em;color:var(--navy-d);animation:ov-word .8s var(--e) .22s both}
+.ov-s{font-size:.92rem;line-height:1.5;text-wrap:balance;color:var(--soft);animation:ov-word .8s var(--e) .4s both}
+.intro .seam{position:relative;width:100%;height:4px;margin-top:.7rem;border-radius:9px;background:rgba(31,59,112,.14)}
+.intro .seam i{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,#10224a,#2f5391 35%,#f2a30f 70%,#e8590c);transform-origin:0 50%;transform:scaleX(0)}
+.intro .seam u{position:absolute;top:50%;left:calc(var(--p,0)*100%);width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px #e8590c,0 0 18px 6px rgba(232,89,12,.55);animation:ld-sp .5s ease-in-out infinite alternate}
+@keyframes ld-sp{to{scale:1.35}}
+.ov-p{display:flex;justify-content:space-between;width:100%;font:600 .85rem var(--body);color:var(--soft);font-variant-numeric:tabular-nums}
+.ov-c b{font-weight:700;color:var(--navy-d)}
+.ld-f{position:absolute;left:0;right:0;bottom:clamp(18px,4vh,36px);text-align:center;font-size:.8rem;letter-spacing:.06em;color:var(--soft);animation:ov-word .8s var(--e) .6s both}
+@keyframes ov-word{from{opacity:0;translate:0 16px;filter:blur(8px)}}
+
+/* ===== ELEMEN TETAP: progres, tombol ke atas ===== */
+.sp{position:fixed;left:0;right:0;top:0;height:4px;z-index:150;transform-origin:0 50%;transform:scaleX(0);pointer-events:none;background:linear-gradient(90deg,var(--yellow),var(--red) 55%,var(--blue));box-shadow:0 0 12px rgba(120,160,225,.7)}
+.up{position:fixed;right:18px;bottom:18px;z-index:90;width:3.1rem;height:3.1rem;padding:0;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--navy);border:1px solid rgba(255,255,255,.8);
+  background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(255,255,255,.55));-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  box-shadow:inset 0 1.5px 0 #fff,0 12px 30px rgba(31,59,112,.25);opacity:0;translate:0 20px;pointer-events:none;transition:opacity .3s,translate .3s,background .2s}
+.up.on{opacity:1;translate:none;pointer-events:auto}
+.up:hover{background:var(--yellow)}
+.up svg{width:1.2rem;height:1.2rem;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+
+/* ===== HEADER ===== */
+.top{position:fixed;top:14px;left:0;right:0;z-index:120;display:flex;justify-content:center;pointer-events:none}
+.bar{pointer-events:auto;width:var(--w);display:flex;align-items:center;gap:1.2rem;padding:.5rem .55rem .5rem 1.5rem;border-radius:999px;transition:padding .3s,box-shadow .3s}
+.top.sc .bar{padding-top:.32rem;padding-bottom:.32rem;box-shadow:inset 0 1.5px 0 rgba(255,255,255,.85),0 16px 40px rgba(31,59,112,.24)}
+.logo{display:block;flex:none}
+.logo img{display:block;height:2.35rem;width:auto;transition:height .3s}
+.top.sc .logo img{height:2rem}
+nav.main{margin-left:auto;display:flex;align-items:center;gap:.15rem}
+nav.main>a,nav.main>.dd>a{display:inline-flex;align-items:center;height:2.7rem;padding:0 1.05rem;border-radius:99px;font-size:.93rem;font-weight:500;color:var(--navy);white-space:nowrap;transition:background .2s}
+nav.main>a:hover,nav.main>.dd>a:hover{background:rgba(255,255,255,.75)}
+nav.main a.cur{background:rgba(255,255,255,.82);box-shadow:inset 0 -3px 0 var(--yellow)}
+nav.main>a.cta{margin-left:.5rem;padding:0 1.5rem;font-weight:600;background:linear-gradient(180deg,#dbe8fb,var(--yellow));box-shadow:inset 0 1px 0 #fff8;animation:pulse 3.6s ease-out infinite}
+@keyframes pulse{0%{box-shadow:inset 0 1px 0 #fff8,0 0 0 0 rgba(120,160,225,.55)}70%,100%{box-shadow:inset 0 1px 0 #fff8,0 0 0 16px rgba(120,160,225,0)}}
+.dd{position:relative;display:flex}
+.dd>a::after{content:"";margin-left:.5rem;width:6px;height:6px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:translateY(-2px) rotate(45deg)}
+.menu{display:none;position:absolute;top:100%;left:0;min-width:17rem;margin-top:.65rem;padding:.5rem;background:rgba(255,255,255,.97);border:1px solid rgba(255,255,255,.9);border-radius:20px;box-shadow:0 18px 44px rgba(31,59,112,.22)}
+.menu::before{content:"";position:absolute;left:0;right:0;top:-.8rem;height:.8rem}
+.dd:hover .menu,.dd:focus-within .menu{display:block}
+.menu a{display:block;padding:.6rem .9rem;border-radius:12px;font-size:.92rem;color:var(--navy)}
+.menu a:hover{background:rgba(31,59,112,.08)}
+.burger{display:none;margin-left:auto;width:2.9rem;height:2.9rem;border-radius:50%;border:1px solid rgba(31,59,112,.2);background:rgba(255,255,255,.75);cursor:pointer;place-items:center}
+.burger i{display:block;width:1.15rem;height:2px;border-radius:2px;background:var(--navy);box-shadow:0 -6px 0 var(--navy),0 6px 0 var(--navy);transition:box-shadow .25s,rotate .25s}
+.menu-open .burger i{box-shadow:none;rotate:45deg}
+.menu-open .burger i::after{content:"";display:block;width:100%;height:2px;background:var(--navy);rotate:90deg}
+.mnav{position:fixed;inset:0;z-index:110;display:none;padding:7rem 1.6rem 2rem;background:linear-gradient(180deg,rgba(248,250,255,.97),rgba(246,249,255,.98));overflow:auto}
+.menu-open .mnav{display:block;animation:mfade .35s var(--e)}
+@keyframes mfade{from{opacity:0;translate:0 -14px}}
+.mnav a{display:block;padding:.85rem .2rem;font:700 2.1rem/1.1 var(--display);color:var(--navy-d);border-bottom:1px solid var(--line)}
+.mnav a.sub{font:500 1.05rem var(--body);padding:.5rem .2rem .5rem 1rem;color:var(--soft);border:0}
+
+/* ===== HERO (menempel di bawah; panel lain meluncur menimpanya) ===== */
+main{position:relative}
+.hero{position:sticky;top:0;z-index:0;height:100vh;height:100svh;min-height:640px;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.hero-bg .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(31,59,112,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(31,59,112,.07) 1px,transparent 1px);background-size:64px 64px;-webkit-mask:radial-gradient(70% 75% at 62% 42%,#000,transparent);mask:radial-gradient(70% 75% at 62% 42%,#000,transparent);animation:gm 30s linear infinite}
+@keyframes gm{to{background-position:64px 64px}}
+.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.42;animation:drift 16s ease-in-out infinite alternate}
+.o1{width:34vmax;height:34vmax;left:-10vmax;top:-12vmax;background:var(--blue)}
+.o2{width:24vmax;height:24vmax;right:-4vmax;top:10%;background:var(--yellow);animation-duration:19s;animation-delay:-4s}
+.o3{width:22vmax;height:22vmax;left:42%;bottom:-12vmax;background:var(--red);opacity:.3;animation-duration:21s;animation-delay:-8s}
+@keyframes drift{to{transform:translate3d(5vmax,3vmax,0) scale(1.15)}}
+.hero-in{height:100%;display:flex;align-items:center;padding:clamp(88px,12vh,130px) 0 clamp(150px,22vh,210px)}
+.hero .wrap.hw{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(24px,4vw,90px);align-items:center;
+  translate:0 calc(var(--hp,0)*70px);scale:calc(1 - var(--hp,0)*.07);opacity:calc(1 - var(--hp,0)*1.25)}
+.hero h1{font-size:clamp(3rem,6.3vw,8.4rem);line-height:.98;color:var(--navy-d)}
+.hero .sub{margin:1.6rem 0 2.2rem;font-size:clamp(1.05rem,1.2vw,1.35rem);color:var(--soft);max-width:54ch}
+.hero .acts{display:flex;flex-wrap:wrap;gap:.8rem}
+.collage{position:relative;justify-self:end;width:100%;max-width:780px;aspect-ratio:1/1;max-height:min(66vh,760px)}
+.cf{position:absolute;border-radius:clamp(22px,2.6vw,40px);border:6px solid rgba(255,255,255,.82);box-shadow:0 26px 60px rgba(16,34,74,.24);
+  translate:calc(var(--px,0)*var(--k,10)*1px) calc(var(--py,0)*var(--k,10)*.8px)}
+.cf.f1{inset:2% 0 16% 16%;--k:-10}
+.cf.f2{left:0;bottom:0;width:48%;aspect-ratio:4/3;--k:18}
+.cf.f3{right:-2%;top:-3%;width:31%;aspect-ratio:1;--k:26}
+.cb{position:absolute;z-index:3;right:6%;bottom:2%;display:flex;align-items:center;gap:.8rem;padding:.8rem 1.25rem .8rem .9rem;border-radius:22px;translate:calc(var(--px,0)*-22px) calc(var(--py,0)*-16px)}
+.cb b{display:grid;place-items:center;width:2.8rem;height:2.8rem;border-radius:50%;background:linear-gradient(180deg,#dbe8fb,var(--yellow));font:700 .95rem var(--display);color:var(--navy-d);letter-spacing:.02em}
+.cb span{display:block;font-size:.8rem;line-height:1.35;color:var(--soft)}
+.cb strong{display:block;font:700 1.35rem/1.05 var(--display);color:var(--navy-d)}
+.hero-facts{position:absolute;left:50%;bottom:clamp(18px,4vh,44px);translate:-50% 0;width:var(--w);display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;opacity:calc(1 - var(--hp,0)*2)}
+.hero-facts .glass{padding:1.1rem 1.5rem;border-radius:22px}
+.hero-facts b{display:block;font:700 1.75rem/1.1 var(--display);color:var(--navy)}
+.hero-facts span{font-size:.88rem;color:var(--soft);line-height:1.4;display:block}
+
+/* animasi masuk hero */
+.js:not(.rm) .hr{opacity:0;translate:0 44px}
+.js.ready:not(.rm) .hr{opacity:1;translate:none;transition:opacity .9s var(--e) var(--d,0s),translate .9s var(--e) var(--d,0s)}
+.js:not(.rm) .hcol{opacity:0;scale:.9;translate:0 60px}
+.js.ready:not(.rm) .hcol{opacity:1;scale:1;translate:none;transition:opacity 1.1s var(--e) var(--d,.5s),scale 1.3s var(--e) var(--d,.5s),translate 1.3s var(--e) var(--d,.5s)}
+
+/* ===== PANEL YANG SALING MENIMPA ===== */
+.stack{position:relative;z-index:2}
+.panel{position:relative;z-index:1;padding:clamp(64px,7vw,124px) 0;border-radius:var(--rad) var(--rad) 0 0;overflow:clip;
+  background:linear-gradient(180deg,#fff 0%,#f6f8ff 100%);box-shadow:0 -22px 60px rgba(16,34,74,.15)}
+.panel.tint{background:linear-gradient(180deg,#eef4fd 0%,#eaf0fb 100%)}
+.panel.warm{background:linear-gradient(180deg,#f4f8ff 0%,#eef3fc 100%)}
+.panel::after{content:"";position:absolute;inset:0;z-index:60;border-radius:inherit;background:var(--navy-d);opacity:calc(var(--cv,0)*.12);pointer-events:none}
+.stk .panel{position:sticky}
+.sh{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:1.5rem clamp(24px,5vw,100px);align-items:end;margin-bottom:clamp(32px,4.4vw,72px)}
+
+/* ===== ANIMASI MUNCUL SAAT SCROLL ===== */
+.js:not(.rm) .rv{opacity:0;translate:0 38px;transition:opacity .9s var(--e) var(--d,0s),translate .9s var(--e) var(--d,0s),scale .9s var(--e) var(--d,0s)}
+.js:not(.rm) .rv.on{opacity:1;translate:none;scale:none}
+.js:not(.rm) .rv.l{translate:-64px 0}
+.js:not(.rm) .rv.r{translate:64px 0}
+.js:not(.rm) .rv.z{scale:.9;translate:0 28px}
+.js:not(.rm) .wipe{clip-path:inset(0 0 100% 0 round var(--cr,28px));transition:clip-path 1.25s var(--e) var(--d,0s)}
+.js:not(.rm) .wipe.on{clip-path:inset(0 0 0 0 round var(--cr,28px))}
+.js:not(.rm) .wipe .ph::before{scale:1.25}
+.js:not(.rm) .wipe.on .ph::before{scale:1}
+.js:not(.rm) .wipe.ph::before{scale:1.25}
+.js:not(.rm) .wipe.ph.on::before{scale:1}
+.sp-h .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.04em 0 .14em;margin:-.04em 0 -.14em}
+.sp-h .w>i{display:inline-block;font-style:normal}
+.js:not(.rm) .sp-h .w>i{translate:0 112%;rotate:4deg;transition:translate 1s cubic-bezier(.2,.85,.2,1) calc(var(--i)*.055s + var(--d0,0s)),rotate 1s cubic-bezier(.2,.85,.2,1) calc(var(--i)*.055s + var(--d0,0s))}
+.js:not(.rm) .sp-h.on .w>i{translate:0 0;rotate:0deg}
+.js:not(.rm) h2.sp-h:not(.on)::after{width:0}
+.scrub .wd{opacity:.16;transition:opacity .25s}
+.rm .scrub .wd,.no-js .scrub .wd{opacity:1}
+/* ===== RINGKASAN: manifesto + angka ===== */
+.scrub{font:600 clamp(2rem,4.3vw,4.8rem)/1.06 var(--display);color:var(--navy-d);max-width:30ch}
+.scrub .wd{display:inline-block;margin-right:.24em}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(36px,5vw,76px);border-top:1px solid var(--line)}
+.st{padding:1.8rem 1.6rem 0 0;position:relative}
+.st+.st{padding-left:1.8rem;border-left:1px solid var(--line)}
+.st b{display:block;font:700 clamp(3.4rem,6.4vw,7rem)/.95 var(--display);color:var(--navy);letter-spacing:-.01em}
+.st b small{font-size:.5em;color:var(--blue-ink);margin-left:.08em}
+.st b::after{content:"";display:block;width:2.6rem;height:5px;margin:.7rem 0 .9rem;border-radius:9px;background:linear-gradient(90deg,var(--yellow),var(--red))}
+.st h3{font:700 1.35rem var(--display);margin-bottom:.25rem}
+.st p{font-size:.95rem;color:var(--soft);max-width:30ch}
+
+/* ===== TENTANG ===== */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,100px);align-items:center}
+.about .pic{position:relative}
+.about .pic .ph{aspect-ratio:5/4;border-radius:clamp(26px,3vw,48px);border:6px solid rgba(255,255,255,.9);box-shadow:0 30px 70px rgba(16,34,74,.22);--cr:clamp(26px,3vw,48px)}
+.about .pic .tag{position:absolute;z-index:2;left:clamp(14px,-3vw,-40px);bottom:-1.6rem;display:flex;gap:.9rem;align-items:center;padding:1rem 1.4rem;border-radius:22px;translate:-2% 0}
+.about .pic .tag i{display:grid;place-items:center;width:2.7rem;height:2.7rem;border-radius:50%;background:linear-gradient(180deg,#dbe8fb,var(--yellow))}
+.about .pic .tag svg{width:1.3rem;height:1.3rem;fill:none;stroke:var(--navy-d);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.about .pic .tag b{display:block;font:700 1.25rem/1.1 var(--display);color:var(--navy-d)}
+.about .pic .tag span{font-size:.82rem;color:var(--soft)}
+.about .tx>*+*{margin-top:1.1rem}
+.about .tx h2{margin-bottom:1.4rem}
+.about .tx p{max-width:62ch}
+.about .tx .lead{margin-top:0}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.6rem;margin-top:1.6rem}
+.checks li{display:flex;gap:.7rem;align-items:flex-start;font-size:.97rem;line-height:1.45}
+.checks svg{flex:none;width:1.4rem;height:1.4rem;margin-top:.05rem;padding:.28rem;border-radius:50%;background:var(--yellow);fill:none;stroke:var(--navy-d);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
+.chips b{font-weight:500;padding:.55rem 1.1rem;border-radius:99px;font-size:.92rem;color:var(--navy);background:rgba(255,255,255,.7);border:1px solid var(--line);transition:transform .25s var(--e),background .2s}
+.chips b:hover{transform:translateY(-3px);background:#fff}
+
+/* ===== VISI, MISI, NILAI ===== */
+.vm{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(18px,2.4vw,40px)}
+.vm .vis{position:relative;overflow:hidden;padding:clamp(28px,3.6vw,64px);border-radius:clamp(26px,3vw,48px);background:linear-gradient(135deg,rgba(91,148,196,.2),rgba(110,140,210,.14) 60%,rgba(120,160,225,.22));border:1px solid rgba(255,255,255,.8);box-shadow:inset 0 1.5px 0 #fff,0 22px 50px rgba(31,59,112,.12)}
+.vm .vis::before{content:"";position:absolute;right:-8%;top:-30%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(120,160,225,.5),transparent 68%)}
+.vm .vis h3{font-size:1.5rem;color:var(--blue-ink)}
+.vm .vis p{position:relative;margin-top:1rem;font:600 clamp(1.7rem,2.7vw,3.2rem)/1.12 var(--display);color:var(--navy-d);max-width:26ch}
+.mis{display:grid;gap:1rem;align-content:stretch}
+.mis article{display:grid;grid-template-columns:3.6rem 1fr;gap:1.1rem;align-items:start;padding:1.5rem 1.7rem;border-radius:26px}
+.mis i,.val i,.ind i,.why i,.tst i{display:grid;place-items:center;width:3.6rem;height:3.6rem;border-radius:18px;background:linear-gradient(145deg,#fff,#eaf1fb);border:1px solid var(--line);box-shadow:0 10px 22px rgba(31,59,112,.1)}
+.mis svg,.val svg,.ind svg,.why svg,.tst svg{width:1.7rem;height:1.7rem;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.mis h3{font-size:1.35rem;margin-bottom:.25rem}
+.mis p{font-size:.97rem;color:var(--soft)}
+.vals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(28px,3.6vw,56px);border-top:1px solid var(--line)}
+.val{padding:1.8rem 1.6rem 0 0}
+.val+.val{padding-left:1.8rem;border-left:1px solid var(--line)}
+.val h3{margin:1.1rem 0 .4rem;font-size:1.55rem}
+.val p{font-size:.96rem;color:var(--soft);max-width:34ch}
+
+/* ===== LAYANAN: strip foto yang melebar ===== */
+.acc{display:flex;gap:1rem;height:clamp(520px,68vh,760px)}
+.svc{position:relative;flex:1 1 0;min-width:0;border-radius:clamp(22px,2.4vw,36px);overflow:hidden;cursor:pointer;color:#fff;isolation:isolate;transition:flex-grow .85s var(--e),box-shadow .4s;box-shadow:0 16px 40px rgba(16,34,74,.16);outline-offset:-3px}
+.svc.act{flex-grow:5.4;box-shadow:0 26px 60px rgba(16,34,74,.28);cursor:default}
+.svc .ph{position:absolute;inset:0}
+.svc .ph::before{scale:1.1}
+.svc.act .ph::before{scale:1}
+.svc::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,24,52,.1) 0%,rgba(12,24,52,.18) 40%,rgba(12,24,52,.86) 100%);pointer-events:none;transition:opacity .5s}
+.svc .tt{position:absolute;z-index:2;left:50%;bottom:1.5rem;translate:-50% 0;writing-mode:vertical-rl;rotate:180deg;font:700 clamp(1.5rem,1.8vw,2rem)/1 var(--display);white-space:nowrap;transition:opacity .3s;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+.svc.act .tt{opacity:0}
+.svc .ic{position:absolute;z-index:2;top:1.2rem;left:50%;translate:-50% 0;display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.5);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:left .6s var(--e),translate .6s var(--e)}
+.svc.act .ic{left:clamp(20px,2.4vw,40px);translate:0 0}
+.svc .ic svg{width:1.4rem;height:1.4rem;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc .dt{position:absolute;z-index:2;left:0;bottom:0;width:clamp(360px,46vw,800px);padding:clamp(20px,2.4vw,40px);opacity:0;translate:0 22px;pointer-events:none;transition:opacity .35s,translate .35s}
+.svc.act .dt{opacity:1;translate:none;pointer-events:auto;transition:opacity .6s var(--e) .3s,translate .7s var(--e) .3s}
+.svc .dt h3{color:#fff;font-size:clamp(1.9rem,2.7vw,3.2rem);margin-bottom:.7rem}
+.svc .dt p{color:rgba(255,255,255,.92);font-size:1.04rem;max-width:56ch}
+.svc .dt ul{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.1rem}
+.svc .dt li{padding:.4rem .9rem;border-radius:99px;font-size:.85rem;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.tech{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:clamp(24px,3vw,44px)}
+.tech b{font-weight:500;padding:.6rem 1.2rem;border-radius:99px;font-size:.93rem;color:var(--navy);background:rgba(255,255,255,.75);border:1px solid var(--line);box-shadow:inset 0 1px 0 #fff;transition:transform .25s var(--e)}
+.tech b:hover{transform:translateY(-3px)}
+
+/* ===== ALUR PRODUKSI: terkunci, berganti saat scroll ===== */
+#proses.panel{padding:0}
+.proc{position:relative;height:calc(100vh + var(--n,7)*50vh);height:calc(100svh + var(--n,7)*50svh)}
+.pin{position:sticky;top:0;height:100vh;height:100svh;padding:clamp(86px,11vh,116px) 0 clamp(22px,4vh,46px)}
+.pin .wrap{height:100%;display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(24px,4vw,80px)}
+.pl{display:flex;flex-direction:column;justify-content:center;min-height:0}
+.pl h2{font-size:clamp(2.3rem,4vw,4.4rem)}
+.pl .lead{margin-top:1rem;font-size:1.02rem}
+.psteps{margin-top:clamp(14px,2.4vh,30px);border-left:2px solid var(--line)}
+.pstep{position:relative;display:grid;grid-template-columns:3rem 1fr;column-gap:.9rem;padding:.5rem 0 .5rem 1.2rem;cursor:pointer;opacity:.46;transition:opacity .4s}
+.pstep:hover{opacity:.8}
+.pstep.act{opacity:1}
+.pstep::before{content:"";position:absolute;left:-2px;top:0;bottom:0;width:2px;background:var(--yellow-d);scale:1 0;transform-origin:50% 0;transition:scale .5s var(--e)}
+.pstep.act::before{scale:1 1}
+.pstep .num{font:700 1.6rem/1.15 var(--display);color:var(--blue-ink)}
+.pstep h3{font-size:1.4rem;line-height:1.2}
+.pstep p{grid-column:2;max-height:0;opacity:0;overflow:hidden;font-size:.96rem;color:var(--soft);transition:max-height .6s var(--e),opacity .5s}
+.pstep.act p{max-height:8rem;opacity:1;margin-top:.3rem}
+.pr{position:relative;min-height:0;border-radius:clamp(24px,3vw,48px);overflow:hidden;box-shadow:0 30px 70px rgba(16,34,74,.25);border:6px solid rgba(255,255,255,.9);background:#dfe6f4}
+.pshot{position:absolute;inset:0;opacity:0;scale:1.07;transition:opacity .8s var(--e),scale 1.6s var(--e)}
+.pshot.act{opacity:1;scale:1}
+.pshot .ph{position:absolute;inset:0;opacity:0;transition:opacity .9s var(--e)}
+.pshot .ph.on{opacity:1}
+.pshot .ph::before{background-position:center 35%}
+.pcap{position:absolute;z-index:3;left:clamp(14px,2vw,32px);right:clamp(14px,2vw,32px);bottom:clamp(14px,2vw,32px);display:flex;align-items:center;gap:1.2rem;padding:1rem 1.5rem;border-radius:24px}
+.pcap .big{font:700 3.2rem/.9 var(--display);color:var(--navy);min-width:3.2rem}
+.pcap b{display:block;font:700 1.45rem/1.1 var(--display);color:var(--navy-d)}
+.pcap span{font-size:.88rem;color:var(--soft);line-height:1.4;display:block}
+.cf.ss{overflow:hidden}
+.ss .ph{position:absolute;inset:0;border-radius:0;opacity:0;transition:opacity 1.1s var(--e)}
+.ss .ph.on{opacity:1}
+.ptabs{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:clamp(12px,2vh,22px)}
+.ptab{height:2.5rem;padding:0 1.1rem;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.7);font:inherit;font-size:.9rem;font-weight:500;color:var(--navy);cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.ptab:hover{transform:translateY(-2px)}
+.ptab[aria-selected=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.pstep{padding:.34rem 0 .34rem 1.2rem}.pstep h3{font-size:1.25rem}.pstep .num{font-size:1.4rem}
+.pbar{position:absolute;z-index:3;left:0;top:0;height:5px;width:100%;transform-origin:0 50%;transform:scaleX(var(--pp,0));background:linear-gradient(90deg,var(--yellow),var(--red))}
+
+/* ===== FASILITAS: galeri + lightbox ===== */
+.filt{display:flex;flex-wrap:wrap;gap:.5rem}
+.filt button{height:2.8rem;padding:0 1.4rem;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.7);font-weight:500;color:var(--navy);cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.filt button:hover{transform:translateY(-2px)}
+.filt button[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-flow:dense;gap:clamp(10px,1.2vw,20px)}
+.gt{position:relative;aspect-ratio:4/3;border-radius:clamp(16px,1.6vw,26px);overflow:hidden;cursor:zoom-in;box-shadow:0 12px 30px rgba(16,34,74,.14);transition:opacity .4s,scale .4s var(--e),box-shadow .3s;border:0;padding:0;text-align:left;color:#fff;display:block;width:100%}
+.gt .ph{position:absolute;inset:0}
+.gt:hover .ph::before{scale:1.07}
+.gt:hover{box-shadow:0 22px 44px rgba(16,34,74,.26)}
+.gt.big{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.gt.wide{grid-column:span 2;aspect-ratio:auto}
+.gt[hidden]{display:none}
+.gt.out{opacity:0;scale:.94}
+.gt figcaption{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:2.2rem 1.1rem .9rem;font-size:.9rem;line-height:1.35;background:linear-gradient(180deg,transparent,rgba(12,24,52,.82));translate:0 30%;opacity:0;transition:opacity .35s,translate .4s var(--e)}
+.gt:hover figcaption,.gt:focus-visible figcaption{opacity:1;translate:none}
+.gt .zm{position:absolute;z-index:2;right:.8rem;top:.8rem;display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;background:rgba(255,255,255,.85);opacity:0;scale:.8;transition:opacity .3s,scale .3s var(--e)}
+.gt:hover .zm{opacity:1;scale:1}
+.gt .zm svg{width:1.1rem;height:1.1rem;fill:none;stroke:var(--navy);stroke-width:2;stroke-linecap:round}
+.lb{position:fixed;inset:0;z-index:250;display:none;place-items:center;background:rgba(10,18,40,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.lb.open{display:grid;animation:mfade .3s var(--e)}
+.lb .im{width:min(1500px,92vw);height:min(82vh,900px);border-radius:20px;overflow:hidden;position:relative;background:#0f1b36}
+.lb .im .ph{position:absolute;inset:0;background:transparent}
+.lb .im .ph::before{background-size:contain}
+.lb .cap{position:absolute;left:0;right:0;bottom:2.2vh;text-align:center;color:#fff;font-size:1rem;padding:0 4rem}
+.lb .cap small{display:block;opacity:.7;font-size:.82rem}
+.lb button{position:absolute;display:grid;place-items:center;width:3.2rem;height:3.2rem;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.14);color:#fff;cursor:pointer;transition:background .2s}
+.lb button:hover{background:rgba(255,255,255,.3)}
+.lb button svg{width:1.4rem;height:1.4rem;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.lb .x{top:2.5vh;right:2.5vw}.lb .pv{left:2vw;top:50%;translate:0 -50%}.lb .nx{right:2vw;top:50%;translate:0 -50%}
+
+/* ===== MUTU, K3 & ERP ===== */
+.qe{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,3vw,56px);align-items:stretch}
+.qa{display:flex;flex-direction:column;gap:1.4rem}
+.iso{display:flex;align-items:center;gap:1.6rem;padding:1.6rem 2rem;border-radius:30px}
+.iso .seal{flex:none;display:grid;place-items:center;width:6.4rem;height:6.4rem;border-radius:50%;text-align:center;background:radial-gradient(circle at 30% 25%,#e1ecfc,var(--yellow));box-shadow:0 0 0 7px rgba(120,160,225,.28),0 14px 30px rgba(120,160,225,.5);font:700 1.1rem/1 var(--display);color:var(--navy-d)}
+.iso .seal b{display:block;font-size:1.9rem;line-height:.95}
+.iso h3{font-size:1.7rem;margin-bottom:.3rem}
+.iso p{font-size:.97rem;color:var(--soft)}
+.tests{display:grid;gap:.9rem}
+.tst{display:grid;grid-template-columns:3.6rem 1fr;gap:1.1rem;padding:1.2rem 1.5rem;border-radius:24px;align-items:start}
+.tst h3{font-size:1.3rem;margin-bottom:.15rem}
+.tst p{font-size:.95rem;color:var(--soft)}
+.k3{padding:1.5rem 1.8rem;border-radius:24px;font-size:.97rem;color:var(--soft);display:flex;gap:1rem;align-items:flex-start}
+.k3 b{color:var(--navy-d)}
+.erp{position:relative;display:flex;flex-direction:column;padding:1.1rem;border-radius:34px}
+.erp .bar2{display:flex;align-items:center;gap:.4rem;padding:.2rem .5rem .9rem}
+.erp .bar2 i{width:.7rem;height:.7rem;border-radius:50%;background:#c3d4f0}
+.erp .bar2 i:nth-child(2){background:var(--yellow)}.erp .bar2 i:nth-child(3){background:#8fb0e0}
+.erp .bar2 span{margin-left:.8rem;font-size:.8rem;color:var(--soft);padding:.2rem .9rem;border-radius:99px;background:rgba(31,59,112,.07)}
+.erp .scr{position:relative;flex:1;min-height:clamp(240px,28vw,480px);border-radius:18px;border:1px solid var(--line)}
+.erp .ft{display:grid;grid-template-columns:1fr 1fr;gap:.55rem 1.4rem;padding:1.3rem .6rem .3rem}
+.erp .ft li{display:flex;gap:.6rem;font-size:.95rem;line-height:1.4;align-items:flex-start}
+.erp .ft svg{flex:none;width:1.3rem;height:1.3rem;margin-top:.1rem;padding:.25rem;border-radius:50%;background:var(--yellow);fill:none;stroke:var(--navy-d);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.erp h3{padding:0 .6rem;font-size:1.7rem;margin-top:.2rem}
+
+/* ===== INDUSTRI, KLIEN, KEUNGGULAN ===== */
+.inds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.4vw,24px)}
+.ind{position:relative;padding:1.8rem 1.7rem 1.9rem;border-radius:28px;overflow:hidden;transition:transform .35s var(--e),box-shadow .35s}
+.ind:hover{transform:translateY(-8px);box-shadow:inset 0 1.5px 0 #fff,0 28px 56px rgba(31,59,112,.22)}
+.ind::before{content:"";position:absolute;right:-18%;top:-26%;width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(120,160,225,.4),transparent 68%);transition:scale .6s var(--e)}
+.ind:hover::before{scale:1.5}
+.ind h3{margin:1.2rem 0 .4rem;font-size:1.65rem}
+.ind p{font-size:.96rem;color:var(--soft)}
+.cl-h{margin:clamp(36px,5vw,76px) 0 1.2rem;font:700 clamp(1.6rem,2.2vw,2.4rem)/1.1 var(--display);color:var(--navy-d)}
+.logos{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.track{display:flex;width:max-content;padding:.8rem 0 1.4rem;animation:mq 34s linear infinite}
+.logos:hover .track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.tile{flex:0 0 clamp(200px,17vw,300px);height:clamp(104px,8vw,140px);margin-right:1.1rem;display:grid;place-items:center;padding:1.4rem;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(255,255,255,.6));border:1px solid rgba(255,255,255,.85);box-shadow:inset 0 1.5px 0 #fff,0 12px 30px rgba(31,59,112,.12);transition:transform .3s var(--e),box-shadow .3s}
+.tile:hover{transform:translateY(-6px) scale(1.04);box-shadow:inset 0 1.5px 0 #fff,0 20px 40px rgba(31,59,112,.22)}
+.tile img{max-width:100%;max-height:3.4rem;object-fit:contain}
+.whys{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.why{padding:1.8rem 2rem 1.8rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:3.6rem 1fr;gap:1.1rem;align-items:start}
+.why:not(:nth-child(3n+1)){padding-left:2rem;border-left:1px solid var(--line)}
+.why h3{font-size:1.45rem;margin-bottom:.3rem}
+.why p{font-size:.96rem;color:var(--soft)}
+
+/* ===== TIM ===== */
+.team{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(12px,1.4vw,24px)}
+.tm{position:relative;border-radius:clamp(20px,2vw,32px);overflow:hidden;background:#dfe6f4;box-shadow:0 16px 40px rgba(16,34,74,.16);transition:transform .4s var(--e),box-shadow .4s}
+.tm:hover{transform:translateY(-10px);box-shadow:0 30px 60px rgba(16,34,74,.28)}
+.tm .ph{aspect-ratio:4/5.2;background:linear-gradient(145deg,rgba(91,148,196,.25),rgba(120,160,225,.28))}
+.tm .ph::before{filter:blur(26px) saturate(1.05);scale:1.4;opacity:.6}
+.tm .ph::after{font:700 3.4rem var(--display);color:rgba(31,59,112,.35);content:attr(data-label)}
+.tm .ph.vis i{position:absolute;inset:0;z-index:2;background:var(--foto) center/contain no-repeat}
+.tm .cap{position:absolute;z-index:3;left:.6rem;right:.6rem;bottom:.6rem;padding:.8rem 1rem;border-radius:18px}
+.tm h3{font-size:1.25rem;line-height:1.1}
+.tm p{font-size:.84rem;color:var(--blue-ink);font-weight:600;margin-top:.15rem;line-height:1.3}
+/* ===== BROSUR (kartu pilihan) ===== */
+.bro{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.8vw,30px)}
+.bc{display:flex;flex-direction:column;padding:1.2rem;border-radius:32px;transition:transform .4s var(--e),box-shadow .4s}
+.bc:hover{transform:translateY(-8px);box-shadow:inset 0 1.5px 0 #fff,0 30px 60px rgba(31,59,112,.24)}
+.bc .pv{position:relative;aspect-ratio:297/210;border-radius:18px;overflow:hidden;background:#e8edf8;box-shadow:0 14px 34px rgba(16,34,74,.2);cursor:pointer;border:0;padding:0;display:block;width:100%}
+.bc .pv .sw{position:absolute;left:0;top:0;box-shadow:none;border-radius:0}
+.bc .pv::after{content:"Pratinjau";position:absolute;inset:0;display:grid;place-items:center;font:600 1rem var(--body);color:#fff;background:rgba(16,34,74,.55);opacity:0;transition:opacity .3s}
+.bc .pv:hover::after,.bc .pv:focus-visible::after{opacity:1}
+.bc h3{margin:1.3rem .4rem .35rem;font-size:1.9rem}
+.bc p{margin:0 .4rem;font-size:.96rem;color:var(--soft)}
+.bc .meta{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem .4rem 1.3rem}
+.bc .meta b{font-weight:500;font-size:.82rem;padding:.3rem .8rem;border-radius:99px;background:rgba(31,59,112,.08);color:var(--navy)}
+.bc .acts{display:flex;gap:.6rem;margin:auto .4rem .3rem;flex-wrap:wrap}
+.bc .btn{height:2.9rem;padding:0 1.3rem;font-size:.93rem}
+.bhint{margin-top:1.6rem;font-size:.92rem;color:var(--soft);max-width:90ch}
+
+/* ===== PRATINJAU BROSUR (modal) & CETAK ===== */
+#bk{position:fixed;inset:0;z-index:260;display:flex;flex-direction:column;background:#e4e9f4;visibility:hidden;opacity:0;pointer-events:none;transition:opacity .35s,visibility 0s .35s}
+#bk.open{visibility:visible;opacity:1;pointer-events:auto;transition:opacity .35s}
+.bk-bar{display:flex;align-items:center;gap:1rem 1.4rem;flex-wrap:wrap;padding:.8rem clamp(14px,2vw,32px);background:#fff;box-shadow:0 6px 24px rgba(16,34,74,.12);position:relative;z-index:2}
+.bk-bar h3{font-size:1.5rem;margin-right:auto}
+.bk-tabs{display:flex;gap:.4rem;flex-wrap:wrap}
+.bk-tabs button{height:2.6rem;padding:0 1.1rem;border-radius:99px;border:1px solid var(--line);background:#f4f7fd;font-weight:500;font-size:.9rem;color:var(--navy);cursor:pointer;transition:background .2s,color .2s}
+.bk-tabs button[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.bk-bar .btn{height:2.6rem;padding:0 1.3rem;font-size:.9rem}
+.bk-bar .x{width:2.6rem;padding:0}
+.bk-body{flex:1;overflow:auto;padding:clamp(16px,2.6vw,40px)}
+#bk-pages{display:grid;gap:clamp(14px,2vw,28px);justify-content:center}
+.bk-tip{padding:.55rem clamp(14px,2vw,32px);font-size:.85rem;background:#eef4fd;color:#1f3b70;border-bottom:1px solid #c9d9f1}
+.sw{position:relative;overflow:hidden;background:#fff;box-shadow:0 20px 50px rgba(16,34,74,.22);border-radius:6px;flex:none}
+.sw>.sheet{transform:scale(var(--s,1));transform-origin:0 0}
+
+@page{size:297mm 210mm;margin:0}
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{background:#fff!important;height:auto!important;overflow:visible!important;font-size:16px!important}
+  body>*:not(#bk){display:none!important}
+  #bk{position:static!important;display:block!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;background:#fff!important;transition:none!important}
+  .bk-bar,.bk-tip{display:none!important}
+  .bk-body{padding:0!important;overflow:visible!important}
+  #bk-pages{display:block!important}
+  .sw{width:297mm!important;height:209.7mm!important;margin:0!important;box-shadow:none!important;border-radius:0!important;break-after:page;page-break-after:always;overflow:hidden}
+  .sw:last-child{break-after:auto;page-break-after:auto}
+  .sw>.sheet{transform:none!important}
+}
+
+/* ===== FAQ ===== */
+.faqw{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,5vw,100px);align-items:start}
+.faqw .fl{position:sticky;top:7rem}
+.faqw .fl .lead{margin-top:1.4rem}
+.faqw .fl .help{margin-top:2rem;padding:1.6rem 1.8rem;border-radius:26px}
+.faqw .fl .help h3{font-size:1.5rem;margin-bottom:.35rem}
+.faqw .fl .help p{font-size:.95rem;color:var(--soft);margin-bottom:1.1rem}
+.faq{display:grid;gap:.9rem}
+.faq details{border-radius:24px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:1.35rem 4.2rem 1.35rem 1.7rem;font:600 1.1rem/1.4 var(--body);color:var(--navy);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:1.7rem;top:50%;translate:0 -50%;font:500 1.8rem/1 var(--body);color:var(--blue);transition:rotate .25s}
+.faq details[open] summary::after{rotate:45deg}
+.faq details[open] summary{color:var(--navy-d)}
+.faq details p{padding:0 1.7rem 1.5rem;color:var(--soft);max-width:70ch}
+.faq details::details-content{block-size:0;overflow:clip;transition:block-size .4s var(--e),content-visibility .4s allow-discrete}
+.faq details[open]::details-content{block-size:auto}
+:root{interpolate-size:allow-keywords}
+
+/* ===== KONTAK ===== */
+.ct{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.15fr);gap:clamp(14px,1.8vw,30px);align-items:stretch}
+.cc{padding:clamp(22px,2.4vw,38px);border-radius:30px}
+.cc h3{margin-bottom:.8rem;font-size:1.8rem}
+.cc p{color:var(--soft);font-size:.98rem}
+.cc dl{display:grid;grid-template-columns:5rem 1fr;gap:.5rem .8rem;margin-top:1.3rem;font-size:.95rem}
+.cc dt{color:var(--soft)}
+.cc dd{margin:0}
+.cc a{color:var(--blue-ink);font-weight:500}
+.cc a:hover{text-decoration:underline}
+.cc .pin2{display:inline-grid;place-items:center;width:2.8rem;height:2.8rem;border-radius:50%;margin-bottom:1rem;background:linear-gradient(180deg,#dbe8fb,var(--yellow))}
+.cc .pin2 svg{width:1.3rem;height:1.3rem;fill:none;stroke:var(--navy-d);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fm{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.fm label{display:grid;gap:.35rem;font-size:.86rem;font-weight:600;color:var(--navy)}
+.fm .full{grid-column:1/-1}
+.fm input,.fm select,.fm textarea{width:100%;font:400 .98rem var(--body);color:var(--ink);padding:.85rem 1rem;border-radius:14px;border:1px solid rgba(31,59,112,.2);background:rgba(255,255,255,.85);transition:border-color .2s,box-shadow .2s}
+.fm textarea{resize:vertical;min-height:7.5rem}
+.fm input:focus,.fm select:focus,.fm textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 4px rgba(91,148,196,.22)}
+.fm .note{font-size:.82rem;color:var(--soft);font-weight:400;align-self:center}
+.peta{margin-top:clamp(14px,1.8vw,30px);display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.6fr);padding:0;overflow:hidden;border-radius:30px}
+.peta-info{padding:clamp(22px,2.6vw,44px);align-self:center}
+.peta-info h3{margin-bottom:.7rem;font-size:1.9rem}
+.peta-info p{color:var(--soft)}
+.peta-aksi{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+.peta iframe{display:block;width:100%;height:100%;min-height:clamp(320px,34vw,520px);border:0}
+
+/* ===== FOOTER ===== */
+footer.panel{padding-bottom:1.4rem;background:linear-gradient(180deg,#f1f5ff,#eef3fc)}
+.cta-band{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:1.6rem 3rem;padding:clamp(28px,4vw,72px);border-radius:clamp(26px,3vw,48px);background:linear-gradient(135deg,rgba(91,148,196,.3),rgba(110,140,210,.2) 55%,rgba(120,160,225,.4));border:1px solid rgba(255,255,255,.85);box-shadow:inset 0 1.5px 0 #fff,0 24px 56px rgba(31,59,112,.14)}
+.cta-band h2{font-size:clamp(2.2rem,4vw,4.4rem)}
+.cta-band h2::after{display:none}
+.cta-band p{margin-top:.8rem;color:var(--soft);max-width:56ch}
+.cta-band .acts{display:flex;flex-wrap:wrap;gap:.8rem}
+.fcols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:2rem clamp(24px,4vw,80px);margin-top:clamp(36px,4vw,64px)}
+.fcols img{height:2.6rem;width:auto;display:block;margin-bottom:1rem}
+.fcols h4{font:700 1.2rem var(--display);margin-bottom:.8rem;color:var(--navy-d)}
+.fcols p,.fcols li,.fcols a{font-size:.94rem;color:var(--soft)}
+.fcols li{margin-bottom:.45rem}
+.fcols a:hover{color:var(--blue-ink)}
+.sosial{display:flex;gap:.6rem;margin-top:1.2rem}
+.sosial a{display:grid;place-items:center;width:2.7rem;height:2.7rem;border-radius:50%;color:var(--navy);background:rgba(255,255,255,.75);border:1px solid rgba(31,59,112,.18);box-shadow:inset 0 1px 0 #fff;transition:background .2s,translate .25s,scale .25s}
+.sosial a:hover{background:var(--yellow);translate:0 -4px;scale:1.1}
+.sosial svg{width:1.15rem;height:1.15rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:2.4rem;padding-top:1.3rem;border-top:1px solid var(--line);font-size:.86rem;color:var(--soft)}
+
+/* ===== PENGGUNA: daftar isi titik di sisi kanan ===== */
+.toc{position:fixed;right:14px;top:50%;translate:0 -50%;z-index:95;display:none;flex-direction:column;gap:2px;padding:10px 6px;border-radius:999px}
+.toc a{position:relative;display:grid;place-items:center;width:24px;height:22px}
+.toc i{width:8px;height:8px;border-radius:99px;background:rgba(31,59,112,.4);border:1px solid rgba(255,255,255,.8);transition:height .25s,background .25s}
+.toc a.on i{height:20px;background:var(--yellow);border-color:var(--navy)}
+.toc span{position:absolute;right:calc(100% + 12px);white-space:nowrap;padding:.35rem .9rem;border-radius:99px;font-size:.8rem;font-weight:500;color:var(--navy);background:rgba(255,255,255,.97);box-shadow:0 8px 22px rgba(31,59,112,.2);opacity:0;pointer-events:none;transition:opacity .2s}
+.toc a:hover span,.toc a:focus-visible span{opacity:1}
+@media(min-width:1300px){.toc{display:flex}}
+
+/* ===== RESPONSIF ===== */
+@media(max-width:1280px){
+  .team{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .inds{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gal{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ct{grid-template-columns:1fr 1fr}
+  .ct .cc.fm-c{grid-column:1/-1}
+  nav.main>a,nav.main>.dd>a{padding:0 .8rem;font-size:.88rem}
+}
+@media(max-width:1060px){
+  nav.main{display:none}
+  .burger{display:grid}
+  .hero .wrap.hw{grid-template-columns:1fr}
+  .collage{display:none}
+  .hero-in{padding-bottom:clamp(190px,26vh,240px)}
+  .hero-facts{grid-template-columns:1fr 1fr 1fr;gap:.6rem}
+  .hero-facts .glass{padding:.8rem 1rem}
+  .hero-facts b{font-size:1.2rem}
+  .sh,.about,.vm,.qe,.faqw{grid-template-columns:1fr}
+  .faqw .fl{position:static}
+  .stats,.vals{grid-template-columns:1fr 1fr}
+  .st:nth-child(3),.val:nth-child(3){padding-left:0;border-left:0}
+  .st:nth-child(n+3),.val:nth-child(n+3){margin-top:1.6rem}
+  .whys{grid-template-columns:1fr 1fr}
+  .why:not(:nth-child(3n+1)){padding-left:0;border-left:0}
+  .why:nth-child(even){padding-left:2rem;border-left:1px solid var(--line)}
+  .bro{grid-template-columns:1fr}
+  .bc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 1.4rem;align-items:start}
+  .bc .pv{grid-row:1/5}
+  .bc h3{margin-top:.2rem}
+  .peta{grid-template-columns:1fr}
+  .cta-band{grid-template-columns:1fr}
+  .fcols{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .hero{position:relative;height:auto;min-height:100svh}
+  .hero .wrap.hw{translate:none;scale:1;opacity:1}
+  .hero-facts{position:relative;left:auto;bottom:auto;translate:none;margin:0 auto 1.6rem;opacity:1}
+  .hero-in{height:auto;min-height:calc(100svh - 120px);padding-bottom:2rem}
+  .hero{display:flex;flex-direction:column}
+  .panel{box-shadow:0 -14px 40px rgba(16,34,74,.12)}
+  .acc{flex-direction:column;height:auto}
+  .svc{flex:none;min-height:360px}
+  .svc .tt{display:none}
+  .svc .ic{left:1.2rem;translate:0 0}
+  .svc .dt{opacity:1;translate:none;width:100%;pointer-events:auto}
+  .proc{height:auto}
+  .pin{position:static;height:auto;padding:clamp(70px,12vw,100px) 0}
+  .pin .wrap{grid-template-columns:1fr;height:auto}
+  .pr{display:none}
+  .pstep{opacity:1}
+  .pstep p{max-height:none;opacity:1;margin-top:.3rem}
+  .pstep::before{display:none}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gt figcaption{opacity:1;translate:none;font-size:.78rem;padding-top:1.6rem}
+  .team{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .checks,.erp .ft,.fm{grid-template-columns:1fr}
+  .ct{grid-template-columns:1fr}
+  .stats,.vals{grid-template-columns:1fr}
+  .st,.st+.st,.val,.val+.val{padding-left:0;border-left:0}
+  .st+.st,.val+.val{margin-top:1.4rem}
+  .whys{grid-template-columns:1fr}
+  .why:nth-child(even){padding-left:0;border-left:0}
+  .inds{grid-template-columns:1fr}
+  .about .pic .tag{left:.8rem;translate:none}
+  .bc{display:flex}
+  .fcols{grid-template-columns:1fr}
+  .lb .im{height:70vh}
+  .iso{flex-direction:column;text-align:center}
+}
+@media(max-height:820px) and (min-width:901px){.pl .lead{display:none}.pstep{padding:.38rem 0 .38rem 1.2rem}}
+@media(hover:none){.gt figcaption{opacity:1;translate:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* ===== LEMBAR BROSUR (A4 lanskap, 297 x 210 mm) ===== */
+.sheet{position:relative;width:297mm;height:209.7mm;overflow:hidden;background:#fff;color:var(--ink);font:400 12.5px/1.55 var(--body);text-align:left;text-transform:none}
+.sheet h1,.sheet h2,.sheet h3,.sheet h4{font-family:var(--display);color:var(--navy-d);font-weight:700;line-height:1.04;letter-spacing:0}
+.sheet h2{font-size:40px}
+.sheet h2::after{width:54px;height:5px;margin-top:10px;transition:none}
+.sheet h3{font-size:19px}
+.sheet p{margin:0}
+.sheet .ph::after{font-size:10px}
+.sheet .lead{font-size:14px;max-width:none;color:var(--soft)}
+.sx-h{position:absolute;left:0;right:0;top:0;height:60px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e4eaf6;background:#fff;z-index:3}
+.sx-h img{height:28px;width:auto;display:block}
+.sx-h span{font:700 21px var(--display);color:var(--navy)}
+.sx-f{position:absolute;left:0;right:0;bottom:0;height:38px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;font-size:10.5px;color:var(--soft);border-top:1px solid #e4eaf6;background:#fff;z-index:3}
+.sx-f b{font:700 17px var(--display);color:var(--navy)}
+.sx-f::before{content:"";position:absolute;left:0;top:-1px;width:120px;height:3px;background:linear-gradient(90deg,var(--yellow),var(--red))}
+.sx-b{position:absolute;left:48px;right:48px;top:82px;bottom:54px}
+.sx-b.g2{display:grid;grid-template-columns:1.05fr .95fr;gap:38px}
+.pad-t>*+*{margin-top:12px}
+.bx{background:#f4f7ff;border:1px solid #e1e8f6;border-radius:14px;padding:14px 16px}
+.bx h3{font-size:17px;margin-bottom:3px}
+.bx p{font-size:11.5px;color:var(--soft);line-height:1.5}
+.ico{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#fff;border:1px solid #dde6f5;flex:none}
+.ico svg{width:18px;height:18px;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cks{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;font-size:11.5px;line-height:1.4}
+.cks li{display:flex;gap:8px;align-items:flex-start}
+.cks svg{flex:none;width:16px;height:16px;padding:3px;border-radius:50%;background:var(--yellow);fill:none;stroke:var(--navy-d);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.chp{display:flex;flex-wrap:wrap;gap:6px}
+.chp b{font-weight:500;font-size:10.5px;padding:5px 12px;border-radius:99px;background:#eef3fc;color:var(--navy);border:1px solid #dbe5f5}
+.cap-s{font-size:10.5px;line-height:1.35;padding:6px 2px 0;color:var(--soft)}
+
+/* sampul */
+.s-cover{background:linear-gradient(120deg,#10224a 0%,#1f3b70 62%,#2f5ba1 100%);color:#fff}
+.s-cover::before{content:"";position:absolute;left:-8%;bottom:-30%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(120,160,225,.28),transparent 68%)}
+.cv-r{position:absolute;right:0;top:0;bottom:0;width:51%;clip-path:polygon(17% 0,100% 0,100% 100%,0 100%)}
+.cv-r .ph{position:absolute;inset:0}
+.cv-r::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,34,74,0) 55%,rgba(16,34,74,.55))}
+.cv-st{position:absolute;right:0;top:0;bottom:0;width:51%;clip-path:polygon(17% 0,21.4% 0,4.4% 100%,0 100%);background:linear-gradient(180deg,var(--yellow),#5f86c4);z-index:2}
+.cv-l{position:absolute;left:56px;top:48px;bottom:48px;width:50%;display:flex;flex-direction:column;z-index:3}
+.cv-logo{align-self:flex-start;background:#fff;border-radius:14px;padding:10px 20px;display:flex}
+.cv-logo img{height:34px;width:auto;display:block}
+.s-cover h1{margin-top:auto;font-size:112px;line-height:.9;color:#fff}
+.cv-sub{margin-top:20px;font-size:19px;line-height:1.4;color:#dbe6fa;max-width:30ch}
+.cv-sub::before{content:"";display:block;width:64px;height:6px;margin-bottom:18px;border-radius:9px;background:linear-gradient(90deg,var(--yellow),var(--red))}
+.cv-facts{display:flex;gap:26px;margin-top:34px;font-size:11.5px;color:#c9d7f3}
+.cv-facts b{display:block;font:700 22px/1.1 var(--display);color:#fff}
+.cv-ft{margin-top:30px;padding-top:16px;border-top:1px solid rgba(255,255,255,.25);font-size:11.5px;color:#c9d7f3}
+.cv-badge{position:absolute;z-index:4;right:44px;bottom:40px;display:flex;gap:12px;align-items:center;padding:12px 18px;border-radius:16px;background:rgba(255,255,255,.94);color:var(--navy-d);box-shadow:0 12px 28px rgba(0,0,0,.25)}
+.cv-badge i{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--yellow);font:700 14px var(--display);font-style:normal}
+.cv-badge b{display:block;font:700 18px/1.05 var(--display)}
+.cv-badge span{font-size:10px;color:var(--soft)}
+
+/* tentang */
+.s-about .tx>*+*{margin-top:14px}
+.s-about .tx p{font-size:12.5px}
+.s-about .ph.main{height:370px;border-radius:18px;border:4px solid #fff;box-shadow:0 14px 34px rgba(16,34,74,.22)}
+.s-about .stt{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.s-about .stt div{padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,#eef4fd,#eef3fc);border:1px solid #e1e8f6}
+.s-about .stt b{display:block;font:700 34px/1 var(--display);color:var(--navy)}
+.s-about .stt span{font-size:10.5px;line-height:1.35;color:var(--soft);display:block;margin-top:4px}
+
+/* visi misi nilai */
+.s-vm .tp{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;height:318px}
+.s-vm .vi{position:relative;overflow:hidden;padding:26px 30px;border-radius:18px;background:linear-gradient(135deg,rgba(91,148,196,.22),rgba(110,140,210,.14) 60%,rgba(120,160,225,.26));border:1px solid #e1e8f6}
+.s-vm .vi h3{color:var(--blue-ink);font-size:20px}
+.s-vm .vi p{margin-top:12px;font:600 29px/1.14 var(--display);color:var(--navy-d)}
+.s-vm .mi{display:grid;gap:10px;align-content:space-between}
+.s-vm .mi .bx{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:center;padding:12px 14px}
+.s-vm .mi .bx p{font-size:11.5px}
+.s-vm .nl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:20px;border-top:1px solid #dde6f5}
+.s-vm .nl div{padding:16px 18px 0 0}
+.s-vm .nl div+div{padding-left:18px;border-left:1px solid #dde6f5}
+.s-vm .nl h3{margin:10px 0 4px;font-size:20px}
+.s-vm .nl p{font-size:11.5px;color:var(--soft);line-height:1.5}
+.s-vm .sec{font:700 24px var(--display);color:var(--navy-d);margin-top:20px}
+
+/* layanan */
+.s-svc .hd{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end;height:92px}
+.s-svc .cs{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;height:540px;margin-top:18px}
+.s-svc .c{display:flex;flex-direction:column;border-radius:16px;overflow:hidden;background:#f4f7ff;border:1px solid #e1e8f6}
+.s-svc .c .ph{height:170px}
+.s-svc .c div.t{padding:14px 14px 12px;display:flex;flex-direction:column;flex:1}
+.s-svc .c h3{font-size:19px;margin-bottom:6px}
+.s-svc .c p{font-size:11.2px;color:var(--soft);line-height:1.5}
+.s-svc .c .chp{margin-top:auto;padding-top:10px}
+.s-svc .c .chp b{font-size:9.5px;padding:3px 8px}
+
+/* fasilitas */
+.s-fac .hd{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end;height:90px}
+.s-fac .gg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+.s-fac .gg figure{margin:0}
+.s-fac .gg .ph{height:180px;border-radius:14px}
+.s-fac .tc{margin-top:16px}
+
+/* proses */
+.s-proc .hd{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end;height:90px}
+.s-proc .st4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+.s-proc .p{border-radius:14px;overflow:hidden;background:#f4f7ff;border:1px solid #e1e8f6;display:flex;flex-direction:column}
+.s-proc .p .ph{height:108px}
+.s-proc .p .n{position:absolute;z-index:3;left:10px;top:10px;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--yellow);font:700 16px var(--display);color:var(--navy-d)}
+.s-proc .p div.t{padding:11px 13px 12px}
+.s-proc .p h3{font-size:17px;margin-bottom:3px}
+.s-proc .p p{font-size:10.8px;color:var(--soft);line-height:1.45}
+.s-proc .p.end{justify-content:center;padding:18px;background:linear-gradient(135deg,#e6effc,#dde8fa);border-color:#c9d9f1}
+.s-proc .p.end h3{font-size:24px;margin-bottom:8px}
+.s-proc .p.end p{font-size:12px}
+.s-proc .ln3{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:14px;margin-top:16px}
+.s-proc .ln{border-radius:14px;background:#f4f7ff;border:1px solid #e1e8f6;padding:14px 16px}
+.s-proc .ln h3{font-size:19px;margin-bottom:8px}
+.s-proc .ln ol{list-style:none;margin:0;padding:0}
+.s-proc .ln li{display:flex;align-items:center;gap:9px;padding:4px 0;font-size:12.5px;color:var(--navy-d)}
+.s-proc .ln .n{flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--yellow);font:700 12px var(--display);color:var(--navy-d)}
+.s-proc .ln li small{display:block;font-size:10px;color:var(--soft)}
+.s-proc .p.end{margin-top:14px;padding:12px 18px}
+
+/* mutu & erp */
+.s-qe .l{display:flex;flex-direction:column;gap:12px}
+.s-qe .iso2{display:flex;gap:18px;align-items:center;padding:16px 20px;border-radius:16px;background:linear-gradient(135deg,rgba(120,160,225,.3),rgba(120,160,225,.08));border:1px solid #c9d9f1}
+.s-qe .seal{flex:none;display:grid;place-items:center;width:78px;height:78px;border-radius:50%;text-align:center;background:radial-gradient(circle at 30% 25%,#e1ecfc,var(--yellow));box-shadow:0 0 0 5px rgba(120,160,225,.3);font:700 13px/1 var(--display);color:var(--navy-d)}
+.s-qe .seal b{display:block;font-size:22px;line-height:.95}
+.s-qe .tt3{display:grid;gap:10px}
+.s-qe .tt3 .bx{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.s-qe .r{display:flex;flex-direction:column;gap:12px}
+.s-qe .r .ph{height:300px;border-radius:14px;border:1px solid #dbe4f4;background-color:#eef3fb}
+.s-qe .r .ft{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+
+/* industri & klien */
+.s-ind .rw{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.s-ind .rw .bx{padding:14px 16px}
+.s-ind .rw .ico{margin-bottom:8px}
+.s-ind .sec{font:700 24px var(--display);color:var(--navy-d);margin:16px 0 10px}
+.s-ind .wy{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 22px}
+.s-ind .wy div{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.s-ind .wy h3{font-size:17px;margin-bottom:2px}
+.s-ind .wy p{font-size:11px;color:var(--soft);line-height:1.45}
+.s-ind .lg{display:flex;gap:12px}
+.s-ind .lg div{flex:1;height:66px;display:grid;place-items:center;border-radius:14px;background:#f4f7ff;border:1px solid #e1e8f6;padding:10px}
+.s-ind .lg img{max-height:34px;max-width:100%;object-fit:contain}
+
+/* tim */
+.s-team .l{display:flex;flex-direction:column;justify-content:center}
+.s-team .l .lead{margin-top:16px}
+.s-team .l .bx{margin-top:22px}
+.s-team .tg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.s-team .tm2{position:relative;border-radius:16px;overflow:hidden;background:#e4eaf6;height:300px}
+.s-team .tm2 .ph{position:absolute;inset:0;background:linear-gradient(145deg,rgba(91,148,196,.25),rgba(120,160,225,.28))}
+.s-team .tm2 .ph::before{filter:blur(20px);scale:1.4;opacity:.6}
+.s-team .tm2 .ph i{position:absolute;inset:0;z-index:2;background:var(--foto) center/contain no-repeat}
+.s-team .tm2 .cp{position:absolute;z-index:3;left:8px;right:8px;bottom:8px;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.93)}
+.s-team .tm2 h3{font-size:16px}
+.s-team .tm2 p{font-size:10.5px;color:var(--blue-ink);font-weight:600;line-height:1.3}
+
+/* kontak */
+.s-ct .l{display:flex;flex-direction:column;gap:14px}
+.s-ct .l .hd2{margin-bottom:4px}
+.s-ct .bx dl{display:grid;grid-template-columns:62px 1fr;gap:3px 10px;margin-top:8px;font-size:11.5px}
+.s-ct .bx dt{color:var(--soft)}
+.s-ct .bx dd{margin:0;color:var(--ink)}
+.s-ct .bx p{font-size:11.5px}
+.s-ct .r{display:flex;flex-direction:column;gap:14px}
+.s-ct .r .ph{flex:1;border-radius:18px;border:4px solid #fff;box-shadow:0 14px 34px rgba(16,34,74,.22)}
+.s-ct .cta2{padding:18px 22px;border-radius:16px;background:linear-gradient(135deg,rgba(91,148,196,.28),rgba(110,140,210,.18) 55%,rgba(120,160,225,.4));border:1px solid #e1e8f6}
+.s-ct .cta2 h3{font-size:25px;margin-bottom:4px}
+.s-ct .cta2 p{font-size:12px;color:var(--soft)}
+
+/* brosur ringkas & lembar fakta */
+.s-r2 .sv{display:grid;gap:10px}
+.s-r2 .sv .bx{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:center;padding:11px 14px}
+.s-r3 .gg3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.s-r3 .gg3 .ph{height:150px;border-radius:12px}
+.s-r3 .rr{display:flex;flex-direction:column;gap:12px}
+.s-r3 .rr .ph{height:210px;border-radius:12px;border:1px solid #dbe4f4;background-color:#eef3fb}
+.s-r4 .tl{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;font-size:11.5px}
+.s-r4 .tl div{padding:7px 0;border-bottom:1px solid #e4eaf6}
+.s-r4 .tl b{display:block;font:700 15px/1.1 var(--display);color:var(--navy-d)}
+.s-r4 .tl span{color:var(--blue-ink);font-weight:600;font-size:10.5px}
+.s-fact .band{position:absolute;left:0;right:0;top:0;height:118px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(120deg,#10224a,#1f3b70 70%,#2f5ba1);color:#fff}
+.s-fact .band h1{font-size:50px;color:#fff;line-height:1}
+.s-fact .band p{font-size:13px;color:#cfdcf5;margin-top:6px}
+.s-fact .band .cv-logo{padding:8px 16px}
+.s-fact .band .cv-logo img{height:30px}
+.s-fact .fb{position:absolute;left:48px;right:48px;top:136px;bottom:54px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+.s-fact .col>*+*{margin-top:11px}
+.s-fact .sec{font:700 22px var(--display);color:var(--navy-d)}
+.s-fact .sec::after{content:"";display:block;width:36px;height:4px;margin-top:5px;border-radius:9px;background:linear-gradient(90deg,var(--yellow),var(--red))}
+.s-fact .kg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.s-fact .kg div{padding:10px 12px;border-radius:12px;background:linear-gradient(135deg,#eef4fd,#eef3fc);border:1px solid #e1e8f6}
+.s-fact .kg b{display:block;font:700 26px/1 var(--display);color:var(--navy)}
+.s-fact .kg span{font-size:10px;line-height:1.3;color:var(--soft);display:block;margin-top:3px}
+.s-fact .ls li{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid #e9eef8;font-size:11.2px;line-height:1.4}
+.s-fact .ls b{display:block;font:700 15px/1.1 var(--display);color:var(--navy-d)}
+.s-fact .ph3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.s-fact .ph3 .ph{height:82px;border-radius:10px}
+.s-fact .lg2{display:flex;gap:8px}
+.s-fact .lg2 div{flex:1;height:44px;display:grid;place-items:center;border-radius:10px;background:#f4f7ff;border:1px solid #e1e8f6;padding:6px}
+.s-fact .lg2 img{max-height:22px;max-width:100%;object-fit:contain}
+.s-fact .ad{font-size:11px;line-height:1.5}
+.s-fact .ad b{color:var(--navy-d)}
+
+/* ===== LEBAR PENUH: mengikuti ukuran jendela ===== */
+:root{--w:min(2240px,100% - clamp(28px,5.2vw,168px))}
+.lb .im{width:min(1800px,94vw)}
+
+/* ===== FOTO PLANT: tampil utuh (tidak terpotong), sisi diisi latar buram dari foto yang sama ===== */
+.ph.fit.vis{background:#dfe6f4}
+.ph.fit.vis::before{background-size:contain;image-rendering:auto}
+.ph.fit.vis::after{content:"";inset:-6%;padding:0;z-index:0;background:var(--foto) center/cover no-repeat;filter:blur(26px) saturate(1.08)}
+
+/* ===== TEMA: biru donker dan putih ===== */
+.btn.main,nav.main>a.cta{color:#fff;background:linear-gradient(180deg,#2f5391,#162c5c);border-color:rgba(255,255,255,.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 10px 24px rgba(22,44,92,.32)}
+.btn.main:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 14px 30px rgba(22,44,92,.42)}
+
+/* sampul brosur: area foto lebih lebar agar plant terlihat lebih banyak */
+.s-cover .cv-r,.s-cover .cv-st{width:58%}
+.s-cover .cv-l{width:44%}
+
+/* =====================================================================
+   TEMA LEMBUT + LIQUID GLASS (override) — warna, latar hero, kaca, efek
+   ===================================================================== */
+:root{--navy:#233f78;--navy-d:#12264f;--ink:#1e2c4d;--soft:#4a5a7c;--yellow:#bcd6fb;--yellow-d:#7fa6e6;--red:#7db8ee;--blue:#8dbcf0;--blue-ink:#2f5fb0;--line:rgba(60,100,170,.14);--spec:linear-gradient(90deg,#60a5fa,#34d399,#fbbf24,#fb923c,#f472b6)}
+::selection{background:rgba(96,165,250,.3)}
+.latar{background:
+  radial-gradient(60% 50% at 8% 6%,rgba(96,165,250,.3),transparent 70%),
+  radial-gradient(54% 48% at 94% 10%,rgba(244,114,182,.26),transparent 70%),
+  radial-gradient(56% 52% at 88% 94%,rgba(56,189,248,.24),transparent 70%),
+  radial-gradient(50% 46% at 6% 92%,rgba(251,146,60,.22),transparent 70%),
+  linear-gradient(180deg,#f8f9ff,#f6f8ff)}
+h2::after,.st b::after,.pbar{background:var(--spec)}
+.sp{background:var(--spec);box-shadow:0 0 12px rgba(96,165,250,.55)}
+
+/* hero: gradasi lembut menggantikan kotak-kotak */
+.hero-bg{background:#f7f8ff}
+.hero-bg .grid{inset:-18%;background:
+  radial-gradient(32% 38% at 14% 24%,rgba(96,165,250,.55),transparent 70%),
+  radial-gradient(28% 34% at 88% 14%,rgba(244,114,182,.44),transparent 70%),
+  radial-gradient(30% 38% at 78% 84%,rgba(56,189,248,.4),transparent 70%),
+  radial-gradient(28% 34% at 24% 86%,rgba(251,146,60,.42),transparent 70%),
+  radial-gradient(22% 26% at 60% 8%,rgba(248,113,113,.32),transparent 70%),
+  radial-gradient(26% 30% at 92% 54%,rgba(74,222,128,.34),transparent 70%);
+  -webkit-mask:none;mask:none;animation:hmesh 26s ease-in-out infinite alternate;
+  translate:calc(var(--px,0)*-2%) calc(var(--py,0)*-2%);transition:translate 1s var(--e)}
+@keyframes hmesh{to{transform:translate3d(3%,-2%,0) rotate(5deg) scale(1.1)}}
+.orb{filter:blur(70px);opacity:.38}
+.o1{background:#8fdcf0}.o2{background:#ffb27a}.o3{background:#7fe0b8;opacity:.3}
+
+/* panel: dasar pastel dengan bercak warna agar kaca punya sesuatu untuk dibiaskan */
+.panel,.panel.tint,.panel.warm,footer.panel{background-color:#f7f8ff;background-image:
+  radial-gradient(34% 300px at 6% 160px,rgba(255,160,120,.3),transparent),
+  radial-gradient(32% 300px at 94% 330px,rgba(110,200,250,.3),transparent),
+  radial-gradient(34% 320px at 12% 700px,rgba(120,175,255,.32),transparent),
+  radial-gradient(32% 300px at 88% 900px,rgba(255,140,190,.28),transparent),
+  radial-gradient(26% 240px at 52% 1040px,rgba(120,220,190,.26),transparent);
+  background-size:100% 1200px;box-shadow:0 -22px 60px rgba(60,100,170,.12)}
+.panel.tint{background-color:#f3f6ff;background-position:0 -420px}
+.panel.warm{background-color:#fbf8ff;background-position:0 -800px}
+footer.panel{background-position:0 -200px}
+
+/* liquid glass: bening, blur kuat, tanpa kilau (tanpa sorot putih di tepi atas) */
+.glass{background:rgba(255,255,255,.3);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);
+  border:1px solid rgba(255,255,255,.55);box-shadow:0 18px 48px rgba(60,100,170,.14),inset 0 0 0 1px rgba(255,255,255,.12);
+  transition:transform .45s var(--e),box-shadow .45s}
+.glass:not(.bar):hover{transform:translateY(-3px);box-shadow:0 26px 60px rgba(60,100,170,.2),inset 0 0 0 1px rgba(255,255,255,.12)}
+@supports not (backdrop-filter:blur(1px)){.glass{background:rgba(255,255,255,.88)}}
+.bar.glass{background:rgba(255,255,255,.42)}
+.top.sc .bar{box-shadow:0 16px 40px rgba(60,100,170,.22)}
+.up{background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.65);box-shadow:0 12px 30px rgba(60,100,170,.22)}
+.tile{background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);box-shadow:0 12px 30px rgba(60,100,170,.12)}
+.cta-band{background:linear-gradient(135deg,rgba(125,180,255,.32),rgba(150,225,205,.28) 50%,rgba(255,190,160,.3));
+  -webkit-backdrop-filter:blur(24px) saturate(170%);backdrop-filter:blur(24px) saturate(170%);border:1px solid rgba(255,255,255,.6);box-shadow:0 24px 56px rgba(60,100,170,.16)}
+.btn{background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.7);box-shadow:0 8px 22px rgba(60,100,170,.1)}
+.btn:hover{box-shadow:0 14px 30px rgba(60,100,170,.2)}
+.btn.main{background:linear-gradient(135deg,#bcd9ff,#cdeedf 50%,#ffdcc8);border-color:rgba(255,255,255,.75);box-shadow:0 10px 26px rgba(110,150,225,.34)}
+
+/* foto hero: bingkai kaca + melayang pelan */
+.cf{background-clip:padding-box;border:6px solid rgba(255,255,255,.55);box-shadow:0 26px 60px rgba(60,100,170,.24);animation:hflt 8s ease-in-out infinite alternate}
+.cf.f2{animation-duration:9.5s;animation-delay:-3s}
+.cf.f3{animation-duration:11s;animation-delay:-6s}
+@keyframes hflt{to{transform:translateY(-10px) rotate(.5deg)}}
+@media (prefers-reduced-motion:reduce){.hero-bg .grid,.orb,.cf,.ov-b{animation:none!important}}
+
+/* ===== PEMBARUAN ===== */
+:root{--brand:#cc4a07;--brand-d:#b23803;--mc:linear-gradient(90deg,#10224a 0,#2f5391 24%,#f2a30f 50%,#e8590c 74%,#0f9d8a 100%)}
+/* tentang: foto bergulir + rute */
+.about .pic .abv{position:relative;overflow:hidden;isolation:isolate;aspect-ratio:5/4;border-radius:clamp(26px,3vw,48px);border:6px solid rgba(255,255,255,.9);box-shadow:0 30px 70px rgba(16,34,74,.22);background:radial-gradient(120% 90% at 20% 10%,#2f5391,#10224a)}
+.about .pic .abv .ph{aspect-ratio:auto;border:0;border-radius:0;box-shadow:none;background:transparent}
+.route{position:absolute;z-index:3;left:clamp(12px,1.6vw,22px);top:clamp(12px,1.6vw,22px);width:min(64%,340px);padding:.7rem .9rem .6rem;border-radius:20px}
+.route b{display:block;font:700 .92rem/1.2 var(--display);color:var(--navy-d)}
+.route svg{display:block;width:100%;height:auto;margin-top:.2rem;overflow:visible}
+.rt-b{fill:none;stroke:rgba(31,59,112,.22);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.rt-f{fill:none;stroke:var(--brand);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:6 7;animation:rtd 1.1s linear infinite}
+@keyframes rtd{to{stroke-dashoffset:-13}}
+.rt-n{fill:#fff;stroke:var(--navy);stroke-width:2.5}
+.rt-p{fill:var(--brand)}
+.rt-r{fill:none;stroke:var(--brand);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:rtp 2s ease-out infinite}
+@keyframes rtp{from{scale:1;opacity:.9}to{scale:3.4;opacity:0}}
+.rt-t rect,.rt-t path{fill:var(--brand)}.rt-t circle{fill:var(--navy-d)}
+.rt-l{display:flex;justify-content:space-between;margin-top:.15rem;font-size:.7rem;font-weight:600;color:var(--soft)}
+/* alur produksi: tombol gulir foto */
+.pnav{position:absolute;z-index:4;right:clamp(14px,2vw,28px);top:clamp(16px,2.4vw,30px);display:flex;align-items:center;gap:.6rem;padding:.35rem .5rem;border-radius:99px;background:rgba(16,34,74,.62);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.pnav[hidden]{display:none}
+.pnb{display:grid;place-items:center;width:2.4rem;height:2.4rem;padding:0;border:1.5px solid rgba(255,255,255,.7);border-radius:50%;background:var(--brand);color:#fff;cursor:pointer}
+.pnb svg{position:relative;width:1.1rem;height:1.1rem;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.pb-prev svg{rotate:180deg}
+.pdots{display:flex;gap:.35rem}
+.pdots i{width:.5rem;height:.5rem;border-radius:99px;background:rgba(255,255,255,.45);transition:width .3s,background .3s}
+.pdots i.on{width:1.3rem;background:#fff}
+/* mutu: foto + gambaran dashboard ERP */
+.qph{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem}
+.qph .ph{aspect-ratio:4/3;border-radius:16px;box-shadow:0 10px 24px rgba(16,34,74,.15)}
+.qph .ph span{position:absolute;z-index:2;left:.5rem;bottom:.45rem;padding:.2rem .65rem;border-radius:99px;background:rgba(16,34,74,.72);color:#fff;font-size:.74rem;font-weight:600}
+.erp .scr .mk{position:absolute;inset:0;z-index:0;display:grid;grid-template-rows:auto 1fr auto;gap:.6rem;padding:.8rem;background:linear-gradient(160deg,#eef4fe,#dfe9f9);font-size:clamp(.6rem,.9vw,.76rem);color:var(--navy-d)}
+.mk-k{display:grid;grid-template-columns:repeat(3,1fr);gap:.45rem}
+.mk-k div{padding:.5rem .55rem;border-radius:10px;background:#fff;box-shadow:0 2px 8px rgba(16,34,74,.1)}
+.mk-k small{display:block;font-weight:600}
+.mk-k i{display:block;height:5px;margin-top:.4rem;border-radius:9px;background:linear-gradient(90deg,var(--brand) var(--w),#d7e2f5 0)}
+.mk-c{display:flex;align-items:flex-end;gap:.45rem;padding:.6rem .7rem 0;border-radius:10px;background:#fff}
+.mk-c i{flex:1;height:var(--h);border-radius:5px 5px 0 0;background:linear-gradient(180deg,#2f5391,#10224a);transform-origin:50% 100%;animation:mkg 1.2s var(--e) both}
+@keyframes mkg{from{scale:1 0}}
+.mk-p{display:grid;gap:.35rem}
+.mk-p span{display:block;height:7px;border-radius:9px;background:linear-gradient(90deg,#0f9d8a var(--w),#d7e2f5 0)}
+/* klien: foto */
+.cph{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.4vw,22px);margin:clamp(24px,3vw,44px) 0}
+.cph figure{position:relative;margin:0;aspect-ratio:16/10;border-radius:clamp(18px,2vw,30px);overflow:hidden;box-shadow:0 18px 40px rgba(16,34,74,.18)}
+.cph .ph{position:absolute;inset:0}
+.cph figure:hover .ph::before{scale:1.06}
+.cph figcaption{position:absolute;z-index:2;left:.8rem;bottom:.8rem;padding:.35rem .9rem;border-radius:99px;background:rgba(255,255,255,.9);font:600 .88rem var(--body);color:var(--navy-d)}
+@media(max-width:700px){.cph,.qph{grid-template-columns:1fr}.qph .ph{aspect-ratio:16/9}}
+/* brosur & company profile: garis berwarna, logo tanpa lingkaran */
+.sheet,.sheet *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.sx-h{border-bottom:0}.sx-h::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--mc)}
+.sx-f{border-top:0}.sx-f::before{width:100%;top:0;height:3px;background:var(--mc)}
+.sheet h2::after{background:var(--mc)}
+.s-fact .sec::after{width:48px;background:var(--mc)}
+.s-fact .band::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--mc)}
+.s-vm .nl{border-top:3px solid transparent;border-image:var(--mc) 1}
+.cv-st{background:linear-gradient(180deg,#f2a30f,#e8590c 55%,#0f9d8a)}
+.cv-ft{position:relative;border-top:0;padding-top:18px}
+.cv-ft::before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;border-radius:9px;background:linear-gradient(90deg,#ffb347,#ff7a1a 55%,#33c4ad)}
+.cv-logo{background:none;border-radius:0;padding:0;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 10px rgba(255,255,255,.5))}
+.cv-logo img{height:46px;width:auto;max-width:none;flex:none;object-fit:contain}
+.s-fact .band .cv-logo{padding:0;background:none}
+.s-fact .band .cv-logo img{height:52px}
+.s-proc .ln3{grid-template-columns:1fr 1fr}
+/* tombol: warna tegas */
+.btn.main,nav.main>a.cta{color:#fff;background:linear-gradient(180deg,var(--brand),var(--brand-d));border:1px solid rgba(255,255,255,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 10px 24px rgba(178,56,3,.35)}
+.btn.main:hover,nav.main>a.cta:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 14px 30px rgba(178,56,3,.48)}
+.btn:not(.main){color:var(--navy-d);background:#fff;border:1.5px solid var(--navy);box-shadow:0 8px 20px rgba(16,34,74,.12)}
+.ptab,.filt button{border-color:rgba(31,59,112,.4);background:#fff}
+/* tombol: overlay saat diarahkan dan diklik */
+.btn,.ptab,.filt button,.pnb,nav.main>a.cta,.burger{position:relative;overflow:hidden;isolation:isolate;-webkit-tap-highlight-color:transparent}
+.up{isolation:isolate;overflow:hidden}
+.btn::after,.ptab::after,.filt button::after,.pnb::after,nav.main>a.cta::after,.burger::after,.up::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;opacity:0;background:rgba(16,34,74,.09);transition:opacity .2s}
+.btn.main::after,nav.main>a.cta::after,.pnb::after,.ptab[aria-selected=true]::after,.filt button[aria-pressed=true]::after{background:rgba(255,255,255,.2)}
+.btn:hover::after,.ptab:hover::after,.filt button:hover::after,.pnb:hover::after,nav.main>a.cta:hover::after,.burger:hover::after,.up:hover::after,button:focus-visible::after{opacity:1}
+.btn:active::after,.ptab:active::after,.filt button:active::after,.pnb:active::after,nav.main>a.cta:active::after,.burger:active::after,.up:active::after{opacity:1;background:rgba(16,34,74,.24)}
+.btn::before,.ptab::before,.filt button::before,.pnb::before,nav.main>a.cta::before{content:"";position:absolute;left:var(--rx,50%);top:var(--ry,50%);z-index:-1;width:20px;height:20px;margin:-10px;border-radius:50%;pointer-events:none;opacity:0;background:rgba(31,59,112,.28)}
+.btn.main::before,nav.main>a.cta::before,.pnb::before,.ptab[aria-selected=true]::before,.filt button[aria-pressed=true]::before{background:rgba(255,255,255,.5)}
+.rip::before{animation:rip .6s ease-out}
+@keyframes rip{from{opacity:.8;scale:0}to{opacity:0;scale:26}}
 /* =====================================================================
    PENYESUAIAN: galeri bertahap, foto panel peta, kunci scroll menu, tampilan ponsel
    ===================================================================== */
@@ -111,26 +1113,666 @@ html:has(body.menu-open){overflow:hidden}
   .lb .cap{bottom:0;padding:2rem 1rem .8rem;font-size:.9rem;background:linear-gradient(transparent,rgba(10,18,40,.85))}
 }
 
-/* ---------- pratinjau brosur: zoom supaya teks terbaca di ponsel ---------- */
-#bk-pages{width:max-content;min-width:100%}
-.bk-tip{display:flex;align-items:center;justify-content:space-between;gap:.8rem}
-.bk-tip .tp.m,.bk-zoom{display:none}
-@media(max-width:900px){
-  .bk-tip .tp.d{display:none}
-  .bk-tip .tp.m{display:block;line-height:1.35}
-  .bk-zoom{display:flex;flex:none;gap:.35rem}
-  .bk-zoom button{min-width:2.6rem;height:2.6rem;padding:0 .7rem;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--navy);font-weight:600;font-size:1.15rem;line-height:1;cursor:pointer}
-  .bk-zoom button:active{background:var(--navy);color:#fff}
-  .bk-zoom #bk-zv{min-width:3.6rem;font-size:.82rem}
-  .bk-body{-webkit-overflow-scrolling:touch}
-  /* panah pratinjau foto: kontras di atas foto terang */
-  .lb .pv,.lb .nx{background:rgba(10,18,40,.6);color:#fff;border:1px solid rgba(255,255,255,.35)}
-}
 
-/* ---------- hero desktop berlayar pendek: tombol satu baris, tidak menyentuh kartu fakta ---------- */
-@media(min-width:901px) and (max-height:820px){
-  .hero h1{font-size:clamp(3rem,min(6.3vw,10.4vh),8.4rem)}
-  .hero .sub{margin:1.1rem 0 1.5rem}
-  .hero .acts{flex-wrap:nowrap;gap:.6rem}
-  .hero .acts .btn{height:3rem;padding:0 1.1rem;font-size:.94rem;white-space:nowrap}
+/* tentang kami: mosaik foto */
+.mos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:clamp(84px,9vw,130px);gap:clamp(8px,.9vw,14px)}
+.mt{position:relative;margin:0;overflow:hidden;grid-column:span 2;border-radius:clamp(14px,1.6vw,24px);border:4px solid rgba(255,255,255,.92);box-shadow:0 14px 34px rgba(16,34,74,.16)}
+.mt.big{grid-column:span 4;grid-row:span 2}
+.mt .ph{position:absolute;inset:0;aspect-ratio:auto;border:0;border-radius:0;box-shadow:none}
+.mt.erp .ph::before{background-position:left top}
+.mt:hover .ph::before{scale:1.06}
+.mt figcaption{position:absolute;z-index:2;left:8px;bottom:8px;padding:.28rem .7rem;border-radius:99px;font-size:.78rem;font-weight:600;color:var(--navy-d);background:rgba(255,255,255,.9)}
+/* galeri: album per kategori */
+.gal[hidden],.albums[hidden],.albbar[hidden]{display:none}
+.albums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.4vw,22px)}
+.alb{position:relative;aspect-ratio:3/4;border:0;padding:0;overflow:hidden;cursor:pointer;color:#fff;text-align:left;border-radius:clamp(18px,2vw,30px);box-shadow:0 18px 40px rgba(16,34,74,.2);transition:translate .35s,box-shadow .3s}
+.alb:hover{translate:0 -6px;box-shadow:0 28px 54px rgba(16,34,74,.3)}
+.alb .ph{position:absolute;inset:0;aspect-ratio:auto;border:0;border-radius:0;box-shadow:none}
+.alb:hover .ph::before{scale:1.08}
+.alb .at{position:absolute;z-index:2;inset:auto 0 0 0;display:grid;gap:.15rem;padding:3.5rem 1.2rem 1.2rem;background:linear-gradient(180deg,transparent,rgba(12,24,52,.9))}
+.alb b{font-size:1.3rem}.alb small{opacity:.85;font-size:.9rem}
+.albbar{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:1.3rem}
+.albbar b{display:block;font-size:1.4rem;color:var(--navy-d)}.albbar span{color:var(--soft)}
+@media(max-width:900px){.albums{grid-template-columns:repeat(2,minmax(0,1fr))}.alb{aspect-ratio:4/5}}
+@media(max-width:640px){.mt figcaption{font-size:.66rem;padding:.2rem .5rem;left:5px;bottom:5px}.alb b{font-size:1.1rem}}
+</style></head>
+<body>
+
+<!-- Sprite ikon: dipakai ulang di halaman dan brosur -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></symbol>
+<symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21V9l6 4V9l6 4V5h4v16z"/><path d="M7 17h2M12 17h2"/></symbol>
+<symbol id="i-crane" viewBox="0 0 24 24"><path d="M6 21V4l13 4H6M18 8v6"/><path d="M16 14h4v3h-4zM4 21h6"/></symbol>
+<symbol id="i-mountain" viewBox="0 0 24 24"><path d="M2.5 20l6-11 4 6 3-4.5 6 9.5z"/><path d="M8.5 9l2 3"/></symbol>
+<symbol id="i-bridge" viewBox="0 0 24 24"><path d="M2 19h20M5 19v-8M19 19v-8M5 11c2.5 5 11.5 5 14 0M12 15.5V19"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 21l5-3 5 3-1.5-7"/><path d="M9.5 9l1.8 1.8L14.5 7.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.6 0 4.5 2 4.5 5"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.9.7 1.5 1.6 1.5 2.6h4c0-1 .6-1.9 1.5-2.6A6 6 0 0 0 12 3z"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></symbol>
+<symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"/></symbol>
+<symbol id="i-beam" viewBox="0 0 24 24"><path d="M5 4h14M5 20h14M12 4v16"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 16V6h11v10M13 9h4l4 4v3h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M9 16h6"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M4 20h16"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+<symbol id="i-next" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4A4 4 0 1 1 12.6 8 4 4 0 0 1 16 11.4z"/><path d="M17.5 6.5h.01"/></symbol>
+<symbol id="i-in" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+<symbol id="i-yt" viewBox="0 0 24 24"><path d="M22.5 6.4a2.8 2.8 0 0 0-1.9-2C18.9 4 12 4 12 4s-6.9 0-8.6.4a2.8 2.8 0 0 0-1.9 2A29 29 0 0 0 1 11.8a29 29 0 0 0 .5 5.3 2.8 2.8 0 0 0 1.9 1.9c1.7.5 8.6.5 8.6.5s6.9 0 8.6-.5a2.8 2.8 0 0 0 1.9-1.9 29 29 0 0 0 .5-5.3 29 29 0 0 0-.5-5.4z"/><path d="M9.8 15l5.7-3.3L9.8 8.5z"/></symbol>
+</svg>
+
+<div class="latar" aria-hidden="true"></div>
+
+<!-- Pembuka: layar muat bergaya cetak biru, titik las bergerak sebagai progres -->
+<div class="intro" aria-hidden="true">
+  <i class="ld-o o1"></i><i class="ld-o o2"></i><div class="ld-g"></div>
+  <div class="intro-in">
+    <img src="msb-logo.png" alt="" onerror="this.style.display='none'">
+    <div class="ov-t">PT Murinda Sentra Baja</div>
+    <p class="ov-s">Fabrikasi komponen alat berat dan struktur baja</p>
+    <div class="seam"><i></i><u></u></div>
+    <div class="ov-p"><span class="ov-st">Menyiapkan halaman</span><span class="ov-c"><b class="ov-n">0</b>%</span></div>
+  </div>
+  <div class="ld-f">Kalijati, Subang | ISO 9001</div>
+</div>
+
+<header class="top" id="topbar">
+  <div class="bar glass">
+    <a class="logo" href="#beranda" data-go="beranda"><img src="msb-logo.png" alt="PT Murinda Sentra Baja"></a>
+    <nav class="main" aria-label="Menu utama">
+      <div class="dd"><a href="#tentang" data-go="tentang">Perusahaan</a><div class="menu"><a href="#tentang" data-go="tentang">Tentang kami</a><a href="#visi" data-go="visi">Visi, misi, dan nilai</a><a href="#tim" data-go="tim">Tim kunci</a><a href="#klien" data-go="klien">Industri dan klien</a></div></div>
+      <div class="dd"><a href="#layanan" data-go="layanan">Layanan</a><div class="menu"><a href="#svc-fabrikasi" data-go="svc-fabrikasi">Fabrikasi komponen alat berat</a><a href="#svc-struktur" data-go="svc-struktur">Manufaktur struktur baja</a><a href="#svc-permesinan" data-go="svc-permesinan">Pemrosesan material dan permesinan</a><a href="#svc-erp" data-go="svc-erp">ERP dan transparansi real-time</a><a href="#svc-qc" data-go="svc-qc">Inspeksi dan pengendalian mutu</a></div></div>
+      <a href="#proses" data-go="proses">Proses</a><a href="#fasilitas" data-go="fasilitas">Fasilitas</a><a href="#mutu" data-go="mutu">Mutu dan ERP</a><a href="#brosur" data-go="brosur">Brosur</a><a href="#faq" data-go="faq">FAQ</a><a class="cta" href="#kontak" data-go="kontak">Hubungi kami</a>
+    </nav>
+    <button class="burger" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="mnav"><i></i></button>
+  </div>
+</header>
+<div class="mnav" id="mnav">
+  <a href="#tentang" data-go="tentang">Tentang kami</a><a href="#visi" data-go="visi">Visi, misi, dan nilai</a>
+  <a href="#layanan" data-go="layanan">Layanan</a>
+  <a class="sub" href="#svc-fabrikasi" data-go="svc-fabrikasi">Fabrikasi komponen alat berat</a><a class="sub" href="#svc-struktur" data-go="svc-struktur">Manufaktur struktur baja</a><a class="sub" href="#svc-permesinan" data-go="svc-permesinan">Pemrosesan material dan permesinan</a><a class="sub" href="#svc-erp" data-go="svc-erp">ERP dan transparansi real-time</a><a class="sub" href="#svc-qc" data-go="svc-qc">Inspeksi dan pengendalian mutu</a>
+  <a href="#proses" data-go="proses">Proses produksi</a><a href="#fasilitas" data-go="fasilitas">Fasilitas</a><a href="#mutu" data-go="mutu">Mutu dan ERP</a><a href="#klien" data-go="klien">Industri dan klien</a><a href="#tim" data-go="tim">Tim kunci</a><a href="#brosur" data-go="brosur">Brosur dan PDF</a><a href="#faq" data-go="faq">FAQ</a><a href="#kontak" data-go="kontak">Hubungi kami</a>
+</div>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="beranda" data-toc="Beranda">
+  <div class="hero-bg" aria-hidden="true"><i class="grid"></i><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i></div>
+  <div class="hero-in"><div class="wrap hw">
+    <div class="hl">
+      <h1 class="sp-h" id="h1" data-d0=".45">Fabrikasi presisi untuk industri alat berat</h1>
+      <p class="sub hr" style="--d:.95s">PT Murinda Sentra Baja memproduksi komponen alat berat dan struktur baja dengan kualitas tanpa kompromi dari plant terintegrasi di Kalijati, Subang, dan menyerahkannya tepat waktu sesuai target pelanggan.</p>
+      <div class="acts hr" style="--d:1.1s">
+        <a class="btn main" href="#kontak" data-go="kontak">Minta penawaran <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
+        <button class="btn" type="button" data-bk="lengkap"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh company profile</button>
+        <a class="btn" href="#layanan" data-go="layanan">Lihat layanan</a>
+      </div>
+    </div>
+    <div class="collage hcol" id="collage" style="--d:.55s" aria-hidden="true">
+      <div class="cf f1 ss"><div class="ph fit vis on" style="--foto:var(--a-plant)" data-label="Foto plant"></div><div class="ph" style="--foto:var(--s-dump)" data-label="Dump truck"></div><div class="ph" style="--foto:var(--s-komatsu)" data-label="Excavator Komatsu"></div><div class="ph" style="--foto:var(--s-sumitomo)" data-label="Excavator Sumitomo"></div></div>
+      <div class="cf f2 ph" style="--foto:var(--m8)" data-label="Mesin CNC"></div>
+      <div class="cf f3 ph" style="--foto:var(--a-builtup)" data-label="Built-up"></div>
+      <div class="cb glass"><b>ISO</b><div><strong>ISO 9001</strong><span>Sistem manajemen mutu</span></div></div>
+    </div>
+  </div></div>
+  <div class="hero-facts hr" style="--d:1.25s">
+    <div class="glass"><b>ISO 9001</b><span>Sistem manajemen mutu yang diterapkan di seluruh departemen</span></div>
+    <div class="glass"><b>Kalijati, Subang</b><span>Plant terintegrasi, dekat Exit Tol Kalijati</span></div>
+    <div class="glass"><b>ERP buatan sendiri</b><span>Pelacakan produksi dan persetujuan digital real-time</span></div>
+  </div>
+</section>
+
+<div class="stack" id="stack">
+
+<!-- ================= RINGKASAN ================= -->
+<section class="panel" id="ringkasan" data-toc="Ringkasan"><div class="wrap">
+  <p class="scrub" data-scrub>Dari plat baja menjadi komponen yang menggerakkan industri konstruksi, pertambangan, dan infrastruktur, dibuat presisi, teruji, dan tepat waktu.</p>
+  <div class="stats">
+    <div class="st rv" style="--d:0s"><b><small>ISO</small> <span data-count="9001">9001</span></b><h3>Manajemen mutu</h3><p>Diterapkan di seluruh departemen, dari engineering sampai pengiriman.</p></div>
+    <div class="st rv" style="--d:.12s"><b><span data-count="3">3</span></b><h3>Lapis pengujian mutu</h3><p>NDT, inspeksi pengelasan, dan verifikasi ketebalan cat sebelum barang dikirim.</p></div>
+    <div class="st rv" style="--d:.24s"><b><span data-count="2">2</span></b><h3>Lini produksi terpadu</h3><p>Komponen alat berat dan struktur baja built-up, dalam satu plant terintegrasi.</p></div>
+    <div class="st rv" style="--d:.36s"><b><span data-count="4">4</span></b><h3>Klien terkemuka</h3><p>Komatsu, Sumitomo, SANY, dan VR, mitra nasional dan multinasional.</p></div>
+  </div>
+</div></section>
+
+<!-- ================= TENTANG ================= -->
+<section class="panel tint" id="tentang" data-toc="Tentang kami"><div class="wrap about">
+  <div class="pic">
+        <div class="mos" role="group" aria-label="Foto fasilitas, mesin, dan produk PT Murinda Sentra Baja"><figure class="mt big rv z" style="--d:0.05s"><div class="ph" style="--foto:var(--a-plant)" data-label=""></div><figcaption>Plant terintegrasi</figcaption></figure><figure class="mt  rv z" style="--d:0.11s"><div class="ph" style="--foto:var(--p-cw2)" data-label=""></div><figcaption>Counterweight excavator</figcaption></figure><figure class="mt  rv z" style="--d:0.17s"><div class="ph" style="--foto:var(--p-bucket1)" data-label=""></div><figcaption>Bucket excavator</figcaption></figure><figure class="mt  rv z" style="--d:0.23s"><div class="ph fit" style="--foto:var(--p-vessel)" data-label=""></div><figcaption>Komponen dump truck</figcaption></figure><figure class="mt  rv z" style="--d:0.29s"><div class="ph" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (2).jpeg')" data-label=""></div><figcaption>Mesin las SAW</figcaption></figure><figure class="mt  rv z" style="--d:0.35s"><div class="ph" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (3).jpeg')" data-label=""></div><figcaption>Mesin potong CNC</figcaption></figure><figure class="mt  rv z" style="--d:0.41s"><div class="ph" style="--foto:var(--m9)" data-label=""></div><figcaption>Paint booth</figcaption></figure><figure class="mt  rv z" style="--d:0.47s"><div class="ph" style="--foto:url('img/Inspection/UT/UT Inspection (18).jpeg')" data-label=""></div><figcaption>Inspeksi mutu (UT)</figcaption></figure><figure class="mt erp rv z" style="--d:0.53s"><div class="ph" style="--foto:var(--foto-erp)" data-label=""></div><figcaption>ERP pelacakan real-time</figcaption></figure></div>
+    <div class="tag glass rv z" style="--d:.5s"><i><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg></i><div><b>Kalijati, Subang</b><span>Dekat Exit Tol Kalijati</span></div></div>
+  </div>
+  <div class="tx">
+    <h2 class="sp-h">Menjaga kepercayaan setiap mitra bisnis</h2>
+    <p class="lead rv">PT Murinda Sentra Baja adalah kontraktor umum yang mendalami fabrikasi dan manufaktur komponen alat berat, didukung fasilitas plant terintegrasi dan sumber daya manusia yang kompeten.</p>
+    <p class="rv">Fokus kami adalah counterweight excavator, bucket excavator, dan berbagai komponen dump truck. Kapasitas produksi ditunjang mesin las SAW, mesin potong CNC, mesin milling, fasilitas blasting otomatis dan manual, serta paint booth berstandar tinggi.</p>
+    <p class="rv">Kami terus meningkatkan efisiensi operasional melalui ISO 9001, investasi pada kompetensi tim, dan kepatuhan penuh terhadap standar keselamatan kerja.</p>
+    <ul class="checks rv">
+      <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Plant terintegrasi, dari pemotongan sampai pengecatan</li>
+      <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Sistem manajemen mutu ISO 9001</li>
+      <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>ERP buatan sendiri untuk pelacakan real-time</li>
+      <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Kepatuhan penuh pada standar keselamatan kerja</li>
+    </ul>
+    <div class="chips rv" aria-label="Fokus produk"><b>Counterweight excavator</b><b>Bucket excavator</b><b>Komponen dump truck</b><b>Struktur baja built-up</b></div>
+  </div>
+</div></section>
+
+<!-- ================= VISI, MISI, NILAI ================= -->
+<section class="panel" id="visi" data-toc="Visi dan misi"><div class="wrap">
+  <div class="sh"><h2 class="sp-h">Visi, misi, dan nilai kami</h2><p class="lead rv">Arah jangka panjang perusahaan dan prinsip yang kami pegang dalam bekerja setiap hari.</p></div>
+  <div class="vm">
+    <div class="vis rv l"><h3>Visi</h3><p>Menjadi perusahaan manufaktur komponen alat berat dan struktur baja yang unggul dalam kualitas produk, inovasi, dan pelayanan bagi pasar nasional dan internasional.</p></div>
+    <div class="mis">
+      <article class="glass rv r" style="--d:.1s"><i><svg viewBox="0 0 24 24"><use href="#i-target"/></svg></i><div><h3>Solusi tepat waktu</h3><p>Memberikan solusi inovatif, efisien, dan tepat waktu bagi pelanggan di sektor konstruksi, industri, pertambangan, dan infrastruktur.</p></div></article>
+      <article class="glass rv r" style="--d:.2s"><i><svg viewBox="0 0 24 24"><use href="#i-users"/></svg></i><div><h3>Kompetensi dan teknologi</h3><p>Meningkatkan kompetensi sumber daya manusia, teknologi produksi, dan sistem manajemen.</p></div></article>
+      <article class="glass rv r" style="--d:.3s"><i><svg viewBox="0 0 24 24"><use href="#i-globe"/></svg></i><div><h3>Pasar yang lebih luas</h3><p>Memperluas pasar domestik dan internasional melalui inovasi produk dan kemitraan yang saling menguntungkan.</p></div></article>
+    </div>
+  </div>
+  <div class="vals">
+    <div class="val rv" style="--d:0s"><i><svg viewBox="0 0 24 24"><use href="#i-award"/></svg></i><h3>Mutu tanpa kompromi</h3><p>ISO 9001 di seluruh departemen dan pengujian berlapis sebelum barang dikirim.</p></div>
+    <div class="val rv" style="--d:.1s"><i><svg viewBox="0 0 24 24"><use href="#i-clock"/></svg></i><h3>Tepat waktu</h3><p>Perencanaan dan pelacakan produksi real-time lewat ERP agar target pelanggan tercapai.</p></div>
+    <div class="val rv" style="--d:.2s"><i><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></i><h3>Keselamatan kerja</h3><p>Kepatuhan penuh pada standar keselamatan kerja di seluruh area workshop.</p></div>
+    <div class="val rv" style="--d:.3s"><i><svg viewBox="0 0 24 24"><use href="#i-bulb"/></svg></i><h3>Kompetensi dan inovasi</h3><p>Investasi berkelanjutan pada kemampuan tim, teknologi produksi, dan sistem digital sendiri.</p></div>
+  </div>
+</div></section>
+
+<!-- ================= LAYANAN ================= -->
+<section class="panel tint" id="layanan" data-toc="Layanan"><div class="wrap">
+  <div class="sh"><h2 class="sp-h">Layanan dan kapabilitas</h2><p class="lead rv">Layanan fabrikasi dan manufaktur terintegrasi, dari pemrosesan material sampai penyelesaian akhir, dengan pengawasan mutu yang ketat. Arahkan kursor ke tiap panel untuk melihat rinciannya.</p></div>
+  <div class="acc" id="acc">
+    <article class="svc act" id="svc-fabrikasi" tabindex="0" aria-label="Fabrikasi komponen alat berat">
+      <div class="ph vis" style="--foto:var(--foto-layanan-1)" data-label="Foto: komponen alat berat"></div>
+      <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-truck"/></svg></span><h3 class="tt">Fabrikasi komponen alat berat</h3>
+      <div class="dt"><h3>Fabrikasi komponen alat berat</h3><p>Produksi skala besar dan presisi untuk komponen vital: counterweight excavator, bucket excavator, dan suku cadang pendukung dump truck.</p><ul><li>Counterweight excavator</li><li>Bucket excavator</li><li>Komponen dump truck</li></ul></div>
+    </article>
+    <article class="svc" id="svc-struktur" tabindex="0" aria-label="Manufaktur struktur baja">
+      <div class="ph" style="--foto:var(--foto-layanan-2)" data-label="Foto: struktur baja"></div>
+      <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-beam"/></svg></span><h3 class="tt">Manufaktur struktur baja</h3>
+      <div class="dt"><h3>Manufaktur struktur baja</h3><p>Fabrikasi baja struktural berkekuatan tinggi, dirancang sesuai spesifikasi proyek konstruksi, manufaktur industri, pertambangan, dan infrastruktur.</p><ul><li>Profil built-up H-beam</li><li>Baja struktural</li><li>Sesuai spesifikasi proyek</li></ul></div>
+    </article>
+    <article class="svc" id="svc-permesinan" tabindex="0" aria-label="Pemrosesan material dan permesinan">
+      <div class="ph" style="--foto:var(--foto-layanan-3)" data-label="Foto: mesin potong CNC / SAW"></div>
+      <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-gear"/></svg></span><h3 class="tt">Pemrosesan material dan permesinan</h3>
+      <div class="dt"><h3>Pemrosesan material dan permesinan</h3><p>Pemotongan dan pembentukan material tingkat lanjut dengan mesin potong CNC, mesin milling, dan pengelasan SAW (Submerged Arc Welding) untuk akurasi dan ketahanan sambungan.</p><ul><li>Potong CNC</li><li>Milling</li><li>Las SAW</li><li>Roll dan press hidrolik</li></ul></div>
+    </article>
+    <article class="svc" id="svc-erp" tabindex="0" aria-label="ERP terintegrasi dan transparansi real-time">
+      <div class="ph" style="--foto:var(--foto-layanan-4)" data-label="Foto: dashboard MSB ERP System"></div>
+      <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-monitor"/></svg></span><h3 class="tt">ERP dan transparansi real-time</h3>
+      <div class="dt"><h3>ERP terintegrasi dan transparansi real-time</h3><p>Sistem ERP buatan sendiri mengintegrasikan administrasi, persetujuan digital, pelacakan produksi dari bahan mentah sampai barang siap kirim, jadwal pengiriman, dan dokumen pengiriman otomatis.</p><ul><li>Persetujuan digital</li><li>Pelacakan produksi</li><li>Jadwal pengiriman</li></ul></div>
+    </article>
+    <article class="svc" id="svc-qc" tabindex="0" aria-label="Inspeksi dan pengendalian mutu">
+      <div class="ph" style="--foto:var(--foto-layanan-5)" data-label="Foto: inspeksi QC"></div>
+      <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-search"/></svg></span><h3 class="tt">Inspeksi dan pengendalian mutu</h3>
+      <div class="dt"><h3>Inspeksi dan pengendalian mutu</h3><p>Pengujian berlapis: Non-Destructive Testing (NDT), inspeksi pengelasan, dan verifikasi ketebalan cat, diawasi real-time lewat ERP sesuai ISO 9001.</p><ul><li>NDT</li><li>Inspeksi pengelasan</li><li>Ketebalan cat</li></ul></div>
+    </article>
+  </div>
+  <div class="tech rv" aria-label="Fasilitas utama"><b>Mesin las SAW</b><b>Mesin potong CNC</b><b>Mesin milling</b><b>Blasting otomatis</b><b>Blasting manual</b><b>Paint booth</b></div>
+</div></section>
+
+<!-- ================= ALUR PRODUKSI (terkunci saat scroll) ================= -->
+<section class="panel" id="proses" data-toc="Proses"><div class="proc" id="proc" style="--n:6"><div class="pin"><div class="wrap">
+  <div class="pl">
+    <h2 class="sp-h">Alur produksi terintegrasi</h2>
+    <p class="lead rv">Komponen alat berat dikerjakan dalam enam tahap umum, dari pemotongan sampai pemeriksaan akhir. Gulir untuk mengikuti perjalanannya.</p>
+    <div class="ptabs" role="tablist" aria-label="Jalur proses"><button class="ptab" role="tab" data-i="0" aria-selected="true">Komponen alat berat</button><button class="ptab" role="tab" data-i="1" aria-selected="false">Built-up</button></div>
+    <ol class="psteps" id="psteps"></ol>
+  </div>
+  <div class="pr">
+    <div class="pbar"></div>
+    <div id="pshots" aria-hidden="true"></div>
+    <div class="pnav" id="pnav" hidden><button class="pnb pb-prev" type="button" id="pprev" aria-label="Foto sebelumnya"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></button><div class="pdots" id="pdots"></div><button class="pnb" type="button" id="pnext" aria-label="Foto berikutnya"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></button></div>
+    <div class="pcap glass"><span class="big" id="pbig">1</span><div><b id="ptitle">Cutting</b><span id="pdesc"></span></div></div>
+  </div>
+</div></div></div></section>
+
+<!-- ================= FASILITAS ================= -->
+<section class="panel tint" id="fasilitas" data-toc="Fasilitas"><div class="wrap">
+  <div class="sh"><div><h2 class="sp-h">Fasilitas dan mesin produksi</h2></div><div><p class="lead rv">Area kerja dan mesin utama di plant Kalijati, dari pemotongan dan pengelasan sampai penyelesaian akhir. Pilih album, lalu klik foto untuk memperbesar.</p>
+    <div class="filt rv" role="group" aria-label="Saring foto" style="margin-top:1.2rem"><button type="button" aria-pressed="false" data-f="area">Area workshop</button><button type="button" aria-pressed="false" data-f="mesin">Mesin</button><button type="button" aria-pressed="false" data-f="produk">Produk</button><button type="button" aria-pressed="false" data-f="inspeksi">Inspeksi</button></div></div></div>
+    <div class="albums" id="albums"><button type="button" class="alb" data-f="area" aria-label="Buka album Area workshop"><span class="ph" style="--foto:var(--a-plant)"></span><span class="at"><b>Area workshop</b><small></small></span></button><button type="button" class="alb" data-f="mesin" aria-label="Buka album Mesin dan fasilitas"><span class="ph" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (3).jpeg')"></span><span class="at"><b>Mesin dan fasilitas</b><small></small></span></button><button type="button" class="alb" data-f="produk" aria-label="Buka album Produk"><span class="ph" style="--foto:var(--p-cw2)"></span><span class="at"><b>Produk</b><small></small></span></button><button type="button" class="alb" data-f="inspeksi" aria-label="Buka album Inspeksi dan mutu"><span class="ph" style="--foto:url('img/Inspection/UT/UT Inspection (18).jpeg')"></span><span class="at"><b>Inspeksi dan mutu</b><small></small></span></button></div>
+  <div class="albbar" id="albbar" hidden><button type="button" class="btn" id="albback">&larr; Semua album</button><div><b id="albname"></b><span id="albcount"></span></div></div>
+  <div class="gal" id="gal" hidden>
+    <figure class="gt big" tabindex="0" role="button" data-g="area" aria-label="Plant PT Murinda Sentra Baja, tampak dari atas"><div class="ph fit" style="--foto:var(--a-plant)" data-label="MSB_Plant"></div><figcaption>Plant PT Murinda Sentra Baja, tampak dari atas</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Area fabrikasi built-up (profil H-beam)"><div class="ph" style="--foto:var(--a-builtup)" data-label="Area_Fabrikasi_Builtup"></div><figcaption>Area fabrikasi built-up (profil H-beam)</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Area fabrikasi komponen alat berat"><div class="ph" style="--foto:var(--a-komp1)" data-label="Area_Fabrikasi_Komponen_1"></div><figcaption>Area fabrikasi komponen alat berat</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Komponen alat berat setelah proses pengecatan"><div class="ph" style="--foto:var(--a-komp2)" data-label="Area_Fabrikasi_Komponen_2"></div><figcaption>Komponen alat berat setelah proses pengecatan</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Area komponen: plat dan part tersimpan di rak"><div class="ph" style="--foto:var(--a-rak)" data-label="Area_Komponen"></div><figcaption>Area komponen: plat dan part tersimpan di rak</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt wide" tabindex="0" role="button" data-g="area" aria-label="Kompleks workshop dan area sekitar, tampak udara"><div class="ph" style="--foto:url('img/Workshop_Area.png')" data-label="Kompleks workshop dan area sekitar, tampak udara"></div><figcaption>Kompleks workshop dan area sekitar, tampak udara</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Bangunan plant dan area penyimpanan material, tampak udara"><div class="ph" style="--foto:url('img/MSB_Plant.jpg')" data-label="Bangunan plant dan area penyimpanan material, tampak udara"></div><figcaption>Bangunan plant dan area penyimpanan material, tampak udara</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Gedung kantor Murinda"><div class="ph" style="--foto:url('img/Main_Office.jpg')" data-label="Gedung kantor Murinda"></div><figcaption>Gedung kantor Murinda</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin roll dan pelurus"><div class="ph" style="--foto:var(--m1)" data-label="Machine_1"></div><figcaption>Mesin roll dan pelurus</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin press hidrolik Murai"><div class="ph" style="--foto:var(--m2)" data-label="Machine_2"></div><figcaption>Mesin press hidrolik Murai</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin gergaji band Daito"><div class="ph" style="--foto:var(--m3)" data-label="Machine_3"></div><figcaption>Mesin gergaji band Daito</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Pengelasan SAW pada profil H-beam"><div class="ph" style="--foto:var(--m4)" data-label="Machine_4"></div><figcaption>Pengelasan SAW pada profil H-beam</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin las SAW (Submerged Arc Welding)"><div class="ph" style="--foto:var(--m5)" data-label="Machine_5"></div><figcaption>Mesin las SAW (Submerged Arc Welding)</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin perakitan profil H-beam Corimpex"><div class="ph" style="--foto:var(--m6)" data-label="Machine_6"></div><figcaption>Mesin perakitan profil H-beam Corimpex</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong CNC gantri"><div class="ph" style="--foto:var(--m7)" data-label="Machine_7"></div><figcaption>Mesin potong CNC gantri</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong CNC Ficep Gemini HPE"><div class="ph" style="--foto:var(--m8)" data-label="Machine_8"></div><figcaption>Mesin potong CNC Ficep Gemini HPE</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Fasilitas paint booth"><div class="ph" style="--foto:var(--m9)" data-label="Machine_9"></div><figcaption>Fasilitas paint booth</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong gas portabel di atas rel"><div class="ph" style="--foto:var(--m10)" data-label="Machine_10"></div><figcaption>Mesin potong gas portabel di atas rel</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin perakitan profil H-beam dengan rol konveyor"><div class="ph" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (1).jpeg')" data-label="Mesin perakitan profil H-beam dengan rol konveyor"></div><figcaption>Mesin perakitan profil H-beam dengan rol konveyor</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin las SAW untuk profil H-beam"><div class="ph" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (2).jpeg')" data-label="Mesin las SAW untuk profil H-beam"></div><figcaption>Mesin las SAW untuk profil H-beam</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong CNC gantri di area pemotongan plat"><div class="ph" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (3).jpeg')" data-label="Mesin potong CNC gantri di area pemotongan plat"></div><figcaption>Mesin potong CNC gantri di area pemotongan plat</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong CNC gantri bersama operator"><div class="ph" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (4).jpeg')" data-label="Mesin potong CNC gantri bersama operator"></div><figcaption>Mesin potong CNC gantri bersama operator</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong plat multi-torch"><div class="ph" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (5).jpeg')" data-label="Mesin potong plat multi-torch"></div><figcaption>Mesin potong plat multi-torch</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Panel kontrol dan gulungan kawat las SAW"><div class="ph" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (6).jpeg')" data-label="Panel kontrol dan gulungan kawat las SAW"></div><figcaption>Panel kontrol dan gulungan kawat las SAW</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin roll forming"><div class="ph fit" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (7).jpeg')" data-label="Mesin roll forming"></div><figcaption>Mesin roll forming</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Lini mesin roll forming"><div class="ph" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (8).jpeg')" data-label="Lini mesin roll forming"></div><figcaption>Lini mesin roll forming</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin roll forming, tampak dari ujung lini"><div class="ph fit" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (9).jpeg')" data-label="Mesin roll forming, tampak dari ujung lini"></div><figcaption>Mesin roll forming, tampak dari ujung lini</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong plat multi-torch di area pemotongan"><div class="ph" style="--foto:url('img/Fasilitas Mesin/Fasilitas dan Mesin (10).jpeg')" data-label="Mesin potong plat multi-torch di area pemotongan"></div><figcaption>Mesin potong plat multi-torch di area pemotongan</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt big" tabindex="0" role="button" data-g="produk" aria-label="Bucket excavator"><div class="ph" style="--foto:var(--p-bucket1)" data-label="Bucket excavator"></div><figcaption>Bucket excavator</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Bucket excavator, tampak samping"><div class="ph" style="--foto:var(--p-bucket3)" data-label="Bucket excavator, tampak samping"></div><figcaption>Bucket excavator, tampak samping</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight excavator"><div class="ph" style="--foto:var(--p-cw2)" data-label="Counterweight excavator"></div><figcaption>Counterweight excavator</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight excavator, tampak depan"><div class="ph" style="--foto:var(--p-cw5)" data-label="Counterweight excavator, tampak depan"></div><figcaption>Counterweight excavator, tampak depan</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Profil built-up (H-beam)"><div class="ph" style="--foto:var(--p-bu1)" data-label="Profil built-up (H-beam)"></div><figcaption>Profil built-up (H-beam)</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Pemeriksaan profil built-up"><div class="ph" style="--foto:var(--p-bu2)" data-label="Pemeriksaan profil built-up"></div><figcaption>Pemeriksaan profil built-up</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight excavator, tampak miring"><div class="ph" style="--foto:url('img/Product/Counterweight/Counterweight (3).jpeg')" data-label="Counterweight excavator, tampak miring"></div><figcaption>Counterweight excavator, tampak miring</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight excavator dengan titik angkat"><div class="ph" style="--foto:url('img/Product/Counterweight/Counterweight (4).jpeg')" data-label="Counterweight excavator dengan titik angkat"></div><figcaption>Counterweight excavator dengan titik angkat</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Pengiriman counterweight dengan trailer flatbed"><div class="ph" style="--foto:url('img/Proses Fabrikasi/Counterweight/Delivery/Delivery (1).jpeg')" data-label="Pengiriman counterweight dengan trailer flatbed"></div><figcaption>Pengiriman counterweight dengan trailer flatbed</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight dimuat di trailer flatbed, tampak belakang"><div class="ph" style="--foto:url('img/Proses Fabrikasi/Counterweight/Delivery/Delivery (2).jpeg')" data-label="Counterweight dimuat di trailer flatbed, tampak belakang"></div><figcaption>Counterweight dimuat di trailer flatbed, tampak belakang</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Pengiriman counterweight dengan trailer lowbed"><div class="ph" style="--foto:url('img/Proses Fabrikasi/Counterweight/Delivery/Delivery (3).jpeg')" data-label="Pengiriman counterweight dengan trailer lowbed"></div><figcaption>Pengiriman counterweight dengan trailer lowbed</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt wide" tabindex="0" role="button" data-g="produk" aria-label="Vessel dump truck"><div class="ph fit" style="--foto:var(--p-vessel)" data-label="Vessel dump truck"></div><figcaption>Vessel dump truck</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Pengujian ultrasonik (UT) pada sambungan las"><div class="ph" style="--foto:url('img/Inspection/UT/UT Inspection (17).jpeg')" data-label="Pengujian ultrasonik (UT) pada sambungan las"></div><figcaption>Pengujian ultrasonik (UT) pada sambungan las</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Pengujian ultrasonik (UT), inspektur dan perangkat uji"><div class="ph" style="--foto:url('img/Inspection/UT/UT Inspection (18).jpeg')" data-label="Pengujian ultrasonik (UT), inspektur dan perangkat uji"></div><figcaption>Pengujian ultrasonik (UT), inspektur dan perangkat uji</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Inspeksi UT pada area sambungan"><div class="ph" style="--foto:url('img/Inspection/UT/UT Inspection (19).jpeg')" data-label="Inspeksi UT pada area sambungan"></div><figcaption>Inspeksi UT pada area sambungan</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Pembacaan hasil uji ultrasonik (UT)"><div class="ph" style="--foto:url('img/Inspection/UT/UT Inspection (20).jpeg')" data-label="Pembacaan hasil uji ultrasonik (UT)"></div><figcaption>Pembacaan hasil uji ultrasonik (UT)</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Magnetic Particle Inspection (MPI) pada sambungan las"><div class="ph fit" style="--foto:url('img/Inspection/MPI/MPI (1).jpeg')" data-label="Magnetic Particle Inspection (MPI) pada sambungan las"></div><figcaption>Magnetic Particle Inspection (MPI) pada sambungan las</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Pemeriksaan MPI pada permukaan las"><div class="ph fit" style="--foto:url('img/Inspection/MPI/MPI (2).jpeg')" data-label="Pemeriksaan MPI pada permukaan las"></div><figcaption>Pemeriksaan MPI pada permukaan las</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Penetrant Test (PT) pada sambungan las"><div class="ph fit" style="--foto:url('img/Inspection/Penetran/PT.jpeg')" data-label="Penetrant Test (PT) pada sambungan las"></div><figcaption>Penetrant Test (PT) pada sambungan las</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Penetrant Test (PT), area sambungan las"><div class="ph" style="--foto:url('img/Inspection/Penetran/PT (2).jpeg')" data-label="Penetrant Test (PT), area sambungan las"></div><figcaption>Penetrant Test (PT), area sambungan las</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Pengukuran ketebalan cat dengan coating thickness gauge"><div class="ph fit" style="--foto:url('img/Inspection/Painting Inpection/Painting (1).jpeg')" data-label="Pengukuran ketebalan cat dengan coating thickness gauge"></div><figcaption>Pengukuran ketebalan cat dengan coating thickness gauge</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Verifikasi ketebalan cat (DFT)"><div class="ph fit" style="--foto:url('img/Inspection/Painting Inpection/Painting (5).jpeg')" data-label="Verifikasi ketebalan cat (DFT)"></div><figcaption>Verifikasi ketebalan cat (DFT)</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Pemeriksaan dimensi las dengan weld gauge"><div class="ph" style="--foto:url('img/Inspection/Welding/Welding (3).jpeg')" data-label="Pemeriksaan dimensi las dengan weld gauge"></div><figcaption>Pemeriksaan dimensi las dengan weld gauge</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Pengukuran sambungan las dengan weld gauge"><div class="ph" style="--foto:url('img/Inspection/Welding/Welding (4).jpeg')" data-label="Pengukuran sambungan las dengan weld gauge"></div><figcaption>Pengukuran sambungan las dengan weld gauge</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Pemeriksaan tinggi las dengan weld gauge"><div class="ph" style="--foto:url('img/Inspection/Welding/Welding (5).jpeg')" data-label="Pemeriksaan tinggi las dengan weld gauge"></div><figcaption>Pemeriksaan tinggi las dengan weld gauge</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+  </div>
+  <div class="more" id="galmore" hidden><button class="btn" id="galbtn" type="button"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg>Tampilkan lebih banyak (<span id="galleft">0</span>)</button></div>
+</div></section>
+
+<!-- ================= MUTU, K3, ERP ================= -->
+<section class="panel warm" id="mutu" data-toc="Mutu dan ERP"><div class="wrap">
+  <div class="sh"><h2 class="sp-h">Mutu terukur, keselamatan terjaga, produksi terpantau</h2><p class="lead rv">Setiap komponen diperiksa berlapis dan setiap tahap produksi dapat dipantau secara real-time lewat sistem ERP yang kami kembangkan sendiri.</p></div>
+  <div class="qe">
+    <div class="qa">
+      <div class="iso glass rv l"><div class="seal"><div><b>ISO</b>9001</div></div><div><h3>Sistem manajemen mutu ISO 9001</h3><p>Diterapkan di seluruh lini departemen untuk menjaga konsistensi proses, kualitas produk, dan perbaikan berkelanjutan.</p></div></div>
+      <div class="tests">
+        <div class="tst glass rv l" style="--d:.08s"><i><svg viewBox="0 0 24 24"><use href="#i-search"/></svg></i><div><h3>Non-Destructive Testing (NDT)</h3><p>Pemeriksaan kondisi material dan sambungan tanpa merusak komponen.</p></div></div>
+        <div class="tst glass rv l" style="--d:.16s"><i><svg viewBox="0 0 24 24"><use href="#i-flame"/></svg></i><div><h3>Inspeksi pengelasan</h3><p>Verifikasi kualitas sambungan las pada setiap tahap pengerjaan.</p></div></div>
+        <div class="tst glass rv l" style="--d:.24s"><i><svg viewBox="0 0 24 24"><use href="#i-layers"/></svg></i><div><h3>Verifikasi ketebalan cat</h3><p>Pengukuran lapisan cat agar perlindungan permukaan sesuai standar.</p></div></div>
+      </div>
+      <div class="k3 glass rv l" style="--d:.3s"><svg viewBox="0 0 24 24" style="flex:none;width:2rem;height:2rem;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><use href="#i-shield"/></svg><p><b>Keselamatan kerja.</b> Kami menerapkan kepatuhan penuh pada standar keselamatan kerja di seluruh area workshop, dari pemotongan dan pengelasan sampai blasting dan pengecatan.</p></div>
+      <div class="qph rv l" style="--d:.38s"><div class="ph" style="--foto:url('img/Inspection/UT/UT Inspection (18).jpeg')" data-label=""><span>Uji ultrasonik (UT)</span></div><div class="ph" style="--foto:url('img/Inspection/Welding/Welding (3).jpeg')" data-label=""><span>Inspeksi las</span></div><div class="ph" style="--foto:url('img/Inspection/Painting Inpection/Painting (1).jpeg')" data-label=""><span>Ketebalan cat</span></div></div>
+    </div>
+    <div class="erp glass rv r" style="--d:.1s">
+      <div class="bar2"><i></i><i></i><i></i><span>MSB ERP System</span></div>
+      <div class="scr ph wipe" style="--foto:var(--foto-erp);--cr:18px" role="img" aria-label="Dashboard MSB ERP System" data-label=""><div class="mk" aria-hidden="true"><div class="mk-k"><div><small>Produksi</small><i style="--w:78%"></i></div><div><small>Persetujuan</small><i style="--w:62%"></i></div><div><small>Pengiriman</small><i style="--w:88%"></i></div></div><div class="mk-c"><i style="--h:42%"></i><i style="--h:58%"></i><i style="--h:50%"></i><i style="--h:74%"></i><i style="--h:66%"></i><i style="--h:88%"></i><i style="--h:80%"></i></div><div class="mk-p"><span style="--w:82%"></span><span style="--w:64%"></span><span style="--w:91%"></span></div></div></div>
+      <h3 style="margin-top:1.1rem">ERP terintegrasi buatan sendiri</h3>
+      <ul class="ft">
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Administrasi terintegrasi</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Persetujuan digital</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Pelacakan produksi, dari bahan mentah sampai barang siap kirim</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Jadwal dan status pengiriman</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Dokumen pengiriman otomatis</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Pengawasan inspeksi mutu real-time</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- ================= INDUSTRI, KLIEN, KEUNGGULAN ================= -->
+<section class="panel" id="klien" data-toc="Industri dan klien"><div class="wrap">
+  <div class="sh"><h2 class="sp-h">Dipercaya perusahaan terkemuka</h2><p class="lead rv">Mitra manufaktur dan fabrikasi bagi perusahaan nasional dan multinasional di empat sektor utama.</p></div>
+  <div class="inds">
+    <div class="ind glass rv z" style="--d:0s"><i><svg viewBox="0 0 24 24"><use href="#i-crane"/></svg></i><h3>Konstruksi</h3><p>Struktur baja berkekuatan tinggi untuk proyek konstruksi sesuai spesifikasi.</p></div>
+    <div class="ind glass rv z" style="--d:.1s"><i><svg viewBox="0 0 24 24"><use href="#i-factory"/></svg></i><h3>Manufaktur industri</h3><p>Komponen dan struktur baja untuk fasilitas serta lini produksi industri.</p></div>
+    <div class="ind glass rv z" style="--d:.2s"><i><svg viewBox="0 0 24 24"><use href="#i-mountain"/></svg></i><h3>Pertambangan</h3><p>Komponen alat berat yang tangguh untuk kerja berat di lingkungan tambang.</p></div>
+    <div class="ind glass rv z" style="--d:.3s"><i><svg viewBox="0 0 24 24"><use href="#i-bridge"/></svg></i><h3>Infrastruktur</h3><p>Fabrikasi baja struktural untuk pembangunan infrastruktur nasional.</p></div>
+  </div>
+  <div class="cph rv"><figure><div class="ph" style="--foto:var(--s-komatsu)" data-label=""></div><figcaption>Excavator Komatsu</figcaption></figure><figure><div class="ph" style="--foto:var(--s-sumitomo)" data-label=""></div><figcaption>Excavator Sumitomo</figcaption></figure><figure><div class="ph" style="--foto:var(--s-dump)" data-label=""></div><figcaption>Dump truck</figcaption></figure></div>
+  <h3 class="cl-h rv">Klien dan mitra kami</h3>
+  <div class="logos" aria-label="Logo klien"><div class="track" id="track">
+    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
+    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
+    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
+    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
+  </div></div>
+  <h3 class="cl-h rv">Mengapa memilih PT Murinda Sentra Baja</h3>
+  <div class="whys">
+    <div class="why rv" style="--d:0s"><i><svg viewBox="0 0 24 24"><use href="#i-factory"/></svg></i><div><h3>Satu plant terintegrasi</h3><p>Pemotongan, pembentukan, pengelasan, blasting, dan pengecatan dikerjakan di satu lokasi.</p></div></div>
+    <div class="why rv" style="--d:.08s"><i><svg viewBox="0 0 24 24"><use href="#i-monitor"/></svg></i><div><h3>Transparansi real-time</h3><p>Status produksi dan pengiriman dapat dipantau lewat ERP buatan sendiri.</p></div></div>
+    <div class="why rv" style="--d:.16s"><i><svg viewBox="0 0 24 24"><use href="#i-award"/></svg></i><div><h3>Mutu terukur</h3><p>ISO 9001 dan tiga lapis pengujian sebelum barang dikirim.</p></div></div>
+    <div class="why rv" style="--d:.24s"><i><svg viewBox="0 0 24 24"><use href="#i-truck"/></svg></i><div><h3>Akses logistik mudah</h3><p>Plant berada di Kalijati, Subang, dekat Exit Tol Kalijati.</p></div></div>
+    <div class="why rv" style="--d:.32s"><i><svg viewBox="0 0 24 24"><use href="#i-layers"/></svg></i><div><h3>Komponen dan struktur baja</h3><p>Dua lini produk dalam satu pemasok, dari counterweight sampai built-up H-beam.</p></div></div>
+    <div class="why rv" style="--d:.4s"><i><svg viewBox="0 0 24 24"><use href="#i-users"/></svg></i><div><h3>Tim yang kompeten</h3><p>Manajemen, engineering, QC, dan produksi bekerja dalam satu sistem.</p></div></div>
+  </div>
+</div></section>
+
+<!-- ================= TIM ================= -->
+<section class="panel tint" id="tim" data-toc="Tim kunci"><div class="wrap">
+  <div class="sh"><h2 class="sp-h">Manajemen dan tim kunci</h2><p class="lead rv">Jajaran manajemen dan tenaga profesional yang memadukan keahlian strategis, rekayasa teknik, dan pengawasan mutu.</p></div>
+  <div class="team">
+    <article class="tm rv" style="--d:0s"><div class="ph" style="--foto:var(--foto-tim-1)" data-label="SH"><i></i></div><div class="cap glass"><h3>Sofian Halim</h3><p>President Director</p></div></article>
+    <article class="tm rv" style="--d:.08s"><div class="ph" style="--foto:var(--foto-tim-2)" data-label="CS"><i></i></div><div class="cap glass"><h3>Condro Sugihanto</h3><p>Director</p></div></article>
+    <article class="tm rv" style="--d:.16s"><div class="ph" style="--foto:var(--foto-tim-3)" data-label="BK"><i></i></div><div class="cap glass"><h3>Benidiktus Kosim</h3><p>General Manager</p></div></article>
+    <article class="tm rv" style="--d:.24s"><div class="ph" style="--foto:var(--foto-tim-4)" data-label="TK"><i></i></div><div class="cap glass"><h3>Titus Krisna Dwi. L</h3><p>Engineer</p></div></article>
+    <article class="tm rv" style="--d:.32s"><div class="ph" style="--foto:var(--foto-tim-5)" data-label="AW"><i></i></div><div class="cap glass"><h3>ASEW. Widodo</h3><p>QC Manager</p></div></article>
+    <article class="tm rv" style="--d:.4s"><div class="ph" style="--foto:var(--foto-tim-6)" data-label="PS"><i></i></div><div class="cap glass"><h3>Petrus Suhandoyo</h3><p>Production Manager</p></div></article>
+  </div>
+</div></section>
+
+<!-- ================= BROSUR & PDF ================= -->
+<section class="panel warm" id="brosur" data-toc="Brosur"><div class="wrap">
+  <div class="sh"><h2 class="sp-h">Brosur dan company profile PDF</h2><p class="lead rv">Pilih format yang sesuai kebutuhan Anda. Semua dapat dipratinjau langsung, lalu disimpan sebagai PDF atau dicetak.</p></div>
+  <div class="bro">
+    <article class="bc glass rv z" style="--d:0s"><button class="pv" type="button" data-bk="lengkap" aria-label="Pratinjau Company Profile Lengkap" data-pv="lengkap"></button>
+      <h3>Company profile lengkap</h3><p>Profil menyeluruh: sejarah singkat, visi dan misi, layanan, fasilitas, alur produksi, mutu, ERP, tim, klien, dan kontak.</p>
+      
+      <div class="acts"><button class="btn" type="button" data-bk="lengkap"><svg viewBox="0 0 24 24"><use href="#i-eye"/></svg> Pratinjau</button><button class="btn main" type="button" data-bk="lengkap" data-print="1"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh PDF</button></div></article>
+    <article class="bc glass rv z" style="--d:.12s"><button class="pv" type="button" data-bk="ringkas" aria-label="Pratinjau Brosur Ringkas" data-pv="ringkas"></button>
+      <h3>Brosur ringkas</h3><p>Ringkasan perusahaan: tentang kami, layanan, fasilitas, mutu, dan kontak.</p>
+      
+      <div class="acts"><button class="btn" type="button" data-bk="ringkas"><svg viewBox="0 0 24 24"><use href="#i-eye"/></svg> Pratinjau</button><button class="btn main" type="button" data-bk="ringkas" data-print="1"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh PDF</button></div></article>
+    <article class="bc glass rv z" style="--d:.24s"><button class="pv" type="button" data-bk="fakta" aria-label="Pratinjau Lembar Fakta" data-pv="fakta"></button>
+      <h3>Lembar fakta</h3><p>Ringkasan satu lembar: angka kunci, layanan, fasilitas, klien, dan kontak.</p>
+      
+      <div class="acts"><button class="btn" type="button" data-bk="fakta"><svg viewBox="0 0 24 24"><use href="#i-eye"/></svg> Pratinjau</button><button class="btn main" type="button" data-bk="fakta" data-print="1"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh PDF</button></div></article>
+  </div>
+  <p class="bhint rv">Cara menyimpan PDF: klik <b>Unduh PDF</b>, lalu pada jendela cetak pilih tujuan <b>Simpan sebagai PDF</b>. Orientasi dan ukuran kertas sudah diatur otomatis (A4 lanskap, tanpa margin). Aktifkan opsi grafik latar belakang bila tersedia.</p>
+</div></section>
+
+<!-- ================= FAQ ================= -->
+<section class="panel" id="faq" data-toc="FAQ"><div class="wrap faqw">
+  <div class="fl">
+    <h2 class="sp-h">Pertanyaan yang sering diajukan</h2>
+    <p class="lead rv">Jawaban singkat seputar produk, mutu, dan cara bekerja sama.</p>
+    <div class="help glass rv"><h3>Belum menemukan jawabannya?</h3><p>Tim kami siap membantu menjawab kebutuhan spesifik proyek Anda.</p><a class="btn main" href="#kontak" data-go="kontak">Hubungi kami <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a></div>
+  </div>
+  <div class="faq">
+    <details class="glass rv" name="faq" open><summary>Produk apa saja yang dibuat PT Murinda Sentra Baja?</summary><p>Fokus kami adalah counterweight excavator, bucket excavator, dan berbagai komponen dump truck, ditambah fabrikasi baja struktural untuk proyek konstruksi, industri, pertambangan, dan infrastruktur.</p></details>
+    <details class="glass rv" name="faq"><summary>Apakah perusahaan menerapkan sistem manajemen mutu?</summary><p>Ya. Kami menerapkan Sistem Manajemen Mutu ISO 9001 di seluruh lini departemen, dan proses inspeksi diawasi real-time lewat ERP terintegrasi.</p></details>
+    <details class="glass rv" name="faq"><summary>Pengujian apa saja yang dilakukan sebelum barang dikirim?</summary><p>Pengujian berlapis yang mencakup Non-Destructive Testing (NDT), inspeksi pengelasan, dan verifikasi ketebalan cat.</p></details>
+    <details class="glass rv" name="faq"><summary>Bisakah pelanggan memantau status produksi dan pengiriman?</summary><p>Setiap tahap, dari penerimaan material mentah sampai barang jadi, dapat dipantau lewat ERP kami. Jadwal dan status pengiriman juga tersedia, lengkap dengan dokumen pengiriman otomatis.</p></details>
+    <details class="glass rv" name="faq"><summary>Mesin dan fasilitas apa yang dimiliki plant?</summary><p>Mesin las SAW, mesin potong CNC, mesin milling, mesin roll dan pelurus, press hidrolik, gergaji band, fasilitas blasting otomatis dan manual, serta paint booth berstandar tinggi.</p></details>
+    <details class="glass rv" name="faq"><summary>Di mana lokasi plant dan kantor pusat?</summary><p>Plant dan workshop berada di Jl. Raya Kalijati Purwadadi No. 123A, Desa Kalijati Barat, Kecamatan Kalijati, Kabupaten Subang, dekat Exit Tol Kalijati. Kantor pusat berada di 15 Fl, Permata Kuningan Building, Jalan Kuningan Mulia Kav. 9C, Jakarta 12980.</p></details>
+    <details class="glass rv" name="faq"><summary>Bagaimana cara meminta penawaran atau kunjungan ke plant?</summary><p>Hubungi tim kami lewat plant@murinda.com atau telepon workshop di (+62260) 7495467. Anda juga dapat mengisi formulir pada bagian Hubungi kami di halaman ini.</p></details>
+    <details class="glass rv" name="faq"><summary>Apakah tersedia company profile dalam bentuk PDF?</summary><p>Tersedia. Pada bagian Brosur di halaman ini, pilih company profile lengkap, brosur ringkas, atau lembar fakta, lalu simpan sebagai PDF berukuran A4 lanskap.</p></details>
+  </div>
+</div></section>
+
+<!-- ================= KONTAK ================= -->
+<section class="panel tint" id="kontak" data-toc="Kontak"><div class="wrap">
+  <div class="sh"><h2 class="sp-h">Hubungi kami</h2><p class="lead rv">Diskusikan kebutuhan fabrikasi, minta penawaran harga, atau jadwalkan kunjungan ke plant kami.</p></div>
+  <div class="ct">
+    <div class="cc glass rv" style="--d:0s"><span class="pin2"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg></span><h3>Head office</h3>
+      <p>15 Fl, Permata Kuningan Building, Jalan Kuningan Mulia Kav. 9C, Jakarta 12980</p>
+      <dl><dt>Telepon</dt><dd><a href="tel:+622128546000">(+6221) 28546000</a></dd><dt>Faks</dt><dd>(+6221) 28546001/11</dd><dt>Email</dt><dd><a href="mailto:murinda@murinda.com">murinda@murinda.com</a></dd></dl></div>
+    <div class="cc glass rv" style="--d:.1s"><span class="pin2"><svg viewBox="0 0 24 24"><use href="#i-factory"/></svg></span><h3>Workshop</h3>
+      <p>Jl. Raya Kalijati Purwadadi No. 123A RT 006/02, Desa Kalijati Barat, Kecamatan Kalijati, Kabupaten Subang, Jawa Barat 41271 (Exit Tol Kalijati)</p>
+      <dl><dt>Telepon</dt><dd><a href="tel:+622607495467">(+62260) 7495467</a></dd><dt>Faks</dt><dd>(+62260) 7495222</dd><dt>Email</dt><dd><a href="mailto:plant@murinda.com">plant@murinda.com</a></dd><dt>Web</dt><dd><a href="https://www.murinda.com">www.murinda.com</a></dd></dl></div>
+    <form class="cc fm-c glass rv" style="--d:.2s" id="kform" novalidate>
+      <h3>Kirim permintaan</h3>
+      <div class="fm">
+        <label>Nama<input name="nama" autocomplete="name" required></label>
+        <label>Perusahaan<input name="pt" autocomplete="organization"></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Telepon<input name="tel" type="tel" autocomplete="tel"></label>
+        <label class="full">Kebutuhan<select name="butuh"><option>Penawaran fabrikasi komponen alat berat</option><option>Penawaran manufaktur struktur baja</option><option>Pemrosesan material dan permesinan</option><option>Kunjungan ke plant</option><option>Lainnya</option></select></label>
+        <label class="full">Pesan<textarea name="pesan" placeholder="Jelaskan jenis komponen, jumlah, dan target waktu"></textarea></label>
+        <button class="btn main" type="submit">Kirim lewat email <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></button>
+        <span class="note" id="knote">Tombol ini membuka aplikasi email Anda dengan pesan yang sudah terisi.</span>
+      </div>
+    </form>
+  </div>
+  <div class="peta glass rv" id="peta">
+    <div class="peta-info"><div class="peta-foto ph" style="--foto:url('img/Workshop_Area.png')" data-label="" role="img" aria-label="Kompleks workshop PT Murinda Sentra Baja, tampak udara"></div><h3>Lokasi workshop</h3>
+      <p>Jl. Raya Kalijati Purwadadi No. 123A, Desa Kalijati Barat, Kecamatan Kalijati, Kabupaten Subang, dekat Exit Tol Kalijati.</p>
+      <div class="peta-aksi"><a class="btn main" href="https://maps.app.goo.gl/EFvfPU5Rg32WHPD38" target="_blank" rel="noopener">Buka di Google Maps</a><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=-6.515575230426579,107.6708332083749" target="_blank" rel="noopener">Petunjuk arah</a></div></div>
+    <iframe title="Peta lokasi workshop PT Murinda Sentra Baja, Kalijati, Subang" src="https://maps.google.com/maps?q=-6.515575230426579,107.6708332083749&amp;z=16&amp;hl=id&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  </div>
+</div></section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="panel" id="footer"><div class="wrap">
+  <div class="cta-band rv">
+    <div><h2>Siap mewujudkan komponen Anda?</h2><p>Ceritakan kebutuhan fabrikasi Anda. Tim kami akan menanggapi dengan penawaran dan jadwal produksi yang jelas.</p></div>
+    <div class="acts"><a class="btn main" href="#kontak" data-go="kontak">Minta penawaran <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a><button class="btn" type="button" data-bk="lengkap"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh company profile</button></div>
+  </div>
+  <div class="fcols">
+    <div><img src="msb-logo.png" alt="PT Murinda Sentra Baja"><p>Fabrikasi dan manufaktur komponen alat berat dan struktur baja, dari plant terintegrasi di Kalijati, Subang.</p><div class="sosial" id="sosial"></div></div>
+    <div><h4>Perusahaan</h4><ul><li><a href="#tentang" data-go="tentang">Tentang kami</a></li><li><a href="#visi" data-go="visi">Visi, misi, dan nilai</a></li><li><a href="#tim" data-go="tim">Tim kunci</a></li><li><a href="#klien" data-go="klien">Industri dan klien</a></li><li><a href="#faq" data-go="faq">FAQ</a></li></ul></div>
+    <div><h4>Layanan</h4><ul><li><a href="#svc-fabrikasi" data-go="svc-fabrikasi">Fabrikasi komponen alat berat</a></li><li><a href="#svc-struktur" data-go="svc-struktur">Manufaktur struktur baja</a></li><li><a href="#svc-permesinan" data-go="svc-permesinan">Pemrosesan material</a></li><li><a href="#proses" data-go="proses">Alur produksi</a></li><li><a href="#brosur" data-go="brosur">Brosur dan PDF</a></li></ul></div>
+    <div><h4>Kontak</h4><ul><li><a href="mailto:murinda@murinda.com">murinda@murinda.com</a></li><li><a href="mailto:plant@murinda.com">plant@murinda.com</a></li><li><a href="tel:+622128546000">(+6221) 28546000</a></li><li><a href="tel:+622607495467">Workshop (+62260) 7495467</a></li><li><a href="https://www.murinda.com">www.murinda.com</a></li></ul></div>
+  </div>
+  <div class="fbot"><span>&copy; <span id="yr">2026</span> PT Murinda Sentra Baja. Seluruh hak dilindungi.</span><span>Fabrikasi dan manufaktur komponen alat berat</span></div>
+</div></footer>
+
+</div><!-- /stack -->
+</main>
+
+<aside class="toc glass" id="toc" aria-label="Daftar isi"></aside>
+
+<!-- Pratinjau galeri -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Pratinjau foto">
+  <div class="im"><div class="ph vis fit" id="lbph" data-label="Foto belum tersedia"></div><div class="cap" id="lbcap"></div></div>
+  <button class="x" type="button" aria-label="Tutup"><svg viewBox="0 0 24 24"><use href="#i-x"/></svg></button>
+  <button class="pv" type="button" aria-label="Foto sebelumnya"><svg viewBox="0 0 24 24"><use href="#i-prev"/></svg></button>
+  <button class="nx" type="button" aria-label="Foto berikutnya"><svg viewBox="0 0 24 24"><use href="#i-next"/></svg></button>
+</div>
+
+<!-- Pratinjau brosur dan sumber cetak PDF -->
+<div id="bk" role="dialog" aria-modal="true" aria-label="Pratinjau brosur" aria-hidden="true">
+  <div class="bk-bar">
+    <h3>Pratinjau brosur</h3>
+    <div class="bk-tabs" role="group" aria-label="Pilih format"><button type="button" data-bk-tab="lengkap" aria-pressed="true">Company profile lengkap</button><button type="button" data-bk-tab="ringkas" aria-pressed="false">Brosur ringkas</button><button type="button" data-bk-tab="fakta" aria-pressed="false">Lembar fakta</button></div>
+    <button class="btn main" type="button" id="bk-print"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh PDF</button>
+    <button class="btn x" type="button" id="bk-close" aria-label="Tutup pratinjau"><svg viewBox="0 0 24 24"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="bk-tip">Pada jendela cetak, pilih tujuan <b>Simpan sebagai PDF</b>. Ukuran A4 lanskap dan tanpa margin sudah diatur otomatis.</div>
+  <div class="bk-body" id="bk-body"><div id="bk-pages"></div></div>
+</div>
+<script>
+(()=>{
+'use strict';
+const D=document,H=D.documentElement,B=D.body,$=(s,c=D)=>c.querySelector(s),$$=(s,c=D)=>[...c.querySelectorAll(s)],cl=(v,a,b)=>Math.min(b,Math.max(a,v)),RM=H.classList.contains('rm');
+const stack=$('#stack'),panels=$$('.panel',stack),hero=$('#beranda'),secs=$$('[data-toc]'),tx=(s,c)=>$(s,c).textContent.trim();
+let stk=false,tk=0,ca=-1,cs=-1;
+
+/* foto depan acak: tiap kali dibuka, 3 foto hero diundi dari foto area dan mesin */
+{const A=[['--a-plant','Foto plant'],['--a-builtup','Area built-up'],['--a-komp1','Komponen alat berat'],['--a-komp2','Fabrikasi komponen'],['--a-rak','Area komponen']],
+M=[...Array(10)].map((_,i)=>['--m'+(i+1),'Mesin '+(i+1)]),
+sh=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a},
+a=sh(A.slice()),r=sh(a.slice(1).concat(M)),pick=[a[0],r[0],r[1]];
+$$('.cf',$('#collage')).forEach((el,i)=>{el.style.setProperty('--foto','var('+pick[i][0]+')');el.dataset.label=pick[i][1]})}
+
+/* foto dimuat saat mendekati layar */
+const pio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');pio.unobserve(e.target)}}),{rootMargin:'900px 0px'});
+$$('.ph').filter(e=>!e.closest('.ss')).forEach(e=>pio.observe(e));
+
+/* judul per kata + animasi muncul saat scroll */
+$$('.sp-h').forEach(h=>{const t=h.textContent.trim().split(/\s+/);h.setAttribute('aria-label',t.join(' '));h.innerHTML=t.map((w,i)=>`<span class="w" aria-hidden="true"><i style="--i:${i}">${w}</i></span>`).join(' ');if(h.dataset.d0)h.style.setProperty('--d0',h.dataset.d0+'s')});
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');rio.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+$$('.rv,.wipe,.sp-h').forEach(e=>{if(!hero.contains(e))rio.observe(e)});
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);if(RM)return;const el=e.target,v=+el.dataset.count,t0=performance.now();(function f(t){const p=cl((t-t0)/1600,0,1);el.textContent=Math.round(v*(1-(1-p)**3));if(p<1)requestAnimationFrame(f)})(t0)}),{threshold:.6});
+$$('[data-count]').forEach(e=>cio.observe(e));
+const scb=$('[data-scrub]');let wds=[];
+if(scb){scb.innerHTML=scb.textContent.trim().split(/\s+/).map(w=>`<span class="wd">${w}</span>`).join('');wds=$$('.wd',scb)}
+
+/* elemen tetap: progres baca, tombol ke atas, daftar isi */
+const spb=D.createElement('div');spb.className='sp';B.append(spb);
+const up=D.createElement('button');up.className='up';up.type='button';up.setAttribute('aria-label','Kembali ke atas');up.innerHTML='<svg viewBox="0 0 24 24"><use href="#i-up"/></svg>';up.onclick=()=>scrollTo({top:0,behavior:RM?'auto':'smooth'});B.append(up);
+$('#toc').innerHTML=secs.map(s=>`<a href="#${s.id}" data-go="${s.id}"><i></i><span>${s.dataset.toc}</span></a>`).join('');
+$('#yr').textContent=new Date().getFullYear();
+
+/* panel saling menimpa: tiap panel menempel di dasar layar lalu ditimpa panel berikutnya */
+function lay(){const s=innerWidth>900&&!RM;stk=s;stack.classList.toggle('stk',s);panels.forEach(p=>{p.style.top=s?Math.min(0,innerHeight-p.offsetHeight)+'px':''})}
+const nat=p=>{let y=stack.getBoundingClientRect().top+scrollY;for(const q of panels){if(q===p)break;y+=q.offsetHeight}return y};
+function go(id){const t=D.getElementById(id);if(!t)return;if(id==='beranda')return scrollTo({top:0,behavior:RM?'auto':'smooth'});
+  if(t.classList.contains('svc'))act(t);
+  const p=t.closest('.panel'),y=nat(p)+(t===p?0:t.getBoundingClientRect().top-p.getBoundingClientRect().top)-(t===p?0:96);
+  scrollTo({top:y,behavior:RM?'auto':'smooth'})}
+
+/* alur produksi terkunci */
+const TRK=[
+{tab:'Komponen alat berat',lead:'Komponen alat berat dikerjakan dalam enam tahap umum, dari pemotongan sampai pemeriksaan akhir. Gulir untuk mengikuti perjalanannya.',s:[
+['Pemotongan','Plat dan profil dipotong akurat sesuai gambar kerja dengan mesin potong CNC.','Pemotongan akurat dengan mesin potong CNC.',['m8','m7','m10']],
+['Pemesinan','Komponen dibentuk dan dilubangi sesuai posisi dan ukuran pada gambar kerja.','Pemesinan sesuai gambar kerja.',['a-komp1']],
+['Perakitan','Part disusun dan dirakit di area fabrikasi sesuai dimensi.','Perakitan part di area fabrikasi.',['P:Assembly/Assembly (2).jpeg','P:Assembly/Assembly (1).jpeg']],
+['Pengelasan','Sambungan dilas untuk membentuk komponen yang kuat dan rapi.','Pengelasan sambungan komponen.',['P:Welding/Welding Proses (5).jpeg','P:Welding/Welding Proses (4).jpeg','P:Welding/Welding Proses (1).jpeg','P:Welding/Welding Proses (2).jpeg','P:Welding/Welding Proses (3).jpeg']],
+['Pengecatan','Permukaan dicat di paint booth berstandar tinggi.','Pengecatan di paint booth.',['P:Painting/Painting.jpeg']],
+['Pemeriksaan akhir','Komponen diperiksa menyeluruh sebelum dikirim sesuai target pelanggan.','Pemeriksaan akhir sebelum pengiriman.',['I:UT/UT Inspection (18).jpeg','I:Welding/Welding (3).jpeg','I:Painting Inpection/Painting (5).jpeg','D:Delivery (3).jpeg']]]},
+{tab:'Built-up',lead:'Profil built-up dikerjakan dalam empat tahap umum, dari penyiapan plat sampai penyelesaian akhir.',s:[
+['Penyiapan plat','Plat web dan flange dipotong dan disiapkan sesuai dimensi profil.','Penyiapan plat web dan flange.',['m7','m10','m1']],
+['Perakitan profil','Web dan flange dirakit menjadi profil H-beam.','Perakitan profil H-beam.',['m6']],
+['Pengelasan','Sambungan web dan flange dilas agar kuat dan konsisten.','Pengelasan profil built-up.',['m4','m5']],
+['Penyelesaian','Profil built-up diselesaikan dan dirapikan sebelum dikirim.','Penyelesaian akhir profil built-up.',['B:Builtup (1).jpeg','B:Builtup (2).jpeg']]]}];
+const PF=u=>{const m=u.match(/^([PBID]):(.*)$/);if(!m)return `var(--${u})`;const d={P:'img/Proses Fabrikasi/Counterweight/',B:'img/Product/Built-Up/',I:'img/Inspection/',D:'img/Proses Fabrikasi/Counterweight/Delivery/'}[m[1]];return `url('${d}${m[2]}')`};
+let cyt,pci=0,pnear=false;
+function pset(n){const sh=shots[pcur];if(!sh)return;const ps=$$('.ph',sh);if(!ps.length)return;pci=(n+ps.length)%ps.length;ps.forEach((q,i)=>q.classList.toggle('on',i===pci));$('#pnav').hidden=ps.length<2;$('#pdots').innerHTML=ps.map((_,i)=>`<i${i===pci?' class="on"':''}></i>`).join('')}
+function ptick(){clearInterval(cyt);const sh=shots[pcur];if(!sh||RM||$$('.ph',sh).length<2)return;cyt=setInterval(()=>pset(pci+1),4200)}
+function cyc(){pset(0);ptick()}
+const pc=$('#proc');let steps=[],shots=[],pcur=-1,ti=0;
+const goStep=i=>innerWidth<=900?setStep(i):scrollTo({top:pc.getBoundingClientRect().top+scrollY+(i+.5)/steps.length*(pc.offsetHeight-innerHeight),behavior:RM?'auto':'smooth'});
+function buildProc(i){ti=i;const T=TRK[i];
+  $('#psteps').innerHTML=T.s.map((x,j)=>`<li class="pstep${j?'':' act'}" data-cap="${x[2]}"><span class="num">${j+1}</span><h3>${x[0]}</h3><p>${x[1]}</p></li>`).join('');
+  $('#pshots').innerHTML=T.s.map((x,j)=>`<div class="pshot${j?'':' act'}">${x[3].map((u,k)=>`<div class="ph${k?'':' on'}" style="--foto:${PF(u)}" data-label="${x[0]}"></div>`).join('')}</div>`).join('');
+  $$('.ptab',pc).forEach((b,k)=>b.setAttribute('aria-selected',k===i));
+  $('.lead',pc).textContent=T.lead;
+  steps=$$('.pstep',pc);shots=$$('.pshot',pc);pcur=-1;
+  steps.forEach((s,j)=>s.addEventListener('click',()=>goStep(j)))}
+buildProc(0);
+$('#pprev').addEventListener('click',()=>{pset(pci-1);ptick()});$('#pnext').addEventListener('click',()=>{pset(pci+1);ptick()});
+$$('.ss').forEach(el=>{const ps=$$('.ph',el);if(ps.length<2||RM)return;let i=0;const ld=n=>ps[n%ps.length].classList.add('vis');addEventListener('load',()=>ld(1));setInterval(()=>{ps[i].classList.remove('on');i=(i+1)%ps.length;ps[i].classList.add('on');ld(i+1)},4500)});
+$$('.ptab',pc).forEach(b=>b.addEventListener('click',()=>{const i=+b.dataset.i;if(i===ti)return;buildProc(i);
+  if(innerWidth>900&&pc.getBoundingClientRect().top<0)scrollTo({top:pc.getBoundingClientRect().top+scrollY,behavior:'auto'});on()}));
+
+const pld=k=>{if(!pnear)return;[k,k+1].forEach(i=>shots[i]&&$$('.ph',shots[i]).forEach(p=>p.classList.add('vis')))};
+function setStep(k){pcur=k;steps.forEach((s,i)=>s.classList.toggle('act',i===k));shots.forEach((s,i)=>s.classList.toggle('act',i===k));$('#pbig').textContent=k+1;$('#ptitle').textContent=tx('h3',steps[k]);$('#pdesc').textContent=steps[k].dataset.cap||'';pld(k);cyc()}
+new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){pnear=true;pld(Math.max(pcur,0))}},{rootMargin:'1400px 0px'}).observe(pc);
+function upd(){tk=0;const y=scrollY,vh=innerHeight;
+  $('#topbar').classList.toggle('sc',y>40);
+  spb.style.transform=`scaleX(${cl(y/Math.max(1,H.scrollHeight-vh),0,1)})`;up.classList.toggle('on',y>vh);
+  hero.style.setProperty('--hp',cl(y/(vh*.9),0,1).toFixed(3));
+  if(scb&&!RM){const r=scb.getBoundingClientRect(),p=cl((vh*.85-r.top)/(vh*.5+r.height),0,1)*1.15;wds.forEach((w,i)=>{w.style.opacity=i/wds.length<p?1:.16})}
+  panels.forEach((p,i)=>{const n=panels[i+1];p.style.setProperty('--cv',stk&&n?cl(1-n.getBoundingClientRect().top/vh,0,1).toFixed(3):0)});
+  const r=pc.getBoundingClientRect(),pp=cl(-r.top/Math.max(1,r.height-vh),0,1),k=Math.min(steps.length-1,Math.floor(pp*steps.length));
+  $('.pr',pc).style.setProperty('--pp',pp.toFixed(3));
+  const k2=innerWidth>900?k:(pcur<0?0:pcur);if(innerWidth<=900)$('.pr',pc).style.setProperty('--pp',((k2+1)/steps.length).toFixed(3));if(k2!==pcur)setStep(k2);
+  let a=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<vh*.45)a=i});
+  if(a!==ca){ca=a;$$('#toc a').forEach((x,i)=>x.classList.toggle('on',i===a));const id=secs[a].id,m={visi:'tentang',tim:'tentang',klien:'tentang'}[id]||id;$$('nav.main a').forEach(x=>x.classList.toggle('cur',x.dataset.go===m&&!x.closest('.menu')))}
 }
+const on=()=>{tk||(tk=requestAnimationFrame(upd))};
+hero.addEventListener('pointermove',e=>{hero.style.setProperty('--px',((e.clientX/innerWidth-.5)*2).toFixed(3));hero.style.setProperty('--py',((e.clientY/innerHeight-.5)*2).toFixed(3))});
+
+/* menu seluler */
+$('.burger').onclick=()=>{const o=B.classList.toggle('menu-open');$('.burger').setAttribute('aria-expanded',o)};
+
+/* layanan: panel akordeon */
+const svcs=$$('.svc'),act=s=>svcs.forEach(x=>x.classList.toggle('act',x===s));
+svcs.forEach(s=>{s.addEventListener('mouseenter',()=>innerWidth>900&&act(s));s.addEventListener('focus',()=>act(s));s.addEventListener('click',()=>act(s))});
+
+/* galeri: filter, halaman bertahap, dan pratinjau */
+const lb=$('#lb'),figs=$$('.gt'),more=$('#galmore'),gl=$('#galleft'),FG=v=>figs.find(f=>$('.ph',f).getAttribute('style').includes('var(--'+v+')'));
+let vl=[],li=0,gf=null,gn=0;
+const gc=()=>innerWidth<=900?2:innerWidth<=1280?3:4,
+ga=g=>g.classList.contains('big')?(gc()===2?2:4):g.classList.contains('wide')?2:1,
+gp=()=>gc()===4?16:12;
+const AL={area:'Area workshop',mesin:'Mesin dan fasilitas',produk:'Produk',inspeksi:'Inspeksi dan mutu'};
+function albUi(){const o=gf!==null;$('#albums').hidden=o;$('#gal').hidden=!o;$('#albbar').hidden=!o;$$('.filt button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.f===gf));if(o){$('#albname').textContent=AL[gf];$('#albcount').textContent=figs.filter(g=>g.dataset.g===gf).length+' foto'}}
+function galShow(reset){const c=gc(),m=figs.filter(g=>g.dataset.g===gf);if(reset)gn=gp();albUi();
+  let k=Math.min(gn,m.length),a=0;for(let i=0;i<k;i++)a+=ga(m[i]);
+  while(k<m.length&&k>c&&a%c){k--;a-=ga(m[k])}
+  vl=m;
+  figs.forEach(g=>{const i=m.indexOf(g);if(i>-1&&i<k){if(g.hidden){g.hidden=false;g.classList.add('out');requestAnimationFrame(()=>requestAnimationFrame(()=>g.classList.remove('out')))}}else g.hidden=true});
+  const left=m.length-k;more.hidden=left<=0;gl.textContent=left}
+const openAl=f=>{gf=f;galShow(true);$('#fasilitas .sh').scrollIntoView({behavior:'smooth'})};
+$$('.filt button').forEach(b=>b.addEventListener('click',()=>openAl(b.dataset.f)));
+$$('.alb').forEach(b=>{b.addEventListener('click',()=>openAl(b.dataset.f));$('small',b).textContent=figs.filter(g=>g.dataset.g===b.dataset.f).length+' foto'});
+$('#albback').addEventListener('click',()=>{gf=null;galShow(true);$('#fasilitas .sh').scrollIntoView({behavior:'smooth'})});
+$('#galbtn').addEventListener('click',()=>{gn+=gp();galShow(false)});
+const show=()=>{const f=vl[li];$('#lbph').style.setProperty('--foto',getComputedStyle($('.ph',f)).getPropertyValue('--foto'));$('#lbcap').textContent=tx('figcaption',f)};
+const openLb=f=>{li=vl.indexOf(f);show();lb.classList.add('open')};
+const step=d=>{li=(li+d+vl.length)%vl.length;show()};
+figs.forEach(f=>{f.onclick=()=>openLb(f);f.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(f)}}});
+$('.x',lb).onclick=()=>lb.classList.remove('open');$('.pv',lb).onclick=()=>step(-1);$('.nx',lb).onclick=()=>step(1);
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open')});
+galShow(true);
+
+/* formulir: membuka aplikasi email dengan pesan terisi */
+$('#kform').addEventListener('submit',e=>{e.preventDefault();const f=e.target,v=n=>f.elements[n].value.trim(),note=$('#knote');
+  if(!v('nama')||!/\S+@\S+\.\S+/.test(v('email'))){note.textContent='Lengkapi nama dan alamat email yang valid terlebih dahulu.';return}
+  const body=`Nama: ${v('nama')}\nPerusahaan: ${v('pt')}\nEmail: ${v('email')}\nTelepon: ${v('tel')}\n\n${v('pesan')}`;
+  location.href=`mailto:plant@murinda.com?subject=${encodeURIComponent(v('butuh'))}&body=${encodeURIComponent(body)}`;note.textContent='Aplikasi email Anda dibuka dengan pesan yang sudah terisi.'});
+
+/* ================= BROSUR DAN PDF ================= */
+const PW=1122.52,PH=792.6,ft=e=>e.style.getPropertyValue('--foto').trim(),hr=e=>$('use',e).getAttribute('href').slice(3);
+const ic=n=>`<i class="ico"><svg viewBox="0 0 24 24"><use href="#i-${n}"/></svg></i>`,
+ck=t=>`<li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>${t}</li>`,
+ph=(f,c='',x='')=>`<div class="ph vis ${f.includes('a-plant')?'fit ':''}${c}" style="--foto:${f}">${x}</div>`,
+ch=a=>`<div class="chp">${a.map(x=>`<b>${x}</b>`).join('')}</div>`,
+lg=c=>`<div class="${c}">${['komatsu','sumitomo','sany','vr'].map(n=>`<div><img src="${n}.png" alt="${n}"></div>`).join('')}</div>`,
+tech=()=>$$('.tech b').map(b=>b.textContent),
+sh=(c,n,t,b,x='')=>`<section class="sheet ${c}"><div class="sx-h"><img src="msb-logo.png" alt=""><span>${t}</span></div><div class="sx-b ${x}">${b}</div><div class="sx-f"><span>PT Murinda Sentra Baja &nbsp;|&nbsp; www.murinda.com &nbsp;|&nbsp; murinda@murinda.com</span><b>${n}</b></div></section>`,
+hd=(h,l)=>`<div class="hd"><div><h2>${h}</h2></div><p class="lead">${l}</p></div>`,
+bx=a=>`<div class="bx">${ic(hr(a))}<div><h3>${tx('h3',a)}</h3><p>${tx('p',a)}</p></div></div>`;
+
+const cover=t=>`<section class="sheet s-cover"><div class="cv-r">${ph('var(--a-plant)')}</div><div class="cv-st"></div><div class="cv-l"><div class="cv-logo"><img src="msb-logo.png" alt=""></div><h1>${t}</h1><p class="cv-sub">Fabrikasi presisi untuk industri alat berat dan struktur baja</p><div class="cv-facts"><div><b>ISO 9001</b>Manajemen mutu</div><div><b>Subang</b>Plant terintegrasi</div><div><b>2 lini</b>Produksi terpadu</div></div><div class="cv-ft">Jl. Raya Kalijati Purwadadi No. 123A, Kalijati, Subang, Jawa Barat &nbsp;|&nbsp; www.murinda.com</div></div><div class="cv-badge"><i>ISO</i><div><b>ISO 9001</b><span>Sistem manajemen mutu</span></div></div></section>`;
+const about=n=>{const p=$$('#tentang .tx p').map(e=>e.textContent);return sh('s-about',n,'Tentang kami',`<div class="tx"><h2>Menjaga kepercayaan setiap mitra bisnis</h2><p class="lead">${p[0]}</p><p>${p[1]}</p><p>${p[2]}</p><ul class="cks">${$$('#tentang .checks li').map(e=>ck(e.textContent)).join('')}</ul></div><div>${ph('var(--a-plant)','main')}<div class="stt"><div><b>9001</b><span>Sistem manajemen mutu ISO</span></div><div><b>2</b><span>Lini produksi dalam satu plant</span></div><div><b>3</b><span>Lapis pengujian sebelum kirim</span></div></div></div>`,'g2')};
+const vm=n=>sh('s-vm',n,'Visi, misi, dan nilai',`<div class="tp"><div class="vi"><h3>Visi</h3><p>${tx('#visi .vis p')}</p></div><div class="mi">${$$('#visi .mis article').map(bx).join('')}</div></div><div class="sec">Nilai perusahaan</div><div class="nl">${$$('#visi .val').map(a=>`<div>${ic(hr(a))}<h3>${tx('h3',a)}</h3><p>${tx('p',a)}</p></div>`).join('')}</div>`);
+const svc=n=>sh('s-svc',n,'Layanan dan kapabilitas',hd('Layanan dan kapabilitas','Layanan fabrikasi dan manufaktur terintegrasi, dari pemrosesan material hingga penyelesaian akhir, dengan pengawasan mutu yang ketat.')+`<div class="cs">${svcs.map(s=>`<div class="c">${ph(ft($('.ph',s)))}<div class="t"><h3>${tx('.dt h3',s)}</h3><p>${tx('.dt p',s)}</p>${ch($$('.dt li',s).map(l=>l.textContent))}</div></div>`).join('')}</div>`);
+const fac=n=>sh('s-fac',n,'Fasilitas dan mesin produksi',hd('Fasilitas dan mesin produksi','Area kerja dan mesin utama di plant Kalijati, dari pemotongan dan pengelasan sampai penyelesaian akhir.')+`<div class="gg">${['a-plant','a-builtup','a-komp1','a-komp2','m5','m8','m7','m9'].map(FG).map(f=>`<figure>${ph(ft($('.ph',f)))}<div class="cap-s">${tx('figcaption',f)}</div></figure>`).join('')}</div><div class="tc">${ch(tech())}</div>`);
+const proc=n=>sh('s-proc',n,'Alur produksi terintegrasi',hd('Alur produksi terintegrasi','Dua lini produksi, dari pemotongan material sampai pemeriksaan akhir, terhubung dalam satu plant dan satu sistem pemantauan.')+`<div class="ln3">${TRK.map(T=>`<div class="ln"><h3>${T.tab}</h3><ol>${T.s.map((x,j)=>`<li><span class="n">${j+1}</span><span>${x[0]}</span></li>`).join('')}</ol></div>`).join('')}</div><div class="p end"><h3>Satu plant, satu sistem</h3><p>Seluruh tahap dipantau lewat ERP buatan sendiri, dari penerimaan material sampai dokumen pengiriman.</p></div>`);
+const qe=n=>sh('s-qe',n,'Mutu, keselamatan, dan ERP',`<div class="l"><div class="iso2"><div class="seal"><div><b>ISO</b>9001</div></div><div><h3>Sistem manajemen mutu ISO 9001</h3><p>${tx('#mutu .iso p')}</p></div></div><div class="tt3">${$$('#mutu .tst').map(bx).join('')}</div><div class="bx"><h3>Keselamatan kerja</h3><p>${tx('#mutu .k3 p').replace('Keselamatan kerja. ','')}</p></div></div><div class="r">${ph('var(--foto-erp)','contain')}<h3>ERP terintegrasi buatan sendiri</h3><ul class="ft">${$$('#mutu .erp .ft li').map(l=>ck(l.textContent)).join('')}</ul></div>`,'g2');
+const ind=n=>sh('s-ind',n,'Industri dan klien',`<div class="rw">${$$('.ind').map(a=>`<div class="bx">${ic(hr(a))}<h3>${tx('h3',a)}</h3><p>${tx('p',a)}</p></div>`).join('')}</div><div class="sec">Mengapa memilih PT Murinda Sentra Baja</div><div class="wy">${$$('.why').map(a=>`<div>${ic(hr(a))}<span style="display:block"><h3>${tx('h3',a)}</h3><p>${tx('p',a)}</p></span></div>`).join('')}</div><div class="sec">Klien dan mitra kami</div>${lg('lg')}`);
+const team=n=>sh('s-team',n,'Manajemen dan tim kunci',`<div class="l"><h2>Manajemen dan tim kunci</h2><p class="lead">Jajaran manajemen dan tenaga profesional yang memadukan keahlian strategis, rekayasa teknik, dan pengawasan mutu.</p><div class="bx"><h3>Satu tim, satu sistem kerja</h3><p>Manajemen, engineering, QC, dan produksi bekerja dalam satu sistem untuk menjaga mutu dan ketepatan waktu setiap proyek.</p></div></div><div class="tg">${$$('.tm').map(t=>`<div class="tm2"><div class="ph vis" style="--foto:${ft($('.ph',t))}"><i></i></div><div class="cp"><h3>${tx('h3',t)}</h3><p>${tx('p',t)}</p></div></div>`).join('')}</div>`,'g2');
+const ct=n=>sh('s-ct',n,'Kontak',`<div class="l"><div class="hd2"><h2>Hubungi kami</h2></div><div class="bx"><h3>Head office</h3><p>15 Fl, Permata Kuningan Building, Jalan Kuningan Mulia Kav. 9C, Jakarta 12980</p><dl><dt>Telepon</dt><dd>(+6221) 28546000</dd><dt>Faks</dt><dd>(+6221) 28546001/11</dd><dt>Email</dt><dd>murinda@murinda.com</dd></dl></div><div class="bx"><h3>Workshop</h3><p>Jl. Raya Kalijati Purwadadi No. 123A, Desa Kalijati Barat, Kecamatan Kalijati, Kabupaten Subang, Jawa Barat 41271 (Exit Tol Kalijati)</p><dl><dt>Telepon</dt><dd>(+62260) 7495467</dd><dt>Faks</dt><dd>(+62260) 7495222</dd><dt>Email</dt><dd>plant@murinda.com</dd><dt>Web</dt><dd>www.murinda.com</dd></dl></div></div><div class="r">${ph('var(--a-plant)')}<div class="cta2"><h3>Siap mewujudkan komponen Anda?</h3><p>Ceritakan kebutuhan fabrikasi Anda. Tim kami akan menanggapi dengan penawaran dan jadwal produksi yang jelas.</p></div></div>`,'g2');
+const r2=n=>{const p=$$('#tentang .tx p').map(e=>e.textContent);return sh('s-about s-r2',n,'Tentang kami dan layanan',`<div class="tx pad-t"><h2>Menjaga kepercayaan setiap mitra bisnis</h2><p class="lead">${p[0]}</p><p>${p[1]}</p>${ch(['Counterweight excavator','Bucket excavator','Komponen dump truck','Struktur baja built-up'])}<ul class="cks">${$$('#tentang .checks li').map(e=>ck(e.textContent)).join('')}</ul></div><div class="sv">${svcs.map(s=>`<div class="bx">${ic(hr($('.ic',s)))}<div><h3>${tx('.dt h3',s)}</h3><p>${tx('.dt p',s)}</p></div></div>`).join('')}</div>`,'g2')};
+const r3=n=>sh('s-r3',n,'Fasilitas dan mutu',`<div class="pad-t"><h2>Fasilitas dan mesin produksi</h2><div class="gg3">${['a-plant','a-builtup','a-komp1','a-komp2','m5','m8'].map(v=>ph(ft($('.ph',FG(v))))).join('')}</div>${ch(tech())}</div><div class="rr">${ph('var(--foto-erp)','contain')}<h3>Mutu terukur, produksi terpantau</h3><ul class="cks">${['Sistem manajemen mutu ISO 9001','Non-Destructive Testing (NDT)','Inspeksi pengelasan','Verifikasi ketebalan cat','Persetujuan digital lewat ERP','Pelacakan produksi real-time'].map(ck).join('')}</ul></div>`,'g2');
+const fakta=()=>`<section class="sheet s-fact"><div class="band"><div><h1>Lembar fakta</h1><p>PT Murinda Sentra Baja &nbsp;|&nbsp; Fabrikasi komponen alat berat dan struktur baja</p></div><div class="cv-logo"><img src="msb-logo.png" alt=""></div></div><div class="fb"><div class="col"><div class="sec">Angka kunci</div><div class="kg"><div><b>ISO 9001</b><span>Manajemen mutu di seluruh departemen</span></div><div><b>6</b><span>Tahap produksi umum</span></div><div><b>3</b><span>Lapis pengujian mutu</span></div><div><b>4</b><span>Klien terkemuka</span></div></div><div class="sec">Layanan</div><ul class="ls">${svcs.map(s=>`<li>${ic(hr($('.ic',s)))}<div><b>${tx('.tt',s)}</b>${$$('.dt li',s).map(l=>l.textContent).join(', ')}</div></li>`).join('')}</ul></div><div class="col"><div class="sec">Fasilitas utama</div><div class="ph3">${['a-plant','a-builtup','m5'].map(v=>ph(ft($('.ph',FG(v))))).join('')}</div>${ch(tech())}<div class="sec">Sektor industri</div>${ch(['Konstruksi','Manufaktur industri','Pertambangan','Infrastruktur'])}<div class="sec">Klien dan mitra</div>${lg('lg2')}</div><div class="col"><div class="sec">Kontak</div><p class="ad"><b>Workshop</b><br>Jl. Raya Kalijati Purwadadi No. 123A, Desa Kalijati Barat, Kecamatan Kalijati, Kabupaten Subang, Jawa Barat 41271<br>(+62260) 7495467 &nbsp;|&nbsp; plant@murinda.com</p><p class="ad"><b>Head office</b><br>15 Fl, Permata Kuningan Building, Jalan Kuningan Mulia Kav. 9C, Jakarta 12980<br>(+6221) 28546000 &nbsp;|&nbsp; murinda@murinda.com</p><p class="ad"><b>Web</b><br>www.murinda.com</p><div class="sec">Keunggulan</div><ul class="cks" style="grid-template-columns:1fr">${['Satu plant terintegrasi','Transparansi produksi real-time lewat ERP','Mutu terukur dengan tiga lapis pengujian','Akses logistik mudah di Exit Tol Kalijati'].map(ck).join('')}</ul></div></div></section>`;
+const FM={lengkap:()=>[cover('Company Profile'),about(2),vm(3),svc(4),fac(5),proc(6),qe(7),ind(8),team(9),ct(10)],ringkas:()=>[cover('Brosur'),r2(2),r3(3),ct(4)],fakta:()=>[fakta()]};
+
+const bk=$('#bk'),pg=$('#bk-pages');
+function scale(){const s=cl(($('#bk-body').clientWidth-2*cl(innerWidth*.026,16,40))/PW,.3,1.6);$$('#bk-pages .sw').forEach(x=>{x.style.setProperty('--s',s);x.style.width=PW*s+'px';x.style.height=PH*s+'px'})}
+function thumbs(){$$('.pv[data-pv]').forEach(p=>{if(!p.firstElementChild)p.innerHTML=`<div class="sw">${FM[p.dataset.pv]()[0]}</div>`;const s=p.clientWidth/PW,x=p.firstElementChild;x.style.setProperty('--s',s);x.style.width=p.clientWidth+'px';x.style.height=PH*s+'px'})}
+const render=f=>{pg.innerHTML=FM[f]().map(s=>`<div class="sw">${s}</div>`).join('');$$('.bk-tabs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.bkTab===f));scale();$('#bk-body').scrollTop=0};
+const openBk=(f,pr)=>{render(f);bk.classList.add('open');bk.setAttribute('aria-hidden','false');B.style.overflow='hidden';if(pr)setTimeout(()=>print(),600)};
+const closeBk=()=>{bk.classList.remove('open');bk.setAttribute('aria-hidden','true');B.style.overflow=''};
+$('#bk-print').onclick=()=>print();$('#bk-close').onclick=closeBk;
+
+D.addEventListener('click',e=>{
+  const g=e.target.closest('[data-go]');if(g){e.preventDefault();B.classList.remove('menu-open');go(g.dataset.go);return}
+  const b=e.target.closest('[data-bk]');if(b){openBk(b.dataset.bk,b.dataset.print);return}
+  const t=e.target.closest('[data-bk-tab]');if(t)render(t.dataset.bkTab)});
+addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeBk();lb.classList.remove('open');B.classList.remove('menu-open')}
+  if(lb.classList.contains('open')){if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)}});
+
+/* mulai */
+const ro=new ResizeObserver(()=>{lay();on()});panels.forEach(p=>ro.observe(p));
+addEventListener('scroll',on,{passive:true});
+addEventListener('resize',()=>{lay();scale();thumbs();galShow(false);on()});
+lay();thumbs();upd();
+/* overlay pembuka: bilah dan angka progres, selesai 100% saat halaman siap */
+{const it=$('.intro');if(it){const bar=$('.seam i',it),sm=$('.seam',it),pc=$('.ov-n',it),st=$('.ov-st',it),t0=performance.now(),L=[[.3,'Menyiapkan halaman'],[.62,'Memuat foto dan fasilitas'],[.92,'Menyusun profil perusahaan'],[2,'Hampir selesai']];(function f(t){const r=H.classList.contains('ready'),p=r?1:Math.min(.94,(1-Math.pow(1-cl((t-t0)/1700,0,1),3))*.94);bar.style.transform='scaleX('+p+')';sm.style.setProperty('--p',p);pc.textContent=Math.round(p*100);st.textContent=r?'Siap':L.find(x=>p<x[0])[1];if(!r)requestAnimationFrame(f)})(t0)}}
+const ready=()=>{if(H.classList.contains('ready'))return;H.classList.add('ready');$('#h1').classList.add('on');setTimeout(()=>{const i=$('.intro');i&&i.remove()},3000)};
+addEventListener('load',()=>{lay();thumbs();on();setTimeout(ready,RM?0:1400)});
+setTimeout(ready,4500);
+
+if(RM)$$('.route svg').forEach(s=>s.pauseAnimations&&s.pauseAnimations());
+document.addEventListener('pointerdown',e=>{const b=e.target.closest('.btn,.ptab,.filt button,.pnb,nav.main>a.cta');if(!b)return;const r=b.getBoundingClientRect();b.style.setProperty('--rx',(e.clientX-r.left)+'px');b.style.setProperty('--ry',(e.clientY-r.top)+'px');b.classList.remove('rip');void b.offsetWidth;b.classList.add('rip');setTimeout(()=>b.classList.remove('rip'),650)},{passive:true});
+})();
+</script></body></html>
