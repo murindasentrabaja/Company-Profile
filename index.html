@@ -1179,6 +1179,63 @@ body.menu-open{overflow:hidden}
   .gt figcaption{font-size:.7rem}
 }
 
+
+/* ===== PERBAIKAN: latar elegan, halaman penuh, ERP slideshow, animasi peta ===== */
+body{background:#eceff6}
+.latar{background:radial-gradient(70% 50% at 12% 0%,rgba(184,146,74,.16),transparent 70%),radial-gradient(60% 50% at 100% 35%,rgba(47,83,145,.14),transparent 70%),linear-gradient(180deg,#f3f5fa,#e8ecf5)}
+.panel,.panel.tint,.panel.warm,footer.panel{background:linear-gradient(180deg,#fcfcfe 0%,#f0f3f9 100%);border-top:1px solid rgba(184,146,74,.4);margin-top:-1px}
+.panel.tint{background:linear-gradient(180deg,#eceff7 0%,#e3e8f3 100%)}
+.panel.warm{background:linear-gradient(180deg,#f8f7f3 0%,#edf0f6 100%)}
+.panel::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:repeating-linear-gradient(135deg,rgba(31,59,112,.022) 0 1px,transparent 1px 16px)}
+.panel::after{display:none}
+.panel{padding:clamp(52px,5.4vw,100px) 0}#proses.panel{padding:0}
+.sh{margin-bottom:clamp(24px,3vw,52px)}
+.hero{position:relative;height:auto;min-height:max(100svh,700px);display:flex;flex-direction:column;border-radius:0 0 var(--rad) var(--rad);background:radial-gradient(70% 60% at 88% 8%,rgba(184,146,74,.26),transparent 62%),radial-gradient(70% 80% at 0% 100%,rgba(47,83,145,.6),transparent 66%),linear-gradient(160deg,#0a1938 0%,#10224a 55%,#1b3a73 100%)}
+.hero h1{color:#fff}.hero .sub{color:#c9d5ed}
+.hero-bg .grid{background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px)}
+.hero .orb{opacity:.25}
+.hero-in{height:auto;flex:1;padding:clamp(96px,13vh,140px) 0 1.6rem}
+.hero .wrap.hw{translate:none;scale:1;opacity:1}
+.hero-facts{position:relative;left:auto;bottom:auto;translate:none;margin:0 auto clamp(20px,4vh,40px);opacity:1}
+@media(min-width:1061px){
+ .hero .wrap.hw{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)}
+ .collage{max-width:none;aspect-ratio:auto;height:clamp(440px,64vh,800px);max-height:none}
+ .cf.f1{inset:0 0 15% 12%}.cf.f2{width:46%;height:44%;aspect-ratio:auto}.cf.f3{width:30%;height:34%;aspect-ratio:auto;right:-1%;top:-2%}
+}
+.erpx{position:relative;overflow:hidden;min-height:clamp(320px,30vw,470px)!important;aspect-ratio:auto!important;background:linear-gradient(160deg,#0f2250,#1f3b70);color:#fff;border:0}
+.ex-live{position:absolute;z-index:3;right:1rem;top:.9rem;display:flex;align-items:center;gap:.45rem;font-size:.72rem;font-weight:600;padding:.25rem .7rem;border-radius:99px;background:rgba(255,255,255,.12)}
+.ex-live i{width:.5rem;height:.5rem;border-radius:50%;background:#2fd08a;animation:exl 1.2s ease-in-out infinite}
+@keyframes exl{50%{opacity:.25;scale:1.5}}
+.ex-sl{position:absolute;inset:0;padding:1rem 1.1rem 2.6rem;display:flex;flex-direction:column;gap:.8rem;opacity:0;translate:24px 0;transition:opacity .6s var(--e),translate .7s var(--e);pointer-events:none}
+.ex-sl.on{opacity:1;translate:none;pointer-events:auto}
+.ex-sl h4{font:700 clamp(1.1rem,1.5vw,1.45rem) var(--display);color:#fff;letter-spacing:.02em}
+.exk{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem}
+.exk div{padding:.6rem .75rem;border-radius:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16)}
+.exk small{display:block;font-size:.7rem;color:#bfd0ef}
+.exk b{font:700 clamp(1.5rem,2.4vw,2.4rem)/1 var(--display);color:#fff}
+.exk span{font-size:.7rem;color:#bfd0ef;margin-left:.25rem}
+.exb{display:grid;gap:.5rem;align-content:center;flex:1}
+.exb li{display:grid;grid-template-columns:7.5rem 1fr 2.6rem;gap:.6rem;align-items:center;font-size:.78rem}
+.exb i{height:9px;border-radius:9px;background:rgba(255,255,255,.14);overflow:hidden}
+.exb u{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,#f2a30f,#e8590c);transition:width 1.2s var(--e)}
+.ex-sl.on .exb u{width:var(--w)}
+.exb em{font-style:normal;text-align:right;font-weight:600}
+.ex-dots{position:absolute;z-index:3;left:1.1rem;bottom:.8rem;display:flex;gap:.4rem}
+.ex-dots button{width:.55rem;height:.55rem;padding:0;border:0;border-radius:99px;background:rgba(255,255,255,.35);cursor:pointer;transition:width .3s,background .3s}
+.ex-dots button.on{width:1.6rem;background:#f2a30f}
+.pmap{position:relative;overflow:hidden;min-height:clamp(340px,34vw,520px);background:linear-gradient(135deg,#0b1a3d,#1f3b70)}
+.pm-bg{position:absolute!important;inset:0;background:none!important;opacity:.4}.pm-bg::after{display:none}
+.pm-bg::before{animation:pmz 22s ease-in-out infinite alternate}@keyframes pmz{to{scale:1.12}}
+.pm-svg{position:absolute;inset:0;width:100%;height:100%}
+.pm-rb{fill:none;stroke:rgba(255,255,255,.2);stroke-width:12;stroke-linecap:round}
+.pm-rf{fill:none;stroke:#f2a30f;stroke-width:4;stroke-linecap:round;stroke-dasharray:3 14;animation:rtd 1s linear infinite}
+.pm-lb{fill:#fff;font:600 15px var(--body)}.pm-pin{fill:#e8590c}
+.pm-ring{fill:none;stroke:#e8590c;stroke-width:3;transform-box:fill-box;transform-origin:center;animation:rtp 2.2s ease-out infinite}
+.pm-tr rect,.pm-tr path{fill:#f2a30f}.pm-tr circle{fill:#fff}
+.pm-card{position:absolute;z-index:2;left:1rem;bottom:1rem;padding:.7rem 1rem;border-radius:16px;font-size:.85rem;max-width:62%}
+.pm-tg{position:absolute;z-index:3;right:1rem;bottom:1rem;height:2.6rem;padding:0 1.2rem;font-size:.88rem}
+.pmap iframe{position:absolute;inset:0;z-index:2;width:100%;height:100%;min-height:0}.pmap iframe[hidden]{display:none}
+@media(max-width:900px){.erpx{min-height:360px!important}.exb li{grid-template-columns:5.6rem 1fr 2.4rem}.pm-card{max-width:56%}}
 </style></head>
 <body>
 
@@ -1455,7 +1512,7 @@ body.menu-open{overflow:hidden}
     </div>
     <div class="erp glass rv r" style="--d:.1s">
       <div class="bar2"><i></i><i></i><i></i><span>MSB ERP System</span></div>
-      <div class="scr ph wipe" style="--foto:var(--foto-erp);--cr:18px" role="img" aria-label="Dashboard MSB ERP System" data-label=""><div class="mk" aria-hidden="true"><div class="mk-k"><div><small>Produksi</small><i style="--w:78%"></i></div><div><small>Persetujuan</small><i style="--w:62%"></i></div><div><small>Pengiriman</small><i style="--w:88%"></i></div></div><div class="mk-c"><i style="--h:42%"></i><i style="--h:58%"></i><i style="--h:50%"></i><i style="--h:74%"></i><i style="--h:66%"></i><i style="--h:88%"></i><i style="--h:80%"></i></div><div class="mk-p"><span style="--w:82%"></span><span style="--w:64%"></span><span style="--w:91%"></span></div></div></div>
+      <div class="scr erpx" id="erpx" role="region" aria-label="Tampilan MSB ERP System"><div class="ex-live"><i></i>LIVE <time id="ex-t">--:--:--</time></div></div>
       <h3 style="margin-top:1.1rem">ERP terintegrasi buatan sendiri</h3>
       <ul class="ft">
         <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Administrasi terintegrasi</li>
@@ -1577,7 +1634,15 @@ body.menu-open{overflow:hidden}
     <div class="peta-info"><div class="ph vis peta-ph" style="--foto:var(--a-workshop)" role="img" aria-label="Workshop PT Murinda Sentra Baja, tampak dari atas" data-label=""></div><h3>Lokasi workshop</h3>
       <p>Jl. Raya Kalijati Purwadadi No. 123A, Desa Kalijati Barat, Kecamatan Kalijati, Kabupaten Subang, dekat Exit Tol Kalijati.</p>
       <div class="peta-aksi"><a class="btn main" href="https://maps.app.goo.gl/EFvfPU5Rg32WHPD38" target="_blank" rel="noopener">Buka di Google Maps</a><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=-6.515575230426579,107.6708332083749" target="_blank" rel="noopener">Petunjuk arah</a></div></div>
-    <iframe title="Peta lokasi workshop PT Murinda Sentra Baja, Kalijati, Subang" src="https://maps.google.com/maps?q=-6.515575230426579,107.6708332083749&amp;z=16&amp;hl=id&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <div class="pmap" id="pmap"><div class="ph vis pm-bg" style="--foto:var(--a-plant)" aria-hidden="true" data-label=""></div>
+<svg class="pm-svg" viewBox="0 0 800 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="pmg" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#fff" stroke-opacity=".1"/></pattern></defs><rect width="800" height="460" fill="url(#pmg)"/>
+<path id="pm-r" class="pm-rb" d="M60 400C170 390 210 300 320 290S500 310 560 220S660 130 720 100"/><path class="pm-rf" d="M60 400C170 390 210 300 320 290S500 310 560 220S660 130 720 100"/>
+<circle cx="60" cy="400" r="9" fill="#fff"/><text class="pm-lb" x="76" y="426">Jakarta</text><circle cx="560" cy="220" r="8" fill="#fff"/><text class="pm-lb" x="576" y="250">Exit Tol Kalijati</text>
+<circle class="pm-ring" cx="720" cy="100" r="12"/><circle class="pm-ring" cx="720" cy="100" r="12" style="animation-delay:1.1s"/><circle class="pm-pin" cx="720" cy="100" r="11"/><text class="pm-lb" x="700" y="90" text-anchor="end">Plant MSB, Kalijati</text>
+<g class="pm-tr"><rect x="-14" y="-9" width="16" height="11" rx="2"/><path d="M4-6h7l4 5v6H4z"/><circle cx="-8" cy="4" r="3"/><circle cx="9" cy="4" r="3"/><animateMotion dur="7s" repeatCount="indefinite" rotate="auto"><mpath href="#pm-r"/></animateMotion></g></svg>
+<div class="pm-card glass"><b>Menuju plant Kalijati</b><br>Keluar Exit Tol Kalijati, lalu ikuti Jl. Raya Kalijati Purwadadi.</div>
+<button class="btn main pm-tg" id="pm-tg" type="button">Tampilkan peta interaktif</button>
+<iframe hidden title="Peta lokasi workshop PT Murinda Sentra Baja, Kalijati, Subang" data-src="https://maps.google.com/maps?q=-6.515575230426579,107.6708332083749&amp;z=16&amp;hl=id&amp;output=embed" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
   </div>
 </div></section>
 
@@ -1654,7 +1719,7 @@ $('#toc').innerHTML=secs.map(s=>`<a href="#${s.id}" data-go="${s.id}"><i></i><sp
 $('#yr').textContent=new Date().getFullYear();
 
 /* panel saling menimpa: tiap panel menempel di dasar layar lalu ditimpa panel berikutnya */
-function lay(){const s=innerWidth>900&&!RM;stk=s;stack.classList.toggle('stk',s);panels.forEach(p=>{p.style.top=s?Math.min(0,innerHeight-p.offsetHeight)+'px':''})}
+function lay(){stk=false;stack.classList.remove('stk');panels.forEach(p=>{p.style.top=''})}
 const nat=p=>{let y=stack.getBoundingClientRect().top+scrollY;for(const q of panels){if(q===p)break;y+=q.offsetHeight}return y};
 function go(id){const t=D.getElementById(id);if(!t)return;if(id==='beranda')return scrollTo({top:0,behavior:RM?'auto':'smooth'});
   if(t.classList.contains('svc'))act(t);
@@ -1788,6 +1853,20 @@ const ro=new ResizeObserver(()=>{lay();on()});panels.forEach(p=>ro.observe(p));
 addEventListener('scroll',on,{passive:true});
 addEventListener('resize',()=>{lay();scale();thumbs();on()});
 lay();thumbs();upd();
+/* slideshow MSB ERP System (real-time) */
+{const EX=[['Dashboard produksi',[['Output hari ini',128,' unit'],['Dalam proses',46,' PO'],['Tepat waktu',94,'%']],[['Pemotongan',82],['Pemesinan',64],['Perakitan',71],['Pengelasan',58],['Pengecatan',90]]],
+['Persetujuan digital',[['Menunggu',7,' dokumen'],['Disetujui',38,' hari ini'],['Rata-rata',12,' menit']],[['Diketahui',96],['Disetujui',81],['Diterima',67]]],
+['Pelacakan produksi',[['PO aktif',23,''],['Tahap selesai',312,''],['Terlambat',2,'']],[['Counterweight',74],['Bucket excavator',58],['Built-up',86],['Vessel dump truck',45]]],
+['Mutu dan pengiriman',[['Inspeksi lolos',98,'%'],['Surat jalan',17,' terbit'],['Dalam kirim',9,' truk']],[['UT / NDT',99],['Pengelasan',97],['Tebal cat',98],['Pengiriman',88]]]],r=$('#erpx');
+if(r){r.insertAdjacentHTML('beforeend',EX.map(x=>`<div class="ex-sl"><h4>${x[0]}</h4><div class="exk">${x[1].map(k=>`<div><small>${k[0]}</small><b data-v="${k[1]}">${k[1]}</b><span>${k[2]}</span></div>`).join('')}</div><ul class="exb">${x[2].map(b=>`<li><span>${b[0]}</span><i><u style="--w:${b[1]}%" data-p="${b[1]}"></u></i><em>${b[1]}%</em></li>`).join('')}</ul></div>`).join('')+'<div class="ex-dots">'+EX.map((_,i)=>`<button type="button" aria-label="Slide ${i+1}"></button>`).join('')+'</div>');
+const sl=$$('.ex-sl',r),dt=$$('.ex-dots button',r);let c=0,tm;
+const show=i=>{c=(i+sl.length)%sl.length;sl.forEach((e,j)=>e.classList.toggle('on',j===c));dt.forEach((d,j)=>d.classList.toggle('on',j===c))},loop=()=>{clearInterval(tm);if(!RM)tm=setInterval(()=>show(c+1),4800)};
+dt.forEach((d,i)=>d.onclick=()=>{show(i);loop()});show(0);loop();
+const tt=$('#ex-t'),clk=()=>{tt.textContent=new Date().toLocaleTimeString('id-ID',{hour12:false})};clk();setInterval(clk,1000);
+if(!RM)setInterval(()=>{$$('[data-v]',r).forEach(b=>{b.textContent=Math.max(0,+b.dataset.v+(Math.random()*3|0)-1)});$$('u[data-p]',r).forEach(u=>{const v=Math.min(100,+u.dataset.p+(Math.random()*5|0)-2);u.style.setProperty('--w',v+'%');u.parentNode.nextElementSibling.textContent=v+'%'})},2400)}}
+/* peta: animasi rute atau peta interaktif */
+{const g=$('#pm-tg'),m=$('#pmap');if(g&&m){const f=$('iframe',m),v=[$('.pm-svg',m),$('.pm-card',m),$('.pm-bg',m)];g.onclick=()=>{const o=f.hidden;if(o&&!f.src)f.src=f.dataset.src;f.hidden=!o;v.forEach(e=>e.style.display=o?'none':'');g.textContent=o?'Tampilkan animasi rute':'Tampilkan peta interaktif'}}}
+
 /* overlay pembuka: bilah dan angka progres, selesai 100% saat halaman siap */
 {const it=$('.intro');if(it){const bar=$('.seam i',it),sm=$('.seam',it),pc=$('.ov-n',it),st=$('.ov-st',it),t0=performance.now(),L=[[.3,'Menyiapkan halaman'],[.62,'Memuat foto dan fasilitas'],[.92,'Menyusun profil perusahaan'],[2,'Hampir selesai']];(function f(t){const r=H.classList.contains('ready'),p=r?1:Math.min(.94,(1-Math.pow(1-cl((t-t0)/1700,0,1),3))*.94);bar.style.transform='scaleX('+p+')';sm.style.setProperty('--p',p);pc.textContent=Math.round(p*100);st.textContent=r?'Siap':L.find(x=>p<x[0])[1];if(!r)requestAnimationFrame(f)})(t0)}}
 const ready=()=>{if(H.classList.contains('ready'))return;H.classList.add('ready');$('#h1').classList.add('on');setTimeout(()=>{const i=$('.intro');i&&i.remove()},3000)};
