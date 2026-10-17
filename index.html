@@ -1476,6 +1476,34 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
 /* 4) efek masuk lebih ringan: hanya naik dan muncul, tanpa blur dan zoom */
 @keyframes gin{from{opacity:0;translate:0 36px}}
 .js:not(.rm) .gt.in .ph::before{animation:none}
+
+/* ===== DOKUMEN PDF VISI, MISI, KEBIJAKAN ===== */
+.vmdoc{margin-top:clamp(28px,3.6vw,56px);padding:clamp(18px,2.2vw,32px);border-radius:clamp(22px,2.4vw,34px)}
+.vmdoc.glass:not(.bar):hover{transform:none}
+.vmd-head{display:grid;grid-template-columns:3.6rem minmax(0,1fr) auto;gap:1.1rem;align-items:center}
+.vmd-head i{display:grid;place-items:center;width:3.6rem;height:3.6rem;border-radius:18px;background:linear-gradient(145deg,#fff,#eaf1fb);border:1px solid var(--line);box-shadow:0 10px 22px rgba(31,59,112,.1)}
+.vmd-head i svg{width:1.7rem;height:1.7rem;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.vmd-head h3{font-size:1.55rem;margin-bottom:.2rem}
+.vmd-head p{font-size:.96rem;color:var(--soft);max-width:62ch}
+.vmd-acts{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:flex-end}
+.vmd-acts .btn{height:2.9rem;padding:0 1.3rem;font-size:.93rem}
+.vmd-view{position:relative;margin-top:1.3rem;height:clamp(520px,82vh,880px);border-radius:20px;overflow:hidden;background:#eef2fa;border:1px solid var(--line);box-shadow:inset 0 0 0 1px rgba(255,255,255,.6)}
+.vmd-view iframe{display:block;width:100%;height:100%;border:0;background:#fff}
+.vmd-view:not(.act) iframe{pointer-events:none}
+.vmd-hint{position:absolute;left:50%;bottom:.9rem;translate:-50% 0;padding:.45rem 1rem;border-radius:99px;font-size:.82rem;font-weight:500;color:var(--navy-d);background:rgba(255,255,255,.88);border:1px solid var(--line);box-shadow:0 8px 20px rgba(31,59,112,.16);pointer-events:none;white-space:nowrap;transition:opacity .25s}
+.vmd-view.act .vmd-hint,.vmd-view:not(.ld) .vmd-hint{opacity:0}
+.vmd-fb{display:none;position:absolute;inset:0;place-content:center;justify-items:center;gap:.7rem;padding:1.5rem;text-align:center;color:var(--soft);font-size:.96rem}
+.vmd-fb svg{width:2.6rem;height:2.6rem;fill:none;stroke:var(--navy);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.vmd-view.nofr{height:auto;min-height:0}
+.vmd-view.nofr .vmd-fb{display:grid;position:static;padding:1.8rem 1.2rem}
+.vmd-view.nofr iframe,.vmd-view.nofr .vmd-hint{display:none}
+@media(max-width:900px){
+  .vmd-head{grid-template-columns:3rem minmax(0,1fr);gap:.9rem}
+  .vmd-head i{width:3rem;height:3rem;border-radius:15px}
+  .vmd-head h3{font-size:1.35rem}
+  .vmd-acts{grid-column:1/-1;justify-content:stretch}
+  .vmd-acts .btn{flex:1 1 100%}
+}
 </style></head>
 <body>
 
@@ -1640,6 +1668,21 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
     <div class="val rv" style="--d:.1s"><i><svg viewBox="0 0 24 24"><use href="#i-clock"/></svg></i><h3>Tepat waktu</h3><p>Perencanaan dan pelacakan produksi real-time lewat ERP agar target pelanggan tercapai.</p></div>
     <div class="val rv" style="--d:.2s"><i><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></i><h3>Keselamatan kerja</h3><p>Kepatuhan penuh pada standar keselamatan kerja di seluruh area workshop.</p></div>
     <div class="val rv" style="--d:.3s"><i><svg viewBox="0 0 24 24"><use href="#i-bulb"/></svg></i><h3>Kompetensi dan inovasi</h3><p>Investasi berkelanjutan pada kemampuan tim, teknologi produksi, dan sistem digital sendiri.</p></div>
+  </div>
+
+  <div class="vmdoc glass rv" id="vmdoc">
+    <div class="vmd-head">
+      <i><svg viewBox="0 0 24 24"><use href="#i-doc"/></svg></i>
+      <div><h3>Dokumen Visi, Misi, dan Kebijakan</h3><p>Dokumen resmi PT Murinda Sentra Baja (versi bertanda tangan). Baca langsung di sini atau unduh salinannya.</p></div>
+      <div class="vmd-acts">
+        <a class="btn" href="MurindaSentraBaja_VisiMisiPolicies_ind_signed_260806_172016.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-eye"/></svg> Buka di tab baru</a>
+        <a class="btn main" href="MurindaSentraBaja_VisiMisiPolicies_ind_signed_260806_172016.pdf" download><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh PDF</a>
+      </div>
+    </div>
+    <div class="vmd-view" id="vmd-view" data-src="MurindaSentraBaja_VisiMisiPolicies_ind_signed_260806_172016.pdf#view=FitH&amp;navpanes=0">
+      <span class="vmd-hint">Klik dokumen untuk menggulir halaman</span>
+      <div class="vmd-fb"><svg viewBox="0 0 24 24"><use href="#i-doc"/></svg><p>Pratinjau dokumen tidak tersedia di perangkat ini. Gunakan tombol di atas untuk membuka atau mengunduh PDF.</p></div>
+    </div>
   </div>
 </div></section>
 
@@ -2152,5 +2195,12 @@ setTimeout(ready,5200)}
 
 if(RM)$$('.route svg,.ex-hub svg').forEach(s=>s.pauseAnimations&&s.pauseAnimations());
 document.addEventListener('pointerdown',e=>{const b=e.target.closest('.btn,.ptab,.filt button,.pnb,nav.main>a.cta');if(!b)return;const r=b.getBoundingClientRect();b.style.setProperty('--rx',(e.clientX-r.left)+'px');b.style.setProperty('--ry',(e.clientY-r.top)+'px');b.classList.remove('rip');void b.offsetWidth;b.classList.add('rip');setTimeout(()=>b.classList.remove('rip'),650)},{passive:true});
+
+/* penampil PDF visi, misi, kebijakan: dimuat saat mendekati layar; ponsel tanpa penampil PDF memakai tombol buka/unduh */
+{const v=$('#vmd-view');if(v){const can=navigator.pdfViewerEnabled!==false&&matchMedia('(hover:hover) and (pointer:fine)').matches;
+if(!can)v.classList.add('nofr');
+else{const load=()=>{if($('iframe',v))return;const f=D.createElement('iframe');f.title='Dokumen Visi, Misi, dan Kebijakan PT Murinda Sentra Baja';f.src=v.dataset.src;v.prepend(f);v.classList.add('ld')};
+ if('IntersectionObserver' in window){const o=new IntersectionObserver(r=>{if(r[0].isIntersecting){load();o.disconnect()}},{rootMargin:'500px 0px'});o.observe(v)}else load();
+ v.addEventListener('click',()=>v.classList.add('act'));v.addEventListener('mouseleave',()=>v.classList.remove('act'))}}}
 })();
 </script></body></html>
