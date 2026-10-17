@@ -153,28 +153,36 @@ h2::after{content:"";display:block;width:76px;height:6px;margin-top:.9rem;border
 .ph.vis::before{background-image:var(--foto)}
 .ph.contain::before{background-size:contain}
 
-/* ===== PEMBUKA (layar muat) ===== */
+/* ===== PEMBUKA (layar muat): tirai biru tua yang tenang, logo muncul perlahan, tirai terangkat dengan tepi melengkung ===== */
 .intro{display:none}
-.js:not(.rm) .intro{position:fixed;inset:0;z-index:300;display:grid;place-items:center;overflow:hidden;background:#f4f7fd;clip-path:inset(0);transition:clip-path 1.15s cubic-bezier(.77,0,.18,1) .45s,visibility 0s 1.7s}
-.js.ready .intro{clip-path:inset(0 0 100% 0);visibility:hidden;pointer-events:none}
-.ld-g{position:absolute;inset:-48px;background-image:linear-gradient(rgba(31,59,112,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(31,59,112,.07) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse at center,#000 25%,transparent 75%);mask-image:radial-gradient(ellipse at center,#000 25%,transparent 75%);animation:ld-pan 6s linear infinite}
-@keyframes ld-pan{to{translate:48px 48px}}
-.ld-o{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
-.ld-o.o1{width:38vmax;height:38vmax;left:-10vmax;top:-12vmax;background:#9dbcf2}
-.ld-o.o2{width:30vmax;height:30vmax;right:-8vmax;bottom:-10vmax;background:#ffc59a}
-.intro-in{position:relative;display:grid;justify-items:center;gap:1rem;grid-template-columns:minmax(0,1fr);width:min(440px,86vw);container-type:inline-size;text-align:center;transition:opacity .45s,translate .8s var(--e)}
-.js.ready .intro-in{opacity:0;translate:0 -18px}
-.intro-in img{height:auto;width:auto;max-width:72%;max-height:clamp(52px,7vw,78px);object-fit:contain;animation:ov-word .8s var(--e) .05s both}
-.ov-t{max-width:100%;white-space:nowrap;font:700 clamp(1.3rem,6vw,2.2rem)/1.1 var(--display);font-size:min(2.3rem,7.6cqw);letter-spacing:.03em;color:var(--navy-d);animation:ov-word .8s var(--e) .22s both}
-.ov-s{font-size:.92rem;line-height:1.5;text-wrap:balance;color:var(--soft);animation:ov-word .8s var(--e) .4s both}
-.intro .seam{position:relative;width:100%;height:4px;margin-top:.7rem;border-radius:9px;background:rgba(31,59,112,.14)}
-.intro .seam i{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,#10224a,#2f5391 35%,#f2a30f 70%,#e8590c);transform-origin:0 50%;transform:scaleX(0)}
-.intro .seam u{position:absolute;top:50%;left:calc(var(--p,0)*100%);width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px #e8590c,0 0 18px 6px rgba(232,89,12,.55);animation:ld-sp .5s ease-in-out infinite alternate}
-@keyframes ld-sp{to{scale:1.35}}
-.ov-p{display:flex;justify-content:space-between;width:100%;font:600 .85rem var(--body);color:var(--soft);font-variant-numeric:tabular-nums}
-.ov-c b{font-weight:700;color:var(--navy-d)}
-.ld-f{position:absolute;left:0;right:0;bottom:clamp(18px,4vh,36px);text-align:center;font-size:.8rem;letter-spacing:.06em;color:var(--soft);animation:ov-word .8s var(--e) .6s both}
-@keyframes ov-word{from{opacity:0;translate:0 16px;filter:blur(8px)}}
+.js:not(.rm) .intro{--lip:clamp(64px,15vh,160px);position:fixed;inset:0;z-index:300;display:block;transition:translate 1.4s cubic-bezier(.77,0,.18,1) .55s,visibility 0s 2s}
+.js.ready .intro{translate:0 calc(-100% - var(--lip));visibility:hidden;pointer-events:none}
+.ld-sheet{position:absolute;inset:0;overflow:hidden;display:grid;place-items:center;background:radial-gradient(120% 85% at 50% 0%,#1a3a76 0%,#0e2250 42%,#071330 100%)}
+.ld-sheet::after{content:"";position:absolute;left:0;right:0;bottom:0;height:32%;background:linear-gradient(180deg,transparent,#071330);pointer-events:none}
+.ld-lip{display:block;position:absolute;left:0;right:0;top:100%;height:var(--lip);background:#071330;border-radius:0 0 50% 50%/0 0 100% 100%;box-shadow:0 30px 60px -22px rgba(7,19,48,.5)}
+.ld-glow{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+.ld-glow.a{width:52vmax;height:52vmax;left:-16vmax;top:-20vmax;background:rgba(63,120,224,.5);animation:ld-dr 14s ease-in-out infinite alternate}
+.ld-glow.b{width:40vmax;height:40vmax;right:-14vmax;bottom:8vmax;background:rgba(242,163,15,.2);animation:ld-dr 18s ease-in-out -6s infinite alternate-reverse}
+.ld-glow.c{width:34vmax;height:34vmax;left:30%;top:44%;background:rgba(15,157,138,.16);animation:ld-dr 20s ease-in-out -3s infinite alternate}
+@keyframes ld-dr{to{transform:translate3d(6vmax,4vmax,0) scale(1.15)}}
+.ld-in{position:relative;z-index:2;display:grid;justify-items:center;width:min(420px,84vw);text-align:center;transition:opacity .7s ease,translate .9s cubic-bezier(.2,.8,.2,1),filter .7s ease}
+.js.ready .ld-in{opacity:0;translate:0 -26px;filter:blur(6px)}
+.ld-logo{position:relative;display:grid;place-items:center;animation:ld-rise 1.3s var(--e) .1s both}
+.ld-logo::before{content:"";position:absolute;inset:-75% -50%;z-index:-1;border-radius:50%;background:radial-gradient(closest-side,rgba(120,170,255,.36),transparent 72%);animation:ld-pulse 3.6s ease-in-out infinite alternate}
+.ld-logo img{display:block;height:clamp(54px,9vw,78px);width:auto;max-width:78vw;filter:brightness(0) invert(1)}
+@keyframes ld-pulse{from{opacity:.55;scale:.94}to{opacity:1;scale:1.08}}
+.ld-line{display:block;width:clamp(90px,28vw,140px);height:2px;margin:1.5rem 0 1.2rem;border-radius:2px;background:linear-gradient(90deg,transparent,#f2a30f 30%,#ffd88a 50%,#f2a30f 70%,transparent);animation:ld-grow 1.2s var(--e) .45s both}
+@keyframes ld-grow{from{scale:0 1;opacity:0}}
+.ld-name{font:600 clamp(.95rem,2.8vw,1.15rem)/1.3 var(--display);letter-spacing:.34em;padding-left:.34em;text-transform:uppercase;color:#e3ecfb;text-wrap:balance;animation:ld-rise 1.2s var(--e) .6s both}
+.ld-tag{margin-top:.55rem;font-size:.86rem;line-height:1.5;color:#9db4e0;text-wrap:balance;animation:ld-rise 1.2s var(--e) .8s both}
+.ld-prog{width:min(300px,72vw);margin-top:2rem;animation:ld-rise 1.2s var(--e) .95s both}
+.ld-bar{position:relative;height:2px;border-radius:2px;background:rgba(255,255,255,.14);overflow:hidden}
+.ld-bar i{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,#7fb4ff,#fff 62%,#f2a30f);transform-origin:0 50%;transform:scaleX(var(--p,0))}
+.ld-meta{display:flex;justify-content:space-between;margin-top:.7rem;font-size:.74rem;letter-spacing:.06em;color:#8ea6d6;font-variant-numeric:tabular-nums}
+.ld-meta b{font-weight:600;color:#e3ecfb}
+.ld-foot{position:absolute;left:0;right:0;bottom:clamp(20px,4.5vh,40px);z-index:2;text-align:center;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:#7f98c9;animation:ld-rise 1.2s var(--e) 1.1s both;transition:opacity .5s}
+.js.ready .ld-foot{opacity:0}
+@keyframes ld-rise{from{opacity:0;translate:0 20px;filter:blur(12px)}}
 
 /* ===== ELEMEN TETAP: progres, tombol ke atas ===== */
 .sp{position:fixed;left:0;right:0;top:0;height:4px;z-index:150;transform-origin:0 50%;transform:scaleX(0);pointer-events:none;background:linear-gradient(90deg,var(--yellow),var(--red) 55%,var(--blue));box-shadow:0 0 12px rgba(120,160,225,.7)}
@@ -1279,7 +1287,6 @@ main .glass:hover::after{opacity:1}
 /* logo putih */
 .logo img,.fcols img,.sx-h img,.cv-logo img{filter:brightness(0) invert(1)}
 .cv-logo{filter:none}
-.intro-in img{filter:brightness(0) invert(1);background:linear-gradient(120deg,#0b183c,#1f3b70);padding:12px 22px;border-radius:16px;box-sizing:content-box}
 /* header situs */
 .top,.mnav{--navy:#e6edfb;--navy-d:#fff;--ink:#dce5f6;--soft:#c3d0ea;--line:rgba(255,255,255,.18)}
 .bar.glass{background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.18) 50%,transparent 60%) no-repeat -150% 0/60% 100%,linear-gradient(120deg,#0b183c,#1f3b70 70%,#2a4f93);border:1px solid rgba(255,255,255,.28);box-shadow:0 14px 40px rgba(16,34,74,.35);animation:barshine 7s linear infinite}
@@ -1346,47 +1353,6 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
 .exm .exb{flex:none;align-content:center;gap:.6rem}.exm .exb li{grid-template-columns:5.4rem 1fr 2.3rem}
 .exb i{height:8px}.exb u{box-shadow:0 0 10px rgba(242,163,15,.45)}
 @media(max-width:700px){.exh small,.dl{display:none}.exh{padding-right:6.6rem}.exh h4{font-size:1.02rem}.ex-live{top:.7rem;right:.7rem;gap:.3rem;padding:.22rem .55rem;font-size:.62rem}.exk{gap:.4rem}.kc{padding:.5rem .55rem!important}.kc small{white-space:normal;font-size:.64rem;line-height:1.15}.exm{grid-template-columns:1fr}.exc,.sp,.ki{display:none}.kc{grid-template-columns:1fr;padding:.5rem .6rem!important}.dl{top:.4rem;right:.4rem}.exh{padding-right:6rem}}
-/* ===== PEMBUKA BARU: emblem heksagon dilas, percikan api, pintu terbelah ===== */
-.js:not(.rm) .intro{background:none}
-.intro::before,.intro::after{content:"";position:absolute;left:0;right:0;z-index:0;height:50.3%;transition:translate 1.05s cubic-bezier(.77,0,.18,1) .55s}
-.intro::before{top:0;background:linear-gradient(180deg,#06112b,#0c1d46)}.intro::after{bottom:0;background:linear-gradient(180deg,#0c1d46,#0a1a3f)}
-.js.ready:not(.rm) .intro{clip-path:inset(0)}.js.ready .intro::before{translate:0 -101%}.js.ready .intro::after{translate:0 101%}
-.ld-bgx{position:absolute;inset:0;z-index:1;overflow:hidden;transition:opacity .5s}.js.ready .ld-bgx{opacity:0}
-.intro .ld-g{background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px)}
-.ld-core{position:absolute;left:50%;top:44%;width:90vmin;height:90vmin;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(70,125,235,.38),rgba(242,163,15,.07) 45%,transparent 68%);animation:ld-br 3.2s ease-in-out infinite alternate}
-@keyframes ld-br{to{scale:1.12;opacity:.75}}
-.ld-pt{position:absolute;bottom:-12px;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;background:#ffb43a;box-shadow:0 0 8px 2px rgba(255,150,40,.7);opacity:0;animation:ld-up var(--d) linear var(--l) infinite}
-@keyframes ld-up{0%{translate:0 0;opacity:0}12%{opacity:1}100%{translate:var(--dx) -105vh;opacity:0}}
-.ld-sc{position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,rgba(127,180,255,.6),transparent);animation:ld-scan 3.4s linear infinite}
-@keyframes ld-scan{from{translate:0 -4px}to{translate:0 100vh}}
-.ld-k{position:absolute;width:34px;height:34px;border:0 solid rgba(127,180,255,.5)}
-.ld-k.ldk1{left:22px;top:22px;border-width:2px 0 0 2px}.ld-k.ldk2{right:22px;top:22px;border-width:2px 2px 0 0}.ld-k.ldk3{left:22px;bottom:22px;border-width:0 0 2px 2px}.ld-k.ldk4{right:22px;bottom:22px;border-width:0 2px 2px 0}
-.intro-in{z-index:3;gap:1.05rem}
-.js.ready .intro-in{scale:1.14;transition:opacity .5s,translate .8s var(--e),scale .8s var(--e)}
-.ld-emw{position:relative;display:grid;place-items:center}
-.ld-em{width:clamp(160px,50vw,236px);height:auto;overflow:visible;animation:ld-pop 1s var(--e) both}
-@keyframes ld-pop{from{opacity:0;scale:.7;filter:blur(10px)}}
-.ld-tr{fill:none;stroke:rgba(255,255,255,.12);stroke-width:3.2;stroke-linejoin:round}
-.ld-r1,.ld-r2{fill:none;transform-box:fill-box;transform-origin:center}
-.ld-r1{stroke:rgba(255,255,255,.3);stroke-dasharray:2 7;animation:ld-rot 24s linear infinite}
-.ld-r2{stroke:#f2a30f;stroke-opacity:.6;stroke-width:1.6;stroke-dasharray:18 22;animation:ld-rot 14s linear infinite reverse}
-@keyframes ld-rot{to{rotate:360deg}}
-.ld-hx{fill:none;stroke:url(#ldg);stroke-width:3.4;stroke-linejoin:round;stroke-dasharray:1 1;stroke-dashoffset:1;filter:drop-shadow(0 0 5px rgba(143,190,255,.85))}
-.ld-mono text{font:800 60px var(--display);letter-spacing:.04em;fill:#fff;filter:drop-shadow(0 0 10px rgba(130,180,255,.6))}
-.ld-ul{fill:#f2a30f;transform-box:fill-box;transform-origin:center;animation:ld-ul 1.1s var(--e) .7s both}
-@keyframes ld-ul{from{scale:0 1}}
-.ld-sp{animation:ld-spk .5s ease-in-out infinite alternate}@keyframes ld-spk{to{opacity:.7}}
-.ld-fl{position:absolute;width:50%;aspect-ratio:1;border-radius:50%;border:2px solid #fff;opacity:0}
-.js.ready .ld-fl{animation:ld-fl .9s ease-out}@keyframes ld-fl{from{opacity:.9;scale:.6}to{opacity:0;scale:3.2}}
-.ld-t{max-width:100%;white-space:nowrap;font:700 min(1.55rem,5.2cqw)/1.1 var(--display);letter-spacing:.2em;color:#fff;text-shadow:0 0 18px rgba(120,170,255,.5)}
-.ld-t span{display:inline-block;animation:ld-ch .7s var(--e) calc(.45s + var(--i)*.04s) both}.ld-t .ldw{width:.5em}
-@keyframes ld-ch{from{opacity:0;translate:0 .6em;filter:blur(8px)}}
-.ld-s{font-size:.9rem;line-height:1.5;text-wrap:balance;color:#9db4e0;animation:ov-word .8s var(--e) 1.1s both}
-.ld-sg{display:flex;gap:3px;width:100%;margin-top:.5rem}
-.ld-sg i{flex:1;height:10px;border-radius:2px;background:rgba(255,255,255,.1);transform:skewX(-20deg);transition:background .25s,box-shadow .25s}
-.ld-sg i.on{background:linear-gradient(180deg,#ffc24f,#e8590c);box-shadow:0 0 10px rgba(242,163,15,.65)}
-.intro .ov-p{color:#9db4e0}.intro .ov-c b{color:#fff;font-size:1.05rem}
-.intro .ld-f{z-index:3;color:#8ea6d6}
 #svc-erp .ph{background:radial-gradient(70% 60% at 50% 30%,#1f3b70,#0a1633)}
 #svc-erp .ph::after{display:none}
 #svc-erp .ph::before{background-size:auto 56%;background-position:center 6%;background-repeat:no-repeat}
@@ -1487,6 +1453,29 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
 }
 @media(max-width:380px){.gt figcaption{font-size:.7rem}}
 
+
+/* ===== PERBAIKAN: urutan masuk beranda (setelah tirai pembuka terangkat) ===== */
+.js.ready:not(.rm) .hr,.js.ready:not(.rm) .hcol{transition-delay:calc(var(--d,0s) + .5s)}
+.js:not(.rm) .top{opacity:0;translate:0 -22px}
+.js.ready:not(.rm) .top{opacity:1;translate:none;transition:opacity 1s var(--e) 1.2s,translate 1s var(--e) 1.2s}
+
+/* ===== PERBAIKAN: foto pendukung "Tentang kami" lebih landai agar tidak banyak area kosong ===== */
+.apx figure{aspect-ratio:4/3}
+/* kartu rute tidak lagi menimpa kartu lokasi di atas foto */
+.about .pic .route{width:min(52%,300px)}
+
+/* ===== PERBAIKAN: galeri fasilitas dan mesin tidak berkedip ===== */
+/* 1) lapisan blur (backdrop-filter) pada puluhan kartu dihapus: tampilan hampir sama, GPU tidak terbebani saat scroll */
+.gt::before{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(10,24,56,.62)}
+.gt figcaption{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(10,24,56,.66)}
+.gt:hover figcaption,.gt:focus-visible figcaption{background:rgba(10,24,56,.8)}
+/* 2) panel galeri tanpa blur latar (di belakangnya hanya gradasi halus, tampilan tidak berubah) */
+main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
+/* 3) kartu tidak lagi bergeser saat kursor di tepi bawah (penyebab kedip saat hover) */
+.gt:hover,.gt:focus-visible{translate:none}
+/* 4) efek masuk lebih ringan: hanya naik dan muncul, tanpa blur dan zoom */
+@keyframes gin{from{opacity:0;translate:0 36px}}
+.js:not(.rm) .gt.in .ph::before{animation:none}
 </style></head>
 <body>
 
@@ -1532,17 +1521,20 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
 
 <div class="latar" aria-hidden="true"></div>
 
-<!-- Pembuka: layar muat bergaya cetak biru, titik las bergerak sebagai progres -->
+<!-- Pembuka: tirai biru tua, logo muncul perlahan, progres tipis; tirai terangkat dengan tepi melengkung -->
 <div class="intro" aria-hidden="true">
-  <div class="ld-bgx"><i class="ld-core"></i><div class="ld-g"></div><i class="ld-pt" style="--x:60%;--d:7.9s;--l:-6.9s;--s:3px;--dx:45px"></i><i class="ld-pt" style="--x:68%;--d:7.8s;--l:-1.5s;--s:4px;--dx:51px"></i><i class="ld-pt" style="--x:83%;--d:6.8s;--l:-1.5s;--s:3px;--dx:7px"></i><i class="ld-pt" style="--x:21%;--d:4.4s;--l:-6.5s;--s:2px;--dx:31px"></i><i class="ld-pt" style="--x:60%;--d:6.9s;--l:-4.9s;--s:2px;--dx:-67px"></i><i class="ld-pt" style="--x:70%;--d:4.3s;--l:-0.3s;--s:2px;--dx:-63px"></i><i class="ld-pt" style="--x:62%;--d:5.5s;--l:-4.7s;--s:2px;--dx:62px"></i><i class="ld-pt" style="--x:32%;--d:6.9s;--l:-4.0s;--s:2px;--dx:47px"></i><i class="ld-pt" style="--x:86%;--d:5.3s;--l:-8.0s;--s:2px;--dx:-5px"></i><i class="ld-pt" style="--x:43%;--d:7.4s;--l:-4.1s;--s:2px;--dx:-53px"></i><i class="ld-pt" style="--x:75%;--d:7.4s;--l:-3.2s;--s:3px;--dx:28px"></i><i class="ld-pt" style="--x:11%;--d:8.3s;--l:-6.8s;--s:2px;--dx:-16px"></i><i class="ld-pt" style="--x:29%;--d:8.2s;--l:-0.4s;--s:3px;--dx:31px"></i><i class="ld-pt" style="--x:56%;--d:4.3s;--l:-5.0s;--s:3px;--dx:16px"></i><i class="ld-pt" style="--x:14%;--d:5.4s;--l:-0.1s;--s:3px;--dx:-40px"></i><i class="ld-pt" style="--x:20%;--d:5.1s;--l:-0.8s;--s:2px;--dx:49px"></i><i class="ld-pt" style="--x:65%;--d:4.8s;--l:-4.5s;--s:3px;--dx:60px"></i><i class="ld-pt" style="--x:27%;--d:8.4s;--l:-6.2s;--s:3px;--dx:28px"></i><i class="ld-pt" style="--x:17%;--d:5.8s;--l:-7.9s;--s:2px;--dx:-1px"></i><i class="ld-pt" style="--x:78%;--d:5.4s;--l:-7.1s;--s:2px;--dx:-23px"></i><i class="ld-pt" style="--x:53%;--d:8.5s;--l:-4.8s;--s:4px;--dx:-45px"></i><i class="ld-pt" style="--x:8%;--d:8.5s;--l:-1.7s;--s:3px;--dx:-68px"></i><i class="ld-sc"></i><i class="ld-k ldk1"></i><i class="ld-k ldk2"></i><i class="ld-k ldk3"></i><i class="ld-k ldk4"></i></div>
-  <div class="intro-in">
-    <div class="ld-emw"><i class="ld-fl"></i><svg class="ld-em" viewBox="0 0 240 240"><defs><linearGradient id="ldg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7fb4ff"/><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#f2a30f"/></linearGradient><radialGradient id="lds"><stop offset="0" stop-color="#fff"/><stop offset=".25" stop-color="#ffd27a"/><stop offset="1" stop-color="#f2a30f" stop-opacity="0"/></radialGradient></defs><path class="ld-tr" d="M120 20L206.6 70L206.6 170L120 220L33.4 170L33.4 70Z"/><circle class="ld-r1" cx="120" cy="120" r="88"/><circle class="ld-r2" cx="120" cy="120" r="76"/><path class="ld-hx" pathLength="1" d="M120 20L206.6 70L206.6 170L120 220L33.4 170L33.4 70Z"/><g class="ld-mono"><text x="120" y="138" text-anchor="middle">MSB</text><rect class="ld-ul" x="92" y="152" width="56" height="3" rx="1.5"/></g><g class="ld-sp" transform="translate(120 20)"><circle r="16" fill="url(#lds)"/><circle r="3.2" fill="#fff"/></g></svg></div>
-    <div class="ld-t"><span style="--i:0">P</span><span style="--i:1">T</span><span class="ldw"></span><span style="--i:3">M</span><span style="--i:4">U</span><span style="--i:5">R</span><span style="--i:6">I</span><span style="--i:7">N</span><span style="--i:8">D</span><span style="--i:9">A</span><span class="ldw"></span><span style="--i:11">S</span><span style="--i:12">E</span><span style="--i:13">N</span><span style="--i:14">T</span><span style="--i:15">R</span><span style="--i:16">A</span><span class="ldw"></span><span style="--i:18">B</span><span style="--i:19">A</span><span style="--i:20">J</span><span style="--i:21">A</span></div>
-    <p class="ld-s">Fabrikasi komponen alat berat dan struktur baja</p>
-    <div class="ld-sg"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="ov-p"><span class="ov-st">Menyiapkan halaman</span><span class="ov-c"><b class="ov-n">0</b>%</span></div>
+  <div class="ld-sheet">
+    <i class="ld-glow a"></i><i class="ld-glow b"></i><i class="ld-glow c"></i>
+    <div class="ld-in">
+      <div class="ld-logo"><img src="msb-logo.png" alt=""></div>
+      <i class="ld-line"></i>
+      <div class="ld-name">PT Murinda Sentra Baja</div>
+      <p class="ld-tag">Fabrikasi komponen alat berat dan struktur baja</p>
+      <div class="ld-prog"><div class="ld-bar"><i></i></div><div class="ld-meta"><span class="ld-st">Menyiapkan halaman</span><span><b class="ld-n">0</b>%</span></div></div>
+    </div>
+    <div class="ld-foot">Kalijati, Subang &nbsp;|&nbsp; ISO 9001</div>
   </div>
-  <div class="ld-f">Kalijati, Subang | ISO 9001</div>
+  <i class="ld-lip"></i>
 </div>
 
 <header class="top" id="topbar">
@@ -1569,7 +1561,7 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
   <div class="hero-bg" aria-hidden="true"><i class="grid"></i><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i></div>
   <div class="hero-in"><div class="wrap hw">
     <div class="hl">
-      <h1 class="sp-h" id="h1" data-d0=".45">Fabrikasi presisi untuk industri alat berat</h1>
+      <h1 class="sp-h" id="h1" data-d0=".95">Fabrikasi presisi untuk industri alat berat</h1>
       <p class="sub hr" style="--d:.95s">PT Murinda Sentra Baja memproduksi komponen alat berat dan struktur baja dengan kualitas tanpa kompromi dari plant terintegrasi di Kalijati, Subang, dan menyerahkannya tepat waktu sesuai target pelanggan.</p>
       <div class="acts hr" style="--d:1.1s">
         <a class="btn main" href="#kontak" data-go="kontak">Minta penawaran <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
@@ -1578,9 +1570,9 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
       </div>
     </div>
     <div class="collage hcol" id="collage" style="--d:.55s" aria-hidden="true">
-      <div class="cf f1 ss"><div class="ph fit vis on" style="--foto:var(--a-plant)" data-label="Foto plant"></div><div class="ph vis" style="--foto:var(--s-dump)" data-label="Vessel Dump truck"></div><div class="ph vis" style="--foto:var(--s-komatsu)" data-label="Counterweight Excavator Komatsu"></div><div class="ph vis" style="--foto:var(--s-hyundai)" data-label="Counterweight Excavator Hyundai"></div><div class="ph vis" style="--foto:var(--s-sumitomo)" data-label="Excavator Sumitomo"></div></div>
-      <div class="cf f2 ph" style="--foto:var(--m8)" data-label="Mesin CNC"></div>
-      <div class="cf f3 ph" style="--foto:var(--a-builtup)" data-label="Built-up"></div>
+      <div class="cf f1 ss"><div class="ph fit vis on" style="--foto:var(--a-plant)" data-label="Foto plant"></div><div class="ph fit vis" style="--foto:var(--s-dump)" data-label="Vessel Dump truck"></div><div class="ph fit vis" style="--foto:var(--s-komatsu)" data-label="Counterweight Excavator Komatsu"></div><div class="ph fit vis" style="--foto:var(--s-hyundai)" data-label="Counterweight Excavator Hyundai"></div><div class="ph fit vis" style="--foto:var(--s-sumitomo)" data-label="Excavator Sumitomo"></div></div>
+      <div class="cf f2 ph fit" style="--foto:var(--m8)" data-label="Mesin CNC"></div>
+      <div class="cf f3 ph fit" style="--foto:var(--a-builtup)" data-label="Built-up"></div>
       <div class="cb glass"><b>ISO</b><div><strong>ISO 9001</strong><span>Sistem manajemen mutu</span></div></div>
     </div>
   </div></div>
@@ -1608,13 +1600,13 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
 <section class="panel tint" id="tentang" data-toc="Tentang kami"><div class="wrap about">
   <div class="pic">
     <div class="abv ss wipe" style="--cr:clamp(26px,3vw,48px)" role="img" aria-label="Foto plant dan produk PT Murinda Sentra Baja di Kalijati, Subang">
-      <div class="ph vis on" style="--foto:var(--a-plant)" data-label=""></div><div class="ph vis" style="--foto:var(--a-builtup)" data-label=""></div><div class="ph vis" style="--foto:var(--s-komatsu)" data-label=""></div><div class="ph vis" style="--foto:var(--s-sumitomo)" data-label=""></div><div class="ph vis" style="--foto:var(--s-dump)" data-label=""></div>
+      <div class="ph fit vis on" style="--foto:var(--a-plant)" data-label=""></div><div class="ph fit vis" style="--foto:var(--a-builtup)" data-label=""></div><div class="ph fit vis" style="--foto:var(--s-komatsu)" data-label=""></div><div class="ph fit vis" style="--foto:var(--s-sumitomo)" data-label=""></div><div class="ph fit vis" style="--foto:var(--s-dump)" data-label=""></div>
       <div class="route glass" aria-hidden="true"><b>Menuju plant kami</b>
         <svg viewBox="0 0 300 90"><path class="rt-b" d="M16 70 L96 70 L150 40 L236 40 L284 20"/><path class="rt-f" d="M16 70 L96 70 L150 40 L236 40 L284 20"/><circle class="rt-n" cx="16" cy="70" r="5"/><circle class="rt-n" cx="150" cy="40" r="5"/><circle class="rt-r" cx="284" cy="20" r="6"/><circle class="rt-p" cx="284" cy="20" r="6"/>
           <g class="rt-t"><rect x="-10" y="-8" width="12" height="9" rx="1.5"/><path d="M3 -5h5l3 4v4H3z"/><circle cx="-6" cy="3" r="2.4"/><circle cx="6" cy="3" r="2.4"/><animateMotion dur="5.5s" repeatCount="indefinite" rotate="auto" path="M16 70 L96 70 L150 40 L236 40 L284 20"/></g></svg>
         <div class="rt-l"><span>Jakarta</span><span>Exit Tol Kalijati</span><span>Plant MSB</span></div></div>
     </div>
-    <div class="apx"><figure class="rv z"><div class="ph vis" style="--foto:var(--p-cw2)" data-label="Counterweight excavator"></div><figcaption>Counterweight excavator</figcaption></figure><figure class="rv z"><div class="ph vis" style="--foto:var(--p-bucket1)" data-label="Bucket excavator"></div><figcaption>Bucket excavator</figcaption></figure><figure class="rv z"><div class="ph vis" style="--foto:var(--p-vessel)" data-label="Komponen dump truck"></div><figcaption>Komponen dump truck</figcaption></figure><figure class="rv z"><div class="ph vis" style="--foto:var(--m8)" data-label="Mesin potong CNC"></div><figcaption>Mesin potong CNC</figcaption></figure></div>
+    <div class="apx"><figure class="rv z"><div class="ph fit vis" style="--foto:var(--p-cw2)" data-label="Counterweight excavator"></div><figcaption>Counterweight excavator</figcaption></figure><figure class="rv z"><div class="ph fit vis" style="--foto:var(--p-bucket1)" data-label="Bucket excavator"></div><figcaption>Bucket excavator</figcaption></figure><figure class="rv z"><div class="ph fit vis" style="--foto:var(--p-vessel)" data-label="Komponen dump truck"></div><figcaption>Komponen dump truck</figcaption></figure><figure class="rv z"><div class="ph fit vis" style="--foto:var(--m8)" data-label="Mesin potong CNC"></div><figcaption>Mesin potong CNC</figcaption></figure></div>
     <div class="tag glass rv z" style="--d:.5s"><i><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg></i><div><b>Kalijati, Subang</b><span>Dekat Exit Tol Kalijati</span></div></div>
   </div>
   <div class="tx">
@@ -2047,7 +2039,10 @@ function glay(){const vs=figs.filter(g=>!g.hidden),c=gcols();
   const miss=(c-cells%c)%c;
   if(miss&&vs.length>1){const l=vs[vs.length-1];l.classList.add('fill');l.style.setProperty('--sp',miss+1);l.style.aspectRatio=((miss+1)*1.6).toFixed(2)}}
 /* galeri: efek masuk bergantian saat foto memasuki layar */
-const gio=new IntersectionObserver(es=>{es.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top||a.boundingClientRect.left-b.boundingClientRect.left).forEach((e,k)=>{e.target.style.setProperty('--d',Math.min(k,9)*.08+'s');e.target.classList.add('in');gio.unobserve(e.target)})},{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+/* foto dimuat dulu, baru kartu muncul (tidak ada kotak abu-abu yang berganti foto) */
+const gurl=f=>{const p=$('.ph',f);p.classList.add('vis');const m=/url\(["']?(.*?)["']?\)/.exec(getComputedStyle(p,'::before').backgroundImage);return m&&m[1]};
+const gready=f=>new Promise(res=>{const u=gurl(f);if(!u)return res();let d=0;const ok=()=>{if(!d){d=1;res()}},im=new Image();im.onload=im.onerror=ok;im.src=u;setTimeout(ok,1600)});
+const gio=new IntersectionObserver(es=>{es.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top||a.boundingClientRect.left-b.boundingClientRect.left).forEach((e,k)=>{const g=e.target;gio.unobserve(g);gready(g).then(()=>{if(g.hidden)return;g.style.setProperty('--d',Math.min(k,9)*.08+'s');g.classList.add('in')})})},{threshold:.1,rootMargin:'0px 0px -5% 0px'});
 function gapply(reset){let n=0,rest=0;
   figs.forEach(g=>{const m=gf==='all'||g.dataset.g===gf;
     if(m&&n<gshow){n++;if(g.hidden||reset)g.classList.remove('in');g.hidden=false}
@@ -2055,7 +2050,7 @@ function gapply(reset){let n=0,rest=0;
   gmore.hidden=!rest;$('b',gmore).textContent=rest;glay();
   figs.forEach(g=>{if(!g.hidden&&!g.classList.contains('in')){gio.unobserve(g);gio.observe(g)}})}
 $$('.filt button').forEach(b=>{const f=b.dataset.f,n=f==='all'?figs.length:figs.filter(g=>g.dataset.g===f).length;b.insertAdjacentHTML('beforeend',`<small>${n}</small>`)});
-$$('.filt button').forEach(b=>b.addEventListener('click',()=>{$$('.filt button').forEach(x=>x.setAttribute('aria-pressed',x===b));gf=b.dataset.f;gshow=glim();gapply(true)}));
+$$('.filt button').forEach(b=>b.addEventListener('click',()=>{$$('.filt button').forEach(x=>x.setAttribute('aria-pressed',x===b));gf=b.dataset.f;gshow=glim();gapply(false)}));
 $('button',gmore).addEventListener('click',()=>{gshow+=glim();gapply(false)});
 let grz;addEventListener('resize',()=>{cancelAnimationFrame(grz);grz=requestAnimationFrame(glay)});
 gapply(true);
@@ -2141,11 +2136,19 @@ if(!RM)setInterval(()=>{$$('[data-v]',r).forEach(b=>{b.textContent=Math.max(0,+b
 /* peta: animasi rute atau peta interaktif */
 {const g=$('#pm-tg'),m=$('#pmap');if(g&&m){const f=$('iframe',m),v=[$('.pm-svg',m),$('.pm-card',m),$('.pm-bg',m)];g.onclick=()=>{const o=f.hidden;if(o&&!f.src)f.src=f.dataset.src;f.hidden=!o;v.forEach(e=>e.style.display=o?'none':'');g.textContent=o?'Tampilkan animasi rute':'Tampilkan peta interaktif'}}}
 
-/* overlay pembuka: bilah dan angka progres, selesai 100% saat halaman siap */
-{const it=$('.intro');if(it){const hx=$('.ld-hx',it),sp=$('.ld-sp',it),pc=$('.ov-n',it),st=$('.ov-st',it),sg=$$('.ld-sg i',it),L0=hx.getTotalLength(),t0=performance.now(),L=[[.3,'Menyiapkan halaman'],[.62,'Memuat foto dan fasilitas'],[.92,'Menyusun profil perusahaan'],[2,'Hampir selesai']];let cur=0;(function f(t){const r=H.classList.contains('ready'),tg=r?1:Math.min(.94,(1-Math.pow(1-cl((t-t0)/2000,0,1),3))*.94);cur+=(tg-cur)*.2;if(cur>.997)cur=1;hx.style.strokeDashoffset=1-cur;const q=hx.getPointAtLength(L0*cur);sp.setAttribute('transform','translate('+q.x+' '+q.y+')');sg.forEach((s,i)=>s.classList.toggle('on',(i+1)/sg.length<=cur+.001));pc.textContent=Math.round(cur*100);st.textContent=r?'Siap':L.find(x=>cur<x[0])[1];if(!(r&&cur===1))requestAnimationFrame(f)})(t0)}}
-const ready=()=>{if(H.classList.contains('ready'))return;H.classList.add('ready');$('#h1').classList.add('on');setTimeout(()=>{const i=$('.intro');i&&i.remove()},3000)};
-addEventListener('load',()=>{lay();thumbs();on();setTimeout(ready,RM?0:2200)});
-setTimeout(ready,4500);
+/* pembuka: progres halus; setelah 100% tirai terangkat dan beranda tampil */
+const ready=()=>{if(H.classList.contains('ready'))return;H.classList.add('ready');$('#h1').classList.add('on');setTimeout(()=>{const i=$('.intro');i&&i.remove()},2700)};
+{const it=$('.intro'),t0=performance.now(),MIN=1900,L=[[.34,'Menyiapkan halaman'],[.68,'Memuat foto dan fasilitas'],[.96,'Menyusun profil perusahaan'],[2,'Hampir selesai']];
+let loaded=false,fired=false,cur=0,last=t0;
+const bar=it&&$('.ld-bar',it),num=it&&$('.ld-n',it),st=it&&$('.ld-st',it);
+const fire=()=>{if(fired)return;fired=true;setTimeout(ready,RM?0:450)};
+addEventListener('load',()=>{loaded=true;lay();thumbs();on();if(RM||!it)fire()});
+if(it&&!RM)(function f(t){const el=t-t0,dt=Math.min(.1,(t-last)/1000);last=t;
+const ez=1-Math.pow(1-cl(el/(MIN-200),0,1),3),tg=loaded&&el>=MIN?1:Math.min(.92,ez*.92);
+cur+=(tg-cur)*(1-Math.exp(-dt*(tg===1?12:5)));if(tg===1&&cur>.996)cur=1;
+bar.style.setProperty('--p',cur.toFixed(4));num.textContent=Math.round(cur*100);st.textContent=cur>=1?'Siap':L.find(x=>cur<x[0])[1];
+if(cur>=1){fire();return}requestAnimationFrame(f)})(t0);
+setTimeout(ready,5200)}
 
 if(RM)$$('.route svg,.ex-hub svg').forEach(s=>s.pauseAnimations&&s.pauseAnimations());
 document.addEventListener('pointerdown',e=>{const b=e.target.closest('.btn,.ptab,.filt button,.pnb,nav.main>a.cta');if(!b)return;const r=b.getBoundingClientRect();b.style.setProperty('--rx',(e.clientX-r.left)+'px');b.style.setProperty('--ry',(e.clientY-r.top)+'px');b.classList.remove('rip');void b.offsetWidth;b.classList.add('rip');setTimeout(()=>b.classList.remove('rip'),650)},{passive:true});
