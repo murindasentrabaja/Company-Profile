@@ -1504,6 +1504,23 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
   .vmd-acts{grid-column:1/-1;justify-content:stretch}
   .vmd-acts .btn{flex:1 1 100%}
 }
+
+/* ===== KOLASE FOTO BROSUR DAN COMPANY PROFILE ===== */
+.cg{display:flex;flex-direction:column;gap:10px;height:100%}
+.cgr{display:flex;gap:10px;min-height:0;flex:var(--h,1) 1 0}
+.cgt{position:relative;margin:0;min-width:0;flex:var(--w,1) 1 0;border-radius:16px;overflow:hidden;background:#dfe6f4;box-shadow:0 8px 20px rgba(16,34,74,.18)}
+.cgt .ph{position:absolute;inset:0;border-radius:0}
+.cgt figcaption{position:absolute;z-index:2;left:9px;bottom:9px;max-width:calc(100% - 18px);padding:5px 10px 5px 9px;border-radius:9px;border-left:3px solid var(--ac);background:linear-gradient(135deg,rgba(10,22,51,.92),rgba(23,49,106,.84));color:#fff;font:600 10.5px/1.3 var(--body)}
+.cgh{display:flex;flex-direction:column;justify-content:flex-end;padding:20px 22px;color:#fff;background:linear-gradient(145deg,#0a1633,#17316a 70%,#2a4f93)}
+.cgh::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 100% 0,var(--ac),transparent 58%);opacity:.45}
+.cgh>*{position:relative}
+.cgh small{display:block;margin-bottom:8px;font:600 10.5px var(--body);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+.cgh small::before{content:"";display:inline-block;width:22px;height:3px;margin-right:8px;border-radius:3px;vertical-align:middle;background:var(--ac)}
+.s-cg .cgh h2{font-size:34px;line-height:1;color:#fff}
+.s-cg .cgh h2::after{background:var(--ac)}
+.cgh p{margin-top:10px;font-size:11.5px;line-height:1.5;color:#dbe6fa}
+.cgh .chp{margin-top:12px}
+.cgh .chp b{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.24)}
 </style></head>
 <body>
 
@@ -1860,11 +1877,11 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
   <div class="sh"><h2 class="sp-h">Brosur dan company profile PDF</h2><p class="lead rv">Pilih format yang sesuai kebutuhan Anda. Semua dapat dipratinjau langsung, lalu disimpan sebagai PDF atau dicetak.</p></div>
   <div class="bro">
     <article class="bc glass rv z" style="--d:0s"><button class="pv" type="button" data-bk="lengkap" aria-label="Pratinjau Company Profile Lengkap" data-pv="lengkap"></button>
-      <h3>Company profile lengkap</h3><p>Profil menyeluruh: sejarah singkat, visi dan misi, layanan, fasilitas, alur produksi, mutu, ERP, tim, klien, dan kontak.</p>
+      <h3>Company profile lengkap</h3><p>Profil menyeluruh: sejarah singkat, visi dan misi, layanan, fasilitas dan area, mesin produksi, inspeksi mutu, produk, alur produksi, mutu, ERP, tim, klien, dan kontak.</p>
       
       <div class="acts"><button class="btn" type="button" data-bk="lengkap"><svg viewBox="0 0 24 24"><use href="#i-eye"/></svg> Pratinjau</button><button class="btn main" type="button" data-bk="lengkap" data-print="1"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh PDF</button></div></article>
     <article class="bc glass rv z" style="--d:.12s"><button class="pv" type="button" data-bk="ringkas" aria-label="Pratinjau Brosur Ringkas" data-pv="ringkas"></button>
-      <h3>Brosur ringkas</h3><p>Ringkasan perusahaan: tentang kami, layanan, fasilitas, mutu, dan kontak.</p>
+      <h3>Brosur ringkas</h3><p>Ringkasan perusahaan: tentang kami, layanan, fasilitas, galeri mesin dan produk, mutu, dan kontak.</p>
       
       <div class="acts"><button class="btn" type="button" data-bk="ringkas"><svg viewBox="0 0 24 24"><use href="#i-eye"/></svg> Pratinjau</button><button class="btn main" type="button" data-bk="ringkas" data-print="1"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh PDF</button></div></article>
     <article class="bc glass rv z" style="--d:.24s"><button class="pv" type="button" data-bk="fakta" aria-label="Pratinjau Lembar Fakta" data-pv="fakta"></button>
@@ -2135,7 +2152,20 @@ const ct=n=>sh('s-ct',n,'Kontak',`<div class="l"><div class="hd2"><h2>Hubungi ka
 const r2=n=>{const p=$$('#tentang .tx p').map(e=>e.textContent);return sh('s-about s-r2',n,'Tentang kami dan layanan',`<div class="tx pad-t"><h2>Menjaga kepercayaan setiap mitra bisnis</h2><p class="lead">${p[0]}</p><p>${p[1]}</p>${ch(['Counterweight excavator','Bucket excavator','Komponen dump truck','Struktur baja built-up'])}<ul class="cks">${$$('#tentang .checks li').map(e=>ck(e.textContent)).join('')}</ul></div><div class="sv">${svcs.map(s=>`<div class="bx">${ic(hr($('.ic',s)))}<div><h3>${tx('.dt h3',s)}</h3><p>${tx('.dt p',s)}</p></div></div>`).join('')}</div>`,'g2')};
 const r3=n=>sh('s-r3',n,'Fasilitas dan mutu',`<div class="pad-t"><h2>Fasilitas dan mesin produksi</h2><div class="gg3">${[0,1,2,3,9,12].map(i=>ph(ft($('.ph',figs[i])))).join('')}</div>${ch(tech())}</div><div class="rr">${ph('var(--foto-erp)','contain')}<h3>Mutu terukur, produksi terpantau</h3><ul class="cks">${['Sistem manajemen mutu ISO 9001','Non-Destructive Testing (NDT)','Inspeksi pengelasan','Verifikasi ketebalan cat','Persetujuan digital lewat ERP','Pelacakan produksi real-time'].map(ck).join('')}</ul></div>`,'g2');
 const fakta=()=>`<section class="sheet s-fact"><div class="band"><div><h1>Lembar fakta</h1><p>PT Murinda Sentra Baja &nbsp;|&nbsp; Fabrikasi komponen alat berat dan struktur baja</p></div><div class="cv-logo"><img src="msb-logo.png" alt=""></div></div><div class="fb"><div class="col"><div class="sec">Angka kunci</div><div class="kg"><div><b>ISO 9001</b><span>Manajemen mutu di seluruh departemen</span></div><div><b>6</b><span>Tahap produksi umum</span></div><div><b>3</b><span>Lapis pengujian mutu</span></div><div><b>4</b><span>Klien terkemuka</span></div></div><div class="sec">Layanan</div><ul class="ls">${svcs.map(s=>`<li>${ic(hr($('.ic',s)))}<div><b>${tx('.tt',s)}</b>${$$('.dt li',s).map(l=>l.textContent).join(', ')}</div></li>`).join('')}</ul></div><div class="col"><div class="sec">Fasilitas utama</div><div class="ph3">${[0,1,9].map(i=>ph(ft($('.ph',figs[i])))).join('')}</div>${ch(tech())}<div class="sec">Sektor industri</div>${ch(['Konstruksi','Manufaktur industri','Pertambangan','Infrastruktur'])}<div class="sec">Klien dan mitra</div>${lg('lg2')}</div><div class="col"><div class="sec">Kontak</div><p class="ad"><b>Workshop</b><br>Jl. Raya Kalijati Purwadadi No. 123A, Desa Kalijati Barat, Kecamatan Kalijati, Kabupaten Subang, Jawa Barat 41271<br>(+62260) 7495467 &nbsp;|&nbsp; plant@murinda.com</p><p class="ad"><b>Head office</b><br>15 Fl, Permata Kuningan Building, Jalan Kuningan Mulia Kav. 9C, Jakarta 12980<br>(+6221) 28546000 &nbsp;|&nbsp; murinda@murinda.com</p><p class="ad"><b>Web</b><br>www.murinda.com</p><div class="sec">Keunggulan</div><ul class="cks" style="grid-template-columns:1fr">${['Satu plant terintegrasi','Transparansi produksi real-time lewat ERP','Mutu terukur dengan tiga lapis pengujian','Akses logistik mudah di Exit Tol Kalijati'].map(ck).join('')}</ul></div></div></section>`;
-const FM={lengkap:()=>[cover('Company Profile'),about(2),vm(3),svc(4),fac(5),proc(6),qe(7),ind(8),team(9),ct(10)],ringkas:()=>[cover('Brosur'),r2(2),r3(3),ct(4)],fakta:()=>[fakta()]};
+
+/* kolase foto: semua foto galeri (area, mesin, inspeksi, produk) masuk brosur dan company profile */
+const AC={area:'#2f5391',mesin:'#f2a30f',inspeksi:'#0f9d8a',produk:'#e8590c'};
+const cgt=(i,w)=>{const f=figs[i],p=$('.ph',f);return `<figure class="cgt" style="--w:${w};--ac:${AC[f.dataset.g]}"><div class="ph vis${p.classList.contains('fit')?' fit':''}" style="--foto:${ft(p)}"></div><figcaption>${tx('figcaption',f)}</figcaption></figure>`};
+const cg=(n,t,k,h,d,ids,L,ac,x='')=>{const it=[w=>`<div class="cgt cgh" style="--w:${w};--ac:${ac}"><small>${k}</small><h2>${h}</h2><p>${d}</p>${x}</div>`,...ids.map(i=>w=>cgt(i,w))];let j=0;
+ return sh('s-cg',n,t,`<div class="cg">${L.map(r=>`<div class="cgr" style="--h:${r[0]}">${r.slice(1).map(w=>it[j++](w)).join('')}</div>`).join('')}</div>`)};
+const L8=[[1.05,1.1,1.6,1.1],[1,1.3,1,1.4],[1,1.2,1.5]],L9=[[1.1,1.2,1.7,1.1],[1,1.1,1.3,1.6],[1.05,1.6,1,1.2]],L10=[[1.05,1.2,1.5,1.2],[1,1.3,1,1.2,1.2],[1.05,1.5,1.1,1.3]],L7=[[1.1,1.1,1.5,1.2],[1,1.4,1,1.3,1.1]],L11=[[1,1.5,1,1.2,1.1],[1,1.1,1.3,1.1,1.4],[1.05,1.5,1.2,1.4]],L13=[[1,1.5,1,1.2,1.1],[1,1,1.2,1,1.1,1.3],[1,1.2,1.3,1,1.4]];
+const pArea=n=>cg(n,'Fasilitas: area workshop','8 foto','Area workshop','Plant, area fabrikasi, area komponen, dan kantor utama di kompleks workshop Kalijati, Subang.',[0,5,1,2,3,4,6,7],L9,AC.area),
+pCut=n=>cg(n,'Mesin produksi: pemotongan','7 foto','Mesin pemotongan','Mesin potong CNC, gantri, gas, dan gergaji band untuk memotong plat dan profil sesuai gambar kerja.',[15,14,23,19,20,17,10],L8,AC.mesin),
+pForm=n=>cg(n,'Mesin produksi: pembentukan, las, dan finishing','9 foto','Pembentukan, pengelasan, dan finishing','Roll, press hidrolik, perakitan H-beam, las SAW, dan paint booth untuk membentuk, menyambung, dan menyelesaikan komponen.',[12,11,13,8,9,18,22,21,16],L10,AC.mesin),
+pInsp=n=>cg(n,'Inspeksi dan pengujian mutu','6 foto','Inspeksi mutu','Pengujian ultrasonik (UT), magnetic particle (MPI), penetrant (PT), weld gauge, dan ketebalan cat, diawasi lewat ERP sesuai ISO 9001.',[24,26,27,25,28,29],L7,AC.inspeksi),
+pProd=n=>cg(n,'Produk kami','10 foto','Produk kami','Dari workshop sampai pengiriman: komponen alat berat dan struktur baja untuk konstruksi, industri, pertambangan, dan infrastruktur.',[32,30,33,31,34,36,37,38,39,35],L11,AC.produk,ch(['Counterweight excavator','Bucket excavator','Vessel dump truck','Profil built-up (H-beam)'])),
+pGal=n=>cg(n,'Galeri fasilitas, mesin, dan produk','12 foto','Galeri MSB','Cuplikan area workshop, mesin produksi, inspeksi mutu, dan produk dari plant Kalijati, Subang.',[0,15,32,12,30,24,9,34,16,26,36,1],L13,AC.produk,ch(tech()));
+const FM={lengkap:()=>[cover('Company Profile'),about(2),vm(3),svc(4),pArea(5),pCut(6),pForm(7),pInsp(8),pProd(9),proc(10),qe(11),ind(12),team(13),ct(14)],ringkas:()=>[cover('Brosur'),r2(2),r3(3),pGal(4),ct(5)],fakta:()=>[fakta()]};
 
 const bk=$('#bk'),pg=$('#bk-pages');
 function scale(){const s=cl(($('#bk-body').clientWidth-2*cl(innerWidth*.026,16,40))/PW,.3,1.6);$$('#bk-pages .sw').forEach(x=>{x.style.setProperty('--s',s);x.style.width=PW*s+'px';x.style.height=PH*s+'px'})}
