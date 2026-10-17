@@ -73,7 +73,6 @@
   --s-dump:url('img/Slideshow/Dumtruck.jpg');
   --s-komatsu:url('img/Slideshow/Excavator Komatsu.jpg');
   --s-sumitomo:url('img/Slideshow/Excavator Sumitomo.jpg');
-   --s-hyundai:url('img/Slideshow/Excavator Hyundai.jpg');
   /* Produk */
   --p-bucket1:url('img/Product/Bucket Excavator/Bucket Excavator (1).jpeg');
   --p-bucket3:url('img/Product/Bucket Excavator/Bucket Excavator (3).jpeg');
@@ -1341,6 +1340,47 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
 .exm .exb{flex:none;align-content:center;gap:.6rem}.exm .exb li{grid-template-columns:5.4rem 1fr 2.3rem}
 .exb i{height:8px}.exb u{box-shadow:0 0 10px rgba(242,163,15,.45)}
 @media(max-width:700px){.exh small,.dl{display:none}.exh{padding-right:6.6rem}.exh h4{font-size:1.02rem}.ex-live{top:.7rem;right:.7rem;gap:.3rem;padding:.22rem .55rem;font-size:.62rem}.exk{gap:.4rem}.kc{padding:.5rem .55rem!important}.kc small{white-space:normal;font-size:.64rem;line-height:1.15}.exm{grid-template-columns:1fr}.exc,.sp,.ki{display:none}.kc{grid-template-columns:1fr;padding:.5rem .6rem!important}.dl{top:.4rem;right:.4rem}.exh{padding-right:6rem}}
+/* ===== PEMBUKA BARU: emblem heksagon dilas, percikan api, pintu terbelah ===== */
+.js:not(.rm) .intro{background:none}
+.intro::before,.intro::after{content:"";position:absolute;left:0;right:0;z-index:0;height:50.3%;transition:translate 1.05s cubic-bezier(.77,0,.18,1) .55s}
+.intro::before{top:0;background:linear-gradient(180deg,#06112b,#0c1d46)}.intro::after{bottom:0;background:linear-gradient(180deg,#0c1d46,#0a1a3f)}
+.js.ready:not(.rm) .intro{clip-path:inset(0)}.js.ready .intro::before{translate:0 -101%}.js.ready .intro::after{translate:0 101%}
+.ld-bgx{position:absolute;inset:0;z-index:1;overflow:hidden;transition:opacity .5s}.js.ready .ld-bgx{opacity:0}
+.intro .ld-g{background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px)}
+.ld-core{position:absolute;left:50%;top:44%;width:90vmin;height:90vmin;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(70,125,235,.38),rgba(242,163,15,.07) 45%,transparent 68%);animation:ld-br 3.2s ease-in-out infinite alternate}
+@keyframes ld-br{to{scale:1.12;opacity:.75}}
+.ld-pt{position:absolute;bottom:-12px;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;background:#ffb43a;box-shadow:0 0 8px 2px rgba(255,150,40,.7);opacity:0;animation:ld-up var(--d) linear var(--l) infinite}
+@keyframes ld-up{0%{translate:0 0;opacity:0}12%{opacity:1}100%{translate:var(--dx) -105vh;opacity:0}}
+.ld-sc{position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,rgba(127,180,255,.6),transparent);animation:ld-scan 3.4s linear infinite}
+@keyframes ld-scan{from{translate:0 -4px}to{translate:0 100vh}}
+.ld-k{position:absolute;width:34px;height:34px;border:0 solid rgba(127,180,255,.5)}
+.ld-k.ldk1{left:22px;top:22px;border-width:2px 0 0 2px}.ld-k.ldk2{right:22px;top:22px;border-width:2px 2px 0 0}.ld-k.ldk3{left:22px;bottom:22px;border-width:0 0 2px 2px}.ld-k.ldk4{right:22px;bottom:22px;border-width:0 2px 2px 0}
+.intro-in{z-index:3;gap:1.05rem}
+.js.ready .intro-in{scale:1.14;transition:opacity .5s,translate .8s var(--e),scale .8s var(--e)}
+.ld-emw{position:relative;display:grid;place-items:center}
+.ld-em{width:clamp(160px,50vw,236px);height:auto;overflow:visible;animation:ld-pop 1s var(--e) both}
+@keyframes ld-pop{from{opacity:0;scale:.7;filter:blur(10px)}}
+.ld-tr{fill:none;stroke:rgba(255,255,255,.12);stroke-width:3.2;stroke-linejoin:round}
+.ld-r1,.ld-r2{fill:none;transform-box:fill-box;transform-origin:center}
+.ld-r1{stroke:rgba(255,255,255,.3);stroke-dasharray:2 7;animation:ld-rot 24s linear infinite}
+.ld-r2{stroke:#f2a30f;stroke-opacity:.6;stroke-width:1.6;stroke-dasharray:18 22;animation:ld-rot 14s linear infinite reverse}
+@keyframes ld-rot{to{rotate:360deg}}
+.ld-hx{fill:none;stroke:url(#ldg);stroke-width:3.4;stroke-linejoin:round;stroke-dasharray:1 1;stroke-dashoffset:1;filter:drop-shadow(0 0 5px rgba(143,190,255,.85))}
+.ld-mono text{font:800 60px var(--display);letter-spacing:.04em;fill:#fff;filter:drop-shadow(0 0 10px rgba(130,180,255,.6))}
+.ld-ul{fill:#f2a30f;transform-box:fill-box;transform-origin:center;animation:ld-ul 1.1s var(--e) .7s both}
+@keyframes ld-ul{from{scale:0 1}}
+.ld-sp{animation:ld-spk .5s ease-in-out infinite alternate}@keyframes ld-spk{to{opacity:.7}}
+.ld-fl{position:absolute;width:50%;aspect-ratio:1;border-radius:50%;border:2px solid #fff;opacity:0}
+.js.ready .ld-fl{animation:ld-fl .9s ease-out}@keyframes ld-fl{from{opacity:.9;scale:.6}to{opacity:0;scale:3.2}}
+.ld-t{max-width:100%;white-space:nowrap;font:700 min(1.55rem,5.2cqw)/1.1 var(--display);letter-spacing:.2em;color:#fff;text-shadow:0 0 18px rgba(120,170,255,.5)}
+.ld-t span{display:inline-block;animation:ld-ch .7s var(--e) calc(.45s + var(--i)*.04s) both}.ld-t .ldw{width:.5em}
+@keyframes ld-ch{from{opacity:0;translate:0 .6em;filter:blur(8px)}}
+.ld-s{font-size:.9rem;line-height:1.5;text-wrap:balance;color:#9db4e0;animation:ov-word .8s var(--e) 1.1s both}
+.ld-sg{display:flex;gap:3px;width:100%;margin-top:.5rem}
+.ld-sg i{flex:1;height:10px;border-radius:2px;background:rgba(255,255,255,.1);transform:skewX(-20deg);transition:background .25s,box-shadow .25s}
+.ld-sg i.on{background:linear-gradient(180deg,#ffc24f,#e8590c);box-shadow:0 0 10px rgba(242,163,15,.65)}
+.intro .ov-p{color:#9db4e0}.intro .ov-c b{color:#fff;font-size:1.05rem}
+.intro .ld-f{z-index:3;color:#8ea6d6}
 #svc-erp .ph{background:radial-gradient(70% 60% at 50% 30%,#1f3b70,#0a1633)}
 #svc-erp .ph::after{display:none}
 #svc-erp .ph::before{background-size:auto 56%;background-position:center 6%;background-repeat:no-repeat}
@@ -1394,12 +1434,12 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
 
 <!-- Pembuka: layar muat bergaya cetak biru, titik las bergerak sebagai progres -->
 <div class="intro" aria-hidden="true">
-  <i class="ld-o o1"></i><i class="ld-o o2"></i><div class="ld-g"></div>
+  <div class="ld-bgx"><i class="ld-core"></i><div class="ld-g"></div><i class="ld-pt" style="--x:60%;--d:7.9s;--l:-6.9s;--s:3px;--dx:45px"></i><i class="ld-pt" style="--x:68%;--d:7.8s;--l:-1.5s;--s:4px;--dx:51px"></i><i class="ld-pt" style="--x:83%;--d:6.8s;--l:-1.5s;--s:3px;--dx:7px"></i><i class="ld-pt" style="--x:21%;--d:4.4s;--l:-6.5s;--s:2px;--dx:31px"></i><i class="ld-pt" style="--x:60%;--d:6.9s;--l:-4.9s;--s:2px;--dx:-67px"></i><i class="ld-pt" style="--x:70%;--d:4.3s;--l:-0.3s;--s:2px;--dx:-63px"></i><i class="ld-pt" style="--x:62%;--d:5.5s;--l:-4.7s;--s:2px;--dx:62px"></i><i class="ld-pt" style="--x:32%;--d:6.9s;--l:-4.0s;--s:2px;--dx:47px"></i><i class="ld-pt" style="--x:86%;--d:5.3s;--l:-8.0s;--s:2px;--dx:-5px"></i><i class="ld-pt" style="--x:43%;--d:7.4s;--l:-4.1s;--s:2px;--dx:-53px"></i><i class="ld-pt" style="--x:75%;--d:7.4s;--l:-3.2s;--s:3px;--dx:28px"></i><i class="ld-pt" style="--x:11%;--d:8.3s;--l:-6.8s;--s:2px;--dx:-16px"></i><i class="ld-pt" style="--x:29%;--d:8.2s;--l:-0.4s;--s:3px;--dx:31px"></i><i class="ld-pt" style="--x:56%;--d:4.3s;--l:-5.0s;--s:3px;--dx:16px"></i><i class="ld-pt" style="--x:14%;--d:5.4s;--l:-0.1s;--s:3px;--dx:-40px"></i><i class="ld-pt" style="--x:20%;--d:5.1s;--l:-0.8s;--s:2px;--dx:49px"></i><i class="ld-pt" style="--x:65%;--d:4.8s;--l:-4.5s;--s:3px;--dx:60px"></i><i class="ld-pt" style="--x:27%;--d:8.4s;--l:-6.2s;--s:3px;--dx:28px"></i><i class="ld-pt" style="--x:17%;--d:5.8s;--l:-7.9s;--s:2px;--dx:-1px"></i><i class="ld-pt" style="--x:78%;--d:5.4s;--l:-7.1s;--s:2px;--dx:-23px"></i><i class="ld-pt" style="--x:53%;--d:8.5s;--l:-4.8s;--s:4px;--dx:-45px"></i><i class="ld-pt" style="--x:8%;--d:8.5s;--l:-1.7s;--s:3px;--dx:-68px"></i><i class="ld-sc"></i><i class="ld-k ldk1"></i><i class="ld-k ldk2"></i><i class="ld-k ldk3"></i><i class="ld-k ldk4"></i></div>
   <div class="intro-in">
-    <img src="msb-logo.png" alt="" onerror="this.style.display='none'">
-    <div class="ov-t">PT Murinda Sentra Baja</div>
-    <p class="ov-s">Fabrikasi komponen alat berat dan struktur baja</p>
-    <div class="seam"><i></i><u></u></div>
+    <div class="ld-emw"><i class="ld-fl"></i><svg class="ld-em" viewBox="0 0 240 240"><defs><linearGradient id="ldg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7fb4ff"/><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#f2a30f"/></linearGradient><radialGradient id="lds"><stop offset="0" stop-color="#fff"/><stop offset=".25" stop-color="#ffd27a"/><stop offset="1" stop-color="#f2a30f" stop-opacity="0"/></radialGradient></defs><path class="ld-tr" d="M120 20L206.6 70L206.6 170L120 220L33.4 170L33.4 70Z"/><circle class="ld-r1" cx="120" cy="120" r="88"/><circle class="ld-r2" cx="120" cy="120" r="76"/><path class="ld-hx" pathLength="1" d="M120 20L206.6 70L206.6 170L120 220L33.4 170L33.4 70Z"/><g class="ld-mono"><text x="120" y="138" text-anchor="middle">MSB</text><rect class="ld-ul" x="92" y="152" width="56" height="3" rx="1.5"/></g><g class="ld-sp" transform="translate(120 20)"><circle r="16" fill="url(#lds)"/><circle r="3.2" fill="#fff"/></g></svg></div>
+    <div class="ld-t"><span style="--i:0">P</span><span style="--i:1">T</span><span class="ldw"></span><span style="--i:3">M</span><span style="--i:4">U</span><span style="--i:5">R</span><span style="--i:6">I</span><span style="--i:7">N</span><span style="--i:8">D</span><span style="--i:9">A</span><span class="ldw"></span><span style="--i:11">S</span><span style="--i:12">E</span><span style="--i:13">N</span><span style="--i:14">T</span><span style="--i:15">R</span><span style="--i:16">A</span><span class="ldw"></span><span style="--i:18">B</span><span style="--i:19">A</span><span style="--i:20">J</span><span style="--i:21">A</span></div>
+    <p class="ld-s">Fabrikasi komponen alat berat dan struktur baja</p>
+    <div class="ld-sg"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="ov-p"><span class="ov-st">Menyiapkan halaman</span><span class="ov-c"><b class="ov-n">0</b>%</span></div>
   </div>
   <div class="ld-f">Kalijati, Subang | ISO 9001</div>
@@ -1438,7 +1478,7 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
       </div>
     </div>
     <div class="collage hcol" id="collage" style="--d:.55s" aria-hidden="true">
-      <div class="cf f1 ss"><div class="ph fit vis on" style="--foto:var(--a-plant)" data-label="Foto plant"></div><div class="ph vis" style="--foto:var(--s-dump)" data-label="Vessel Dump truck"></div><div class="ph vis" style="--foto:var(--s-komatsu)" data-label="Counterweight Excavator Komatsu"></div><div class="ph vis" style="--foto:var(--s-hyundai)" data-label="Counterweight Excavator Hyundai"></div><div class="ph vis" style="--foto:var(--s-sumitomo)" data-label="Counterweight Excavator Sumitomo"></div></div>
+      <div class="cf f1 ss"><div class="ph fit vis on" style="--foto:var(--a-plant)" data-label="Foto plant"></div><div class="ph vis" style="--foto:var(--s-dump)" data-label="Dump truck"></div><div class="ph vis" style="--foto:var(--s-komatsu)" data-label="Excavator Komatsu"></div><div class="ph vis" style="--foto:var(--s-sumitomo)" data-label="Excavator Sumitomo"></div></div>
       <div class="cf f2 ph" style="--foto:var(--m8)" data-label="Mesin CNC"></div>
       <div class="cf f3 ph" style="--foto:var(--a-builtup)" data-label="Built-up"></div>
       <div class="cb glass"><b>ISO</b><div><strong>ISO 9001</strong><span>Sistem manajemen mutu</span></div></div>
@@ -1648,7 +1688,7 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
     <div class="ind glass rv z" style="--d:.2s"><i><svg viewBox="0 0 24 24"><use href="#i-mountain"/></svg></i><h3>Pertambangan</h3><p>Komponen alat berat yang tangguh untuk kerja berat di lingkungan tambang.</p></div>
     <div class="ind glass rv z" style="--d:.3s"><i><svg viewBox="0 0 24 24"><use href="#i-bridge"/></svg></i><h3>Infrastruktur</h3><p>Fabrikasi baja struktural untuk pembangunan infrastruktur nasional.</p></div>
   </div>
-  <div class="cph rv"><figure><div class="ph vis" style="--foto:var(--s-komatsu)" data-label=""></div><figcaption>Counterweight Excavator Komatsu</figcaption></figure><figure><div class="ph vis" style="--foto:var(--s-sumitomo)" data-label=""></div><figcaption>Counterweight Excavator Sumitomo</figcaption></figure><figure><div class="ph vis" style="--foto:var(--s-hyundai)" data-label=""></div><figcaption>Counterweight Excavator Hyundai</figcaption></figure><figure><div class="ph vis" style="--foto:var(--s-dump)" data-label=""></div><figcaption>Vessel Dump truck</figcaption></figure></div>
+  <div class="cph rv"><figure><div class="ph vis" style="--foto:var(--s-komatsu)" data-label=""></div><figcaption>Excavator Komatsu</figcaption></figure><figure><div class="ph vis" style="--foto:var(--s-sumitomo)" data-label=""></div><figcaption>Excavator Sumitomo</figcaption></figure><figure><div class="ph vis" style="--foto:var(--s-dump)" data-label=""></div><figcaption>Dump truck</figcaption></figure></div>
   <h3 class="cl-h rv">Klien dan mitra kami</h3>
   <div class="logos" aria-label="Logo klien"><div class="track" id="track">
     <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
@@ -1988,9 +2028,9 @@ if(!RM)setInterval(()=>{$$('[data-v]',r).forEach(b=>{b.textContent=Math.max(0,+b
 {const g=$('#pm-tg'),m=$('#pmap');if(g&&m){const f=$('iframe',m),v=[$('.pm-svg',m),$('.pm-card',m),$('.pm-bg',m)];g.onclick=()=>{const o=f.hidden;if(o&&!f.src)f.src=f.dataset.src;f.hidden=!o;v.forEach(e=>e.style.display=o?'none':'');g.textContent=o?'Tampilkan animasi rute':'Tampilkan peta interaktif'}}}
 
 /* overlay pembuka: bilah dan angka progres, selesai 100% saat halaman siap */
-{const it=$('.intro');if(it){const bar=$('.seam i',it),sm=$('.seam',it),pc=$('.ov-n',it),st=$('.ov-st',it),t0=performance.now(),L=[[.3,'Menyiapkan halaman'],[.62,'Memuat foto dan fasilitas'],[.92,'Menyusun profil perusahaan'],[2,'Hampir selesai']];(function f(t){const r=H.classList.contains('ready'),p=r?1:Math.min(.94,(1-Math.pow(1-cl((t-t0)/1700,0,1),3))*.94);bar.style.transform='scaleX('+p+')';sm.style.setProperty('--p',p);pc.textContent=Math.round(p*100);st.textContent=r?'Siap':L.find(x=>p<x[0])[1];if(!r)requestAnimationFrame(f)})(t0)}}
+{const it=$('.intro');if(it){const hx=$('.ld-hx',it),sp=$('.ld-sp',it),pc=$('.ov-n',it),st=$('.ov-st',it),sg=$$('.ld-sg i',it),L0=hx.getTotalLength(),t0=performance.now(),L=[[.3,'Menyiapkan halaman'],[.62,'Memuat foto dan fasilitas'],[.92,'Menyusun profil perusahaan'],[2,'Hampir selesai']];let cur=0;(function f(t){const r=H.classList.contains('ready'),tg=r?1:Math.min(.94,(1-Math.pow(1-cl((t-t0)/2000,0,1),3))*.94);cur+=(tg-cur)*.2;if(cur>.997)cur=1;hx.style.strokeDashoffset=1-cur;const q=hx.getPointAtLength(L0*cur);sp.setAttribute('transform','translate('+q.x+' '+q.y+')');sg.forEach((s,i)=>s.classList.toggle('on',(i+1)/sg.length<=cur+.001));pc.textContent=Math.round(cur*100);st.textContent=r?'Siap':L.find(x=>cur<x[0])[1];if(!(r&&cur===1))requestAnimationFrame(f)})(t0)}}
 const ready=()=>{if(H.classList.contains('ready'))return;H.classList.add('ready');$('#h1').classList.add('on');setTimeout(()=>{const i=$('.intro');i&&i.remove()},3000)};
-addEventListener('load',()=>{lay();thumbs();on();setTimeout(ready,RM?0:1400)});
+addEventListener('load',()=>{lay();thumbs();on();setTimeout(ready,RM?0:2200)});
 setTimeout(ready,4500);
 
 if(RM)$$('.route svg,.ex-hub svg').forEach(s=>s.pauseAnimations&&s.pauseAnimations());
