@@ -22,7 +22,7 @@
      Proses Fabrikasi/Counterweight/ {Assembly, Welding, Painting, Delivery}
      MSB_Plant.jpg . Workshop_Area.png . Main_Office.jpg (langsung di folder img)
    Logo header: <img class="logo"> (msb-logo.png). Ikon tab: <link rel="icon"> di <head>.
-   Logo klien: bagian #klien (komatsu.png, sumitomo.png, sany.png, vr.png).
+   Logo klien: bagian #klien (komatsu.png, sumitomo.png, Hyundai.png, sany.png, vr.png) — Hyundai.png satu folder dengan index.html.
    ===================================================================== */
 :root{
   /* Area workshop */
@@ -34,6 +34,11 @@
   --a-komp1:url('img/Area Workshop/Area_Fabrikasi_Komponen_Alat_Berat_1.jpeg');
   --a-komp2:url('img/Area Workshop/Area_Fabrikasi_Komponen_Alat_Berat_2.jpeg');
   --a-rak:url('img/Area Workshop/Area_Komponen.jpg');
+  /* Foto pendukung sektor industri (bagian #klien) — ganti file di sini bila ingin foto lain */
+  --ind-konstruksi:url('img/Area Workshop/Area_Fabrikasi_Builtup.png');
+  --ind-manufaktur:url('img/Fasilitas Mesin/Fasilitas dan Mesin (5).jpeg');
+  --ind-tambang:url('img/Product/Bucket Excavator/Bucket Excavator (3).jpeg');
+  --ind-infra:url('img/Product/Built-Up/Builtup (2).jpeg');
   /* Mesin */
   --m1:url('img/Mesin/Machine_1.jpg'); --m2:url('img/Mesin/Machine_2.jpg'); --m3:url('img/Mesin/Machine_3.jpg');
   --m4:url('img/Mesin/Machine_4.jpg'); --m5:url('img/Mesin/Machine_5.jpg'); --m6:url('img/Mesin/Machine_6.jpg');
@@ -1388,6 +1393,100 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
 .sheet .ph.contain{background:radial-gradient(70% 60% at 50% 35%,#1f3b70,#0a1633)}.sheet .ph.contain::after{display:none}
 .s-fact .band .cv-logo{flex:none;display:block;width:230px;height:62px;padding:0}
 .s-fact .band .cv-logo img{width:100%;height:100%;max-width:none;object-fit:contain;object-position:right center}
+
+/* =====================================================================
+   PERBAIKAN: sektor industri berfoto, foto mitra tampil utuh, galeri fasilitas
+   (blok ini sengaja di paling akhir agar menimpa aturan lama di atasnya)
+   ===================================================================== */
+
+/* ---- 1. Sektor industri: foto pendukung di atas tiap kartu ---- */
+.inds{--ip:1.6rem}
+.ind{display:flex;flex-direction:column;padding:0 var(--ip) 1.9rem}
+.ind-ph{order:-1;flex:none;width:calc(100% + var(--ip)*2);margin:0 calc(var(--ip)*-1);aspect-ratio:16/9;border-radius:0}
+.ind-ph::before{background-position:var(--pos,center);transition:scale 1.1s var(--e)}
+.ind:hover .ind-ph::before{scale:1.08}
+.ind i{position:relative;z-index:3;margin-top:-1.8rem;border:3px solid rgba(255,255,255,.95);box-shadow:0 12px 26px rgba(16,34,74,.24)}
+.ind h3{margin:1rem 0 .4rem}
+@media(max-width:560px){.inds{--ip:1.3rem}.ind{padding-bottom:1.6rem}}
+
+/* ---- 2. Foto di atas "Klien dan mitra kami": lebih kecil, tampil utuh (tidak terpotong) ----
+   Setiap foto memakai rasio aslinya (--r) sehingga satu baris tingginya sama dan tidak ada bagian yang terpangkas.
+   Bila foto diganti dengan rasio berbeda, sisi kosong diisi latar buram dari foto yang sama (kelas .fit). */
+.cph{display:flex;align-items:flex-start;justify-content:center;gap:clamp(10px,1.4vw,20px);width:100%;max-width:1080px;margin:clamp(24px,3vw,44px) auto;padding:0;overflow:visible}
+.cph figure{position:relative;margin:0;flex:var(--r,1.3) 1 0%;min-width:0;aspect-ratio:auto;overflow:visible;border-radius:0;box-shadow:none;display:flex;flex-direction:column;gap:.65rem}
+.cph .ph{position:relative;inset:auto;width:100%;aspect-ratio:var(--r,1.3);border-radius:clamp(14px,1.4vw,20px);box-shadow:0 0 0 3px rgba(255,255,255,.92),0 14px 30px rgba(16,34,74,.16);transition:translate .45s var(--e),box-shadow .45s}
+.cph figure:hover .ph{translate:0 -4px;box-shadow:0 0 0 3px #fff,0 22px 40px rgba(16,34,74,.24)}
+.cph figure:hover .ph::before{scale:1}
+.cph figcaption{position:static;padding:0 .2rem;border-radius:0;background:none;font:600 .84rem/1.3 var(--body);color:var(--navy-d);text-align:center}
+@media(max-width:900px){
+  .cph{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:600px;gap:.9rem .8rem}
+  .cph figure{flex:none}
+  .cph .ph{aspect-ratio:4/3}
+  .cph figcaption{font-size:.8rem}
+}
+@media(max-width:700px){
+  .cph{overflow:visible;scroll-snap-type:none;margin:1.4rem auto;padding:0;gap:.9rem .7rem}
+  .cph figure{flex:none;scroll-snap-align:none}
+}
+
+/* ---- 3. Galeri fasilitas dan mesin: rapi, efek masuk, keterangan kaca modern ---- */
+.gal{gap:clamp(10px,1.1vw,18px);counter-reset:g}
+.gt{--ac:#5b94c4;--acl:#a9cdf7;aspect-ratio:16/10;border-radius:clamp(16px,1.5vw,24px);counter-increment:g;
+  box-shadow:0 12px 30px rgba(16,34,74,.15);transition:box-shadow .45s,translate .5s var(--e)}
+.gt[data-g=mesin]{--ac:#f2a30f;--acl:#ffd27a}
+.gt[data-g=inspeksi]{--ac:#0f9d8a;--acl:#6ee7d3}
+.gt[data-g=produk]{--ac:#e8590c;--acl:#ffab80}
+.gt:hover,.gt:focus-visible{translate:0 -4px;box-shadow:0 26px 48px rgba(16,34,74,.28)}
+.gt.big{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.gt.fill{grid-column:span var(--sp,2)}
+.gt .ph::before{transition:scale 1.1s var(--e)}
+/* bayangan lembut di dasar foto agar keterangan selalu terbaca (menggantikan kilau berjalan) */
+.gt::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:1;animation:none;
+  background:linear-gradient(180deg,rgba(10,24,56,0) 48%,rgba(10,24,56,.52) 100%)}
+/* nomor urut (mengikuti foto yang sedang tampil) */
+.gt::before{content:counter(g,decimal-leading-zero);position:absolute;z-index:3;left:.8rem;top:.8rem;display:grid;place-items:center;min-width:2.1rem;height:1.75rem;padding:0 .6rem;
+  border-radius:99px;font:700 .74rem/1 var(--display);letter-spacing:.12em;color:#fff;background:rgba(10,24,56,.42);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3)}
+/* keterangan: kartu kaca dengan label kategori dan garis aksen */
+.gt figcaption{position:absolute;z-index:3;left:.7rem;right:auto;bottom:.7rem;max-width:calc(100% - 1.4rem);display:grid;gap:.14rem;
+  padding:.6rem .95rem .66rem 1.1rem;border-radius:14px;font:600 .88rem/1.3 var(--body);color:#fff;
+  background:rgba(10,24,56,.46);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);
+  border:1px solid rgba(255,255,255,.26);box-shadow:0 10px 24px rgba(0,0,0,.2);
+  opacity:1;translate:none;transition:background .3s,translate .45s var(--e)}
+.gt:hover figcaption,.gt:focus-visible figcaption{background:rgba(10,24,56,.64);translate:0 -2px}
+.gt figcaption::before{font:700 .62rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--acl)}
+.gt figcaption::after{content:"";position:absolute;left:.48rem;top:.65rem;bottom:.65rem;width:3px;border-radius:3px;background:var(--ac)}
+.gt[data-g=area] figcaption::before{content:"Area workshop"}
+.gt[data-g=mesin] figcaption::before{content:"Mesin produksi"}
+.gt[data-g=inspeksi] figcaption::before{content:"Inspeksi mutu"}
+.gt[data-g=produk] figcaption::before{content:"Produk"}
+@media(min-width:901px){
+  .gt.big figcaption{left:1rem;bottom:1rem;max-width:min(30rem,calc(100% - 2rem));padding:.85rem 1.2rem .9rem 1.4rem;border-radius:18px;font-size:1.08rem}
+  .gt.big figcaption::after{left:.6rem;top:.85rem;bottom:.85rem}
+  .gt.big::before{left:1rem;top:1rem}
+}
+/* efek masuk: naik, buram jadi jernih, foto mengecil ke ukuran semula, lalu nomor dan keterangan menyusul */
+.js:not(.rm) .gt:not(.in){opacity:0}
+.js:not(.rm) .gt.in{animation:gin 1s var(--e) var(--d,0s) backwards}
+.js:not(.rm) .gt.in .ph::before{animation:gimg 1.6s var(--e) var(--d,0s) backwards}
+.js:not(.rm) .gt.in::before{animation:gbadge .7s var(--e) calc(var(--d,0s) + .2s) backwards}
+.js:not(.rm) .gt.in figcaption{animation:gcap .8s var(--e) calc(var(--d,0s) + .35s) backwards}
+@keyframes gin{from{opacity:0;translate:0 56px;filter:blur(12px)}}
+@keyframes gimg{from{scale:1.35}}
+@keyframes gbadge{from{opacity:0;scale:.5}}
+@keyframes gcap{from{opacity:0;translate:0 18px}}
+/* tombol saring: jumlah foto per kategori */
+.filt button small{margin-left:.5rem;padding:.12rem .5rem;border-radius:99px;background:rgba(31,59,112,.1);font:700 .72rem/1.3 var(--body);transition:background .2s,color .2s}
+.filt button[aria-pressed=true] small{background:rgba(255,255,255,.22);color:#fff}
+@media(max-width:900px){
+  .gt.big{grid-column:span 2;grid-row:auto;aspect-ratio:16/10}
+  .gt figcaption{left:.45rem;bottom:.45rem;max-width:calc(100% - .9rem);padding:.42rem .6rem .46rem .85rem;border-radius:11px;font-size:.74rem;line-height:1.25}
+  .gt figcaption::before{font-size:.54rem}
+  .gt figcaption::after{left:.32rem;top:.5rem;bottom:.5rem}
+  .gt::before{left:.5rem;top:.5rem;min-width:1.7rem;height:1.45rem;padding:0 .45rem;font-size:.64rem}
+}
+@media(max-width:380px){.gt figcaption{font-size:.7rem}}
+
 </style></head>
 <body>
 
@@ -1606,11 +1705,14 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
   <div class="sh"><div><h2 class="sp-h">Fasilitas dan mesin produksi</h2></div><div><p class="lead rv">Area kerja dan mesin utama di plant Kalijati, dari pemotongan dan pengelasan sampai penyelesaian akhir. Klik foto untuk memperbesar.</p>
     <div class="filt rv" role="group" aria-label="Saring foto" style="margin-top:1.2rem"><button type="button" aria-pressed="true" data-f="all">Semua</button><button type="button" aria-pressed="false" data-f="area">Area workshop</button><button type="button" aria-pressed="false" data-f="mesin">Mesin</button><button type="button" aria-pressed="false" data-f="inspeksi">Inspeksi</button><button type="button" aria-pressed="false" data-f="produk">Produk</button></div></div></div>
   <div class="gal" id="gal">
-    <figure class="gt big" tabindex="0" role="button" data-g="area" aria-label="Plant PT Murinda Sentra Baja, tampak dari atas"><div class="ph fit" style="--foto:var(--a-plant)" data-label="MSB_Plant"></div><figcaption>Plant PT Murinda Sentra Baja, tampak dari atas</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Plant PT Murinda Sentra Baja, tampak dari atas"><div class="ph fit" style="--foto:var(--a-plant)" data-label="MSB_Plant"></div><figcaption>Plant PT Murinda Sentra Baja, tampak dari atas</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Area fabrikasi built-up (profil H-beam)"><div class="ph" style="--foto:var(--a-builtup)" data-label="Area_Fabrikasi_Builtup"></div><figcaption>Area fabrikasi built-up (profil H-beam)</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Area fabrikasi komponen alat berat"><div class="ph" style="--foto:var(--a-komp1)" data-label="Area_Fabrikasi_Komponen_1"></div><figcaption>Area fabrikasi komponen alat berat</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Komponen alat berat setelah proses pengecatan"><div class="ph" style="--foto:var(--a-komp2)" data-label="Area_Fabrikasi_Komponen_2"></div><figcaption>Komponen alat berat setelah proses pengecatan</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Area komponen: plat dan part tersimpan di rak"><div class="ph" style="--foto:var(--a-rak)" data-label="Area_Komponen"></div><figcaption>Area komponen: plat dan part tersimpan di rak</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Gedung plant, tampak dari udara"><div class="ph" style="--foto:var(--a-udara)" data-label="MSB_Plant"></div><figcaption>Gedung plant, tampak dari udara</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Kompleks workshop, tampak dari atas"><div class="ph" style="--foto:var(--a-workshop)" data-label="Workshop_Area"></div><figcaption>Kompleks workshop, tampak dari atas</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Gedung kantor utama"><div class="ph" style="--foto:var(--a-office)" data-label="Main_Office"></div><figcaption>Gedung kantor utama</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin roll dan pelurus"><div class="ph" style="--foto:var(--m1)" data-label="Machine_1"></div><figcaption>Mesin roll dan pelurus</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin press hidrolik Murai"><div class="ph" style="--foto:var(--m2)" data-label="Machine_2"></div><figcaption>Mesin press hidrolik Murai</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin gergaji band Daito"><div class="ph" style="--foto:var(--m3)" data-label="Machine_3"></div><figcaption>Mesin gergaji band Daito</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
@@ -1621,16 +1723,6 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong CNC Ficep Gemini HPE"><div class="ph" style="--foto:var(--m8)" data-label="Machine_8"></div><figcaption>Mesin potong CNC Ficep Gemini HPE</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Fasilitas paint booth"><div class="ph" style="--foto:var(--m9)" data-label="Machine_9"></div><figcaption>Fasilitas paint booth</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong gas portabel di atas rel"><div class="ph" style="--foto:var(--m10)" data-label="Machine_10"></div><figcaption>Mesin potong gas portabel di atas rel</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
-    <figure class="gt big" tabindex="0" role="button" data-g="produk" aria-label="Bucket excavator"><div class="ph" style="--foto:var(--p-bucket1)" data-label="Bucket excavator"></div><figcaption>Bucket excavator</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
-    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Bucket excavator, tampak samping"><div class="ph" style="--foto:var(--p-bucket3)" data-label="Bucket excavator, tampak samping"></div><figcaption>Bucket excavator, tampak samping</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
-    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight excavator"><div class="ph" style="--foto:var(--p-cw2)" data-label="Counterweight excavator"></div><figcaption>Counterweight excavator</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
-    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight excavator, tampak depan"><div class="ph" style="--foto:var(--p-cw5)" data-label="Counterweight excavator, tampak depan"></div><figcaption>Counterweight excavator, tampak depan</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
-    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Profil built-up (H-beam)"><div class="ph" style="--foto:var(--p-bu1)" data-label="Profil built-up (H-beam)"></div><figcaption>Profil built-up (H-beam)</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
-    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Pemeriksaan profil built-up"><div class="ph" style="--foto:var(--p-bu2)" data-label="Pemeriksaan profil built-up"></div><figcaption>Pemeriksaan profil built-up</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
-    <figure class="gt wide" tabindex="0" role="button" data-g="produk" aria-label="Vessel dump truck"><div class="ph fit" style="--foto:var(--p-vessel)" data-label="Vessel dump truck"></div><figcaption>Vessel dump truck</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
-    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Gedung plant, tampak dari udara"><div class="ph" style="--foto:var(--a-udara)" data-label="MSB_Plant"></div><figcaption>Gedung plant, tampak dari udara</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
-    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Kompleks workshop, tampak dari atas"><div class="ph" style="--foto:var(--a-workshop)" data-label="Workshop_Area"></div><figcaption>Kompleks workshop, tampak dari atas</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
-    <figure class="gt" tabindex="0" role="button" data-g="area" aria-label="Gedung kantor utama"><div class="ph" style="--foto:var(--a-office)" data-label="Main_Office"></div><figcaption>Gedung kantor utama</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Lini roller conveyor dan mesin profil"><div class="ph" style="--foto:var(--f1)" data-label="Fasilitas dan Mesin 1"></div><figcaption>Lini roller conveyor dan mesin profil</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Meja potong CNC dengan plat baja"><div class="ph" style="--foto:var(--f3)" data-label="Fasilitas dan Mesin 3"></div><figcaption>Meja potong CNC dengan plat baja</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="mesin" aria-label="Mesin potong gantri multi-torch"><div class="ph" style="--foto:var(--f5)" data-label="Fasilitas dan Mesin 5"></div><figcaption>Mesin potong gantri multi-torch</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
@@ -1643,6 +1735,13 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
     <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Penetrant testing (PT) pada sambungan las"><div class="ph" style="--foto:var(--i-pt)" data-label="PT 2"></div><figcaption>Penetrant testing (PT) pada sambungan las</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Pengukuran las dengan weld gauge"><div class="ph" style="--foto:var(--i-weld)" data-label="Welding 3"></div><figcaption>Pengukuran las dengan weld gauge</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="inspeksi" aria-label="Pengukuran ketebalan cat"><div class="ph" style="--foto:var(--i-cat)" data-label="Painting 5"></div><figcaption>Pengukuran ketebalan cat</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Bucket excavator"><div class="ph" style="--foto:var(--p-bucket1)" data-label="Bucket excavator"></div><figcaption>Bucket excavator</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Bucket excavator, tampak samping"><div class="ph" style="--foto:var(--p-bucket3)" data-label="Bucket excavator, tampak samping"></div><figcaption>Bucket excavator, tampak samping</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight excavator"><div class="ph" style="--foto:var(--p-cw2)" data-label="Counterweight excavator"></div><figcaption>Counterweight excavator</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight excavator, tampak depan"><div class="ph" style="--foto:var(--p-cw5)" data-label="Counterweight excavator, tampak depan"></div><figcaption>Counterweight excavator, tampak depan</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Profil built-up (H-beam)"><div class="ph" style="--foto:var(--p-bu1)" data-label="Profil built-up (H-beam)"></div><figcaption>Profil built-up (H-beam)</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Pemeriksaan profil built-up"><div class="ph" style="--foto:var(--p-bu2)" data-label="Pemeriksaan profil built-up"></div><figcaption>Pemeriksaan profil built-up</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
+    <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Vessel dump truck"><div class="ph fit" style="--foto:var(--p-vessel)" data-label="Vessel dump truck"></div><figcaption>Vessel dump truck</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Deretan counterweight di area workshop"><div class="ph" style="--foto:var(--p-cw0)" data-label="Counterweight"></div><figcaption>Deretan counterweight di area workshop</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Counterweight siap dikirim"><div class="ph" style="--foto:var(--p-cw1)" data-label="Counterweight 1"></div><figcaption>Counterweight siap dikirim</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
     <figure class="gt" tabindex="0" role="button" data-g="produk" aria-label="Pengiriman counterweight dengan trailer"><div class="ph" style="--foto:var(--p-kirim)" data-label="Delivery 1"></div><figcaption>Pengiriman counterweight dengan trailer</figcaption><span class="zm"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></span></figure>
@@ -1684,18 +1783,18 @@ main footer .sosial a:hover{background:#fff;color:#12264f}
 <section class="panel" id="klien" data-toc="Industri dan klien"><div class="wrap">
   <div class="sh"><h2 class="sp-h">Dipercaya perusahaan terkemuka</h2><p class="lead rv">Mitra manufaktur dan fabrikasi bagi perusahaan nasional dan multinasional di empat sektor utama.</p></div>
   <div class="inds">
-    <div class="ind glass rv z" style="--d:0s"><i><svg viewBox="0 0 24 24"><use href="#i-crane"/></svg></i><h3>Konstruksi</h3><p>Struktur baja berkekuatan tinggi untuk proyek konstruksi sesuai spesifikasi.</p></div>
-    <div class="ind glass rv z" style="--d:.1s"><i><svg viewBox="0 0 24 24"><use href="#i-factory"/></svg></i><h3>Manufaktur industri</h3><p>Komponen dan struktur baja untuk fasilitas serta lini produksi industri.</p></div>
-    <div class="ind glass rv z" style="--d:.2s"><i><svg viewBox="0 0 24 24"><use href="#i-mountain"/></svg></i><h3>Pertambangan</h3><p>Komponen alat berat yang tangguh untuk kerja berat di lingkungan tambang.</p></div>
-    <div class="ind glass rv z" style="--d:.3s"><i><svg viewBox="0 0 24 24"><use href="#i-bridge"/></svg></i><h3>Infrastruktur</h3><p>Fabrikasi baja struktural untuk pembangunan infrastruktur nasional.</p></div>
+    <div class="ind glass rv z" style="--d:0s"><i><svg viewBox="0 0 24 24"><use href="#i-crane"/></svg></i><h3>Konstruksi</h3><p>Struktur baja berkekuatan tinggi untuk proyek konstruksi sesuai spesifikasi.</p><div class="ind-ph ph" style="--foto:var(--ind-konstruksi);--pos:center" role="img" aria-label="Foto pendukung sektor Konstruksi" data-label="Konstruksi"></div></div>
+    <div class="ind glass rv z" style="--d:.1s"><i><svg viewBox="0 0 24 24"><use href="#i-factory"/></svg></i><h3>Manufaktur industri</h3><p>Komponen dan struktur baja untuk fasilitas serta lini produksi industri.</p><div class="ind-ph ph" style="--foto:var(--ind-manufaktur);--pos:center" role="img" aria-label="Foto pendukung sektor Manufaktur industri" data-label="Manufaktur industri"></div></div>
+    <div class="ind glass rv z" style="--d:.2s"><i><svg viewBox="0 0 24 24"><use href="#i-mountain"/></svg></i><h3>Pertambangan</h3><p>Komponen alat berat yang tangguh untuk kerja berat di lingkungan tambang.</p><div class="ind-ph ph" style="--foto:var(--ind-tambang);--pos:center 45%" role="img" aria-label="Foto pendukung sektor Pertambangan" data-label="Pertambangan"></div></div>
+    <div class="ind glass rv z" style="--d:.3s"><i><svg viewBox="0 0 24 24"><use href="#i-bridge"/></svg></i><h3>Infrastruktur</h3><p>Fabrikasi baja struktural untuk pembangunan infrastruktur nasional.</p><div class="ind-ph ph" style="--foto:var(--ind-infra);--pos:center 62%" role="img" aria-label="Foto pendukung sektor Infrastruktur" data-label="Infrastruktur"></div></div>
   </div>
-  <div class="cph rv"><figure><div class="ph vis" style="--foto:var(--s-komatsu)" data-label=""></div><figcaption>Counterweight Excavator Komatsu</figcaption></figure><figure><div class="ph vis" style="--foto:var(--s-sumitomo)" data-label=""></div><figcaption>Counterweight Excavator Sumitomo</figcaption></figure><figure><div class="ph vis" style="--foto:var(--s-hyundai)" data-label=""></div><figcaption>Counterweight Excavator Hyundai</figcaption></figure><figure><div class="ph vis" style="--foto:var(--s-dump)" data-label=""></div><figcaption>Vessel Dump truck</figcaption></figure></div>
+  <div class="cph rv"><figure style="--r:1.802"><div class="ph fit vis" style="--foto:var(--s-komatsu)" role="img" aria-label="Counterweight Excavator Komatsu" data-label=""></div><figcaption>Counterweight Excavator Komatsu</figcaption></figure><figure style="--r:.989"><div class="ph fit vis" style="--foto:var(--s-sumitomo)" role="img" aria-label="Counterweight Excavator Sumitomo" data-label=""></div><figcaption>Counterweight Excavator Sumitomo</figcaption></figure><figure style="--r:1.231"><div class="ph fit vis" style="--foto:var(--s-hyundai)" role="img" aria-label="Counterweight Excavator Hyundai" data-label=""></div><figcaption>Counterweight Excavator Hyundai</figcaption></figure><figure style="--r:1.334"><div class="ph fit vis" style="--foto:var(--s-dump)" role="img" aria-label="Vessel Dump truck" data-label=""></div><figcaption>Vessel Dump truck</figcaption></figure></div>
   <h3 class="cl-h rv">Klien dan mitra kami</h3>
   <div class="logos" aria-label="Logo klien"><div class="track" id="track">
-    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
-    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
-    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
-    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
+    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="Hyundai.png" alt="Hyundai"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
+    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="Hyundai.png" alt="Hyundai"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
+    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="Hyundai.png" alt="Hyundai"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
+    <div class="tile"><img src="komatsu.png" alt="Komatsu"></div><div class="tile"><img src="sumitomo.png" alt="Sumitomo"></div><div class="tile"><img src="Hyundai.png" alt="Hyundai"></div><div class="tile"><img src="sany.png" alt="SANY"></div><div class="tile"><img src="vr.png" alt="VR"></div>
   </div></div>
   <h3 class="cl-h rv">Mengapa memilih PT Murinda Sentra Baja</h3>
   <div class="whys">
@@ -1937,15 +2036,29 @@ const svcs=$$('.svc'),act=s=>svcs.forEach(x=>x.classList.toggle('act',x===s));
 svcs.forEach(s=>{s.addEventListener('mouseenter',()=>innerWidth>900&&act(s));s.addEventListener('focus',()=>act(s));s.addEventListener('click',()=>act(s))});
 
 /* galeri: filter dan pratinjau */
-const lb=$('#lb'),figs=$$('.gt');let vl=[],li=0;
+const lb=$('#lb'),gal=$('#gal'),figs=$$('.gt');let vl=[],li=0;
 const gmore=$('#gmore');let gf='all';const glim=()=>innerWidth<=900?9:1e9;let gshow=glim();
-function gapply(){let n=0,rest=0;figs.forEach(g=>{const m=gf==='all'||g.dataset.g===gf;
-  if(m&&n<gshow){n++;if(g.hidden){g.classList.add('out');g.hidden=false;requestAnimationFrame(()=>requestAnimationFrame(()=>g.classList.remove('out')))}else g.classList.remove('out')}
-  else{g.hidden=true;if(m)rest++}});
-  gmore.hidden=!rest;$('b',gmore).textContent=rest}
-$$('.filt button').forEach(b=>b.addEventListener('click',()=>{$$('.filt button').forEach(x=>x.setAttribute('aria-pressed',x===b));gf=b.dataset.f;gshow=glim();gapply()}));
-$('button',gmore).addEventListener('click',()=>{gshow+=glim();gapply()});
-gapply();
+/* galeri: tata letak rapi (foto utama di depan, baris terakhir selalu terisi penuh) */
+const gcols=()=>getComputedStyle(gal).gridTemplateColumns.split(' ').filter(Boolean).length||1;
+function glay(){const vs=figs.filter(g=>!g.hidden),c=gcols();
+  vs.forEach(g=>{g.classList.remove('big','fill');g.style.removeProperty('--sp');g.style.removeProperty('aspect-ratio')});
+  let cells=vs.length;
+  if(c>1&&vs.length>=5){vs[0].classList.add('big');cells+=c>2?3:1}
+  const miss=(c-cells%c)%c;
+  if(miss&&vs.length>1){const l=vs[vs.length-1];l.classList.add('fill');l.style.setProperty('--sp',miss+1);l.style.aspectRatio=((miss+1)*1.6).toFixed(2)}}
+/* galeri: efek masuk bergantian saat foto memasuki layar */
+const gio=new IntersectionObserver(es=>{es.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top||a.boundingClientRect.left-b.boundingClientRect.left).forEach((e,k)=>{e.target.style.setProperty('--d',Math.min(k,9)*.08+'s');e.target.classList.add('in');gio.unobserve(e.target)})},{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+function gapply(reset){let n=0,rest=0;
+  figs.forEach(g=>{const m=gf==='all'||g.dataset.g===gf;
+    if(m&&n<gshow){n++;if(g.hidden||reset)g.classList.remove('in');g.hidden=false}
+    else{g.hidden=true;g.classList.remove('in');gio.unobserve(g);if(m)rest++}});
+  gmore.hidden=!rest;$('b',gmore).textContent=rest;glay();
+  figs.forEach(g=>{if(!g.hidden&&!g.classList.contains('in')){gio.unobserve(g);gio.observe(g)}})}
+$$('.filt button').forEach(b=>{const f=b.dataset.f,n=f==='all'?figs.length:figs.filter(g=>g.dataset.g===f).length;b.insertAdjacentHTML('beforeend',`<small>${n}</small>`)});
+$$('.filt button').forEach(b=>b.addEventListener('click',()=>{$$('.filt button').forEach(x=>x.setAttribute('aria-pressed',x===b));gf=b.dataset.f;gshow=glim();gapply(true)}));
+$('button',gmore).addEventListener('click',()=>{gshow+=glim();gapply(false)});
+let grz;addEventListener('resize',()=>{cancelAnimationFrame(grz);grz=requestAnimationFrame(glay)});
+gapply(true);
 const show=()=>{const f=vl[li];$('#lbph').style.setProperty('--foto',getComputedStyle($('.ph',f)).getPropertyValue('--foto'));$('#lbcap').textContent=tx('figcaption',f)};
 const openLb=f=>{vl=figs.filter(x=>!x.hidden);li=vl.indexOf(f);show();lb.classList.add('open')};
 const step=d=>{li=(li+d+vl.length)%vl.length;show()};
@@ -1965,7 +2078,7 @@ const ic=n=>`<i class="ico"><svg viewBox="0 0 24 24"><use href="#i-${n}"/></svg>
 ck=t=>`<li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>${t}</li>`,
 ph=(f,c='',x='')=>`<div class="ph vis ${f.includes('a-plant')?'fit ':''}${c}" style="--foto:${f}">${x}</div>`,
 ch=a=>`<div class="chp">${a.map(x=>`<b>${x}</b>`).join('')}</div>`,
-lg=c=>`<div class="${c}">${['komatsu','sumitomo','sany','vr'].map(n=>`<div><img src="${n}.png" alt="${n}"></div>`).join('')}</div>`,
+lg=c=>`<div class="${c}">${['komatsu','sumitomo','Hyundai','sany','vr'].map(n=>`<div><img src="${n}.png" alt="${n}"></div>`).join('')}</div>`,
 tech=()=>$$('.tech b').map(b=>b.textContent),
 sh=(c,n,t,b,x='')=>`<section class="sheet ${c}"><div class="sx-h"><img src="msb-logo.png" alt=""><span>${t}</span></div><div class="sx-b ${x}">${b}</div><div class="sx-f"><span>PT Murinda Sentra Baja &nbsp;|&nbsp; www.murinda.com &nbsp;|&nbsp; murinda@murinda.com</span><b>${n}</b></div></section>`,
 hd=(h,l)=>`<div class="hd"><div><h2>${h}</h2></div><p class="lead">${l}</p></div>`,
