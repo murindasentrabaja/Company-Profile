@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PT Murinda Sentra Baja | Company Profile</title>
-<meta name="description" content="Company profile PT Murinda Sentra Baja: fabrikasi komponen alat berat dan struktur baja dari plant terintegrasi di Kalijati, Subang. ISO 9001.">
+<meta name="description" content="Company profile PT Murinda Sentra Baja: kontraktor umum dan mitra produksi komponen alat berat lebih dari 30 tahun, dengan plant terintegrasi di Kalijati, Subang. ISO 9001.">
 <meta name="theme-color" content="#f4f6ff">
 <link rel="icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -758,6 +758,15 @@ footer.panel{padding-bottom:1.4rem;background:linear-gradient(180deg,#f1f5ff,#ee
 .s-vm .nl h3{margin:10px 0 4px;font-size:20px}
 .s-vm .nl p{font-size:11.5px;color:var(--soft);line-height:1.5}
 .s-vm .sec{font:700 24px var(--display);color:var(--navy-d);margin-top:20px}
+/* kebijakan mutu dan K3L (brosur) */
+.s-kb .sx-b{grid-template-rows:minmax(0,1fr) auto}
+.s-kb .pc h2{font-size:28px;line-height:1.15;color:var(--navy-d)}
+.s-kb .pc .lead{margin-top:16px;font-size:15px;line-height:1.5;color:var(--ink);max-width:none}
+.s-kb .pc .mk{margin-top:14px;font-size:14px;color:var(--soft)}
+.s-kb .pc ol{list-style:none;counter-reset:kb;margin:16px 0 0;padding:0;display:grid;gap:14px}
+.s-kb .pc li{counter-increment:kb;position:relative;padding-left:36px;font-size:14px;line-height:1.5;color:var(--soft)}
+.s-kb .pc li::before{content:counter(kb);position:absolute;left:0;top:0;display:grid;place-items:center;width:25px;height:25px;border-radius:50%;font:700 13px/1 var(--display);color:var(--navy-d);background:var(--yellow)}
+.s-kb .sg{grid-column:1/-1;text-align:right;font-size:11.5px;color:var(--soft)}
 
 /* layanan */
 .s-svc .hd{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end;height:92px}
@@ -1477,7 +1486,21 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
 @keyframes gin{from{opacity:0;translate:0 36px}}
 .js:not(.rm) .gt.in .ph::before{animation:none}
 
-/* ===== DOKUMEN PDF VISI, MISI, KEBIJAKAN ===== */
+/* ===== KEBIJAKAN MUTU DAN K3L ===== */
+.pol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,32px);margin-top:clamp(28px,3.6vw,56px)}
+.pol article{padding:clamp(22px,2.4vw,40px);border-radius:clamp(24px,2.6vw,38px)}
+.pol-h{display:grid;grid-template-columns:3.6rem minmax(0,1fr);gap:1.1rem;align-items:center}
+.pol-h i{display:grid;place-items:center;width:3.6rem;height:3.6rem;border-radius:18px;background:linear-gradient(145deg,#fff,#eaf1fb);border:1px solid var(--line);box-shadow:0 10px 22px rgba(31,59,112,.1)}
+.pol-h i svg{width:1.7rem;height:1.7rem;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pol-h h3{font-size:clamp(1.3rem,1.8vw,1.7rem);line-height:1.15}
+.pol-i{margin-top:1.3rem;color:var(--navy-d);font-weight:500}
+.pol-k{margin-top:.9rem;font-size:.96rem;color:var(--soft)}
+.pol ol{list-style:none;counter-reset:pl;margin:1rem 0 0;padding:0;display:grid;gap:.85rem}
+.pol li{counter-increment:pl;position:relative;padding-left:2.5rem;font-size:.97rem;line-height:1.55;color:var(--soft)}
+.pol li::before{content:counter(pl);position:absolute;left:0;top:.02rem;display:grid;place-items:center;width:1.75rem;height:1.75rem;border-radius:50%;font:700 .85rem/1 var(--display);color:var(--navy-d);background:linear-gradient(180deg,#dbe8fb,var(--yellow));box-shadow:inset 0 1px 0 #fffb}
+.pol-s{grid-column:1/-1;text-align:right;font-size:.92rem;color:var(--soft)}
+
+/* ===== DOKUMEN VISI, MISI, KEBIJAKAN (pratinjau gambar: awalnya hanya potongan atas, tanpa toolbar PDF) ===== */
 .vmdoc{margin-top:clamp(28px,3.6vw,56px);padding:clamp(18px,2.2vw,32px);border-radius:clamp(22px,2.4vw,34px)}
 .vmdoc.glass:not(.bar):hover{transform:none}
 .vmd-head{display:grid;grid-template-columns:3.6rem minmax(0,1fr) auto;gap:1.1rem;align-items:center}
@@ -1487,17 +1510,22 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
 .vmd-head p{font-size:.96rem;color:var(--soft);max-width:62ch}
 .vmd-acts{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:flex-end}
 .vmd-acts .btn{height:2.9rem;padding:0 1.3rem;font-size:.93rem}
-.vmd-view{position:relative;margin-top:1.3rem;height:clamp(520px,82vh,880px);border-radius:20px;overflow:hidden;background:#eef2fa;border:1px solid var(--line);box-shadow:inset 0 0 0 1px rgba(255,255,255,.6)}
-.vmd-view iframe{display:block;width:100%;height:100%;border:0;background:#fff}
-.vmd-view:not(.act) iframe{pointer-events:none}
-.vmd-hint{position:absolute;left:50%;bottom:.9rem;translate:-50% 0;padding:.45rem 1rem;border-radius:99px;font-size:.82rem;font-weight:500;color:var(--navy-d);background:rgba(255,255,255,.88);border:1px solid var(--line);box-shadow:0 8px 20px rgba(31,59,112,.16);pointer-events:none;white-space:nowrap;transition:opacity .25s}
-.vmd-view.act .vmd-hint,.vmd-view:not(.ld) .vmd-hint{opacity:0}
-.vmd-fb{display:none;position:absolute;inset:0;place-content:center;justify-items:center;gap:.7rem;padding:1.5rem;text-align:center;color:var(--soft);font-size:.96rem}
-.vmd-fb svg{width:2.6rem;height:2.6rem;fill:none;stroke:var(--navy);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.vmd-view.nofr{height:auto;min-height:0}
-.vmd-view.nofr .vmd-fb{display:grid;position:static;padding:1.8rem 1.2rem}
-.vmd-view.nofr iframe,.vmd-view.nofr .vmd-hint{display:none}
+.vmd-view{--tz:clamp(150px,19vw,250px);position:relative;margin-top:1.3rem;height:var(--tz);border-radius:20px;overflow:hidden;cursor:zoom-in;background:#eef2fa;border:1px solid var(--line);box-shadow:inset 0 0 0 1px rgba(255,255,255,.6);transition:height .7s var(--e)}
+.vmd-view.open{height:var(--full,auto);cursor:default}
+.rm .vmd-view{transition:none}
+html:not(.js) .vmd-view{height:auto;cursor:default}
+.vmd-sc{height:100%;overflow:hidden;scrollbar-width:thin}
+.vmd-view.open .vmd-sc{overflow-x:auto;overflow-y:hidden}
+.vmd-view img{display:block;width:100%;min-width:760px;height:auto;aspect-ratio:2000/1416;background:#fff}
+.vmd-view::after{content:"";position:absolute;left:0;right:0;bottom:0;height:min(62%,150px);pointer-events:none;background:linear-gradient(to top,rgba(238,242,250,.98),rgba(238,242,250,0));transition:opacity .35s}
+.vmd-view.open::after{opacity:0}
+.vmd-hint{position:absolute;z-index:1;left:50%;bottom:.9rem;translate:-50% 0;padding:.45rem 1rem;border-radius:99px;font-size:.82rem;font-weight:500;color:var(--navy-d);background:rgba(255,255,255,.92);border:1px solid var(--line);box-shadow:0 8px 20px rgba(31,59,112,.16);pointer-events:none;white-space:nowrap;transition:opacity .25s}
+.vmd-view.open .vmd-hint{opacity:0;visibility:hidden}
 @media(max-width:900px){
+  .pol{grid-template-columns:1fr}
+  .pol-s{text-align:left}
+  .pol-h{grid-template-columns:3rem minmax(0,1fr);gap:.9rem}
+  .pol-h i{width:3rem;height:3rem;border-radius:15px}
   .vmd-head{grid-template-columns:3rem minmax(0,1fr);gap:.9rem}
   .vmd-head i{width:3rem;height:3rem;border-radius:15px}
   .vmd-head h3{font-size:1.35rem}
@@ -1586,7 +1614,7 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
   <div class="bar glass">
     <a class="logo" href="#beranda" data-go="beranda"><img src="msb-logo.png" alt="PT Murinda Sentra Baja"></a>
     <nav class="main" aria-label="Menu utama">
-      <div class="dd"><a href="#tentang" data-go="tentang">Perusahaan</a><div class="menu"><a href="#tentang" data-go="tentang">Tentang kami</a><a href="#visi" data-go="visi">Visi, misi, dan nilai</a><a href="#tim" data-go="tim">Tim kunci</a><a href="#klien" data-go="klien">Industri dan klien</a></div></div>
+      <div class="dd"><a href="#tentang" data-go="tentang">Perusahaan</a><div class="menu"><a href="#tentang" data-go="tentang">Tentang kami</a><a href="#visi" data-go="visi">Visi, misi, dan kebijakan</a><a href="#tim" data-go="tim">Tim kunci</a><a href="#klien" data-go="klien">Industri dan klien</a></div></div>
       <div class="dd"><a href="#layanan" data-go="layanan">Layanan</a><div class="menu"><a href="#svc-fabrikasi" data-go="svc-fabrikasi">Fabrikasi komponen alat berat</a><a href="#svc-struktur" data-go="svc-struktur">Manufaktur struktur baja</a><a href="#svc-permesinan" data-go="svc-permesinan">Pemrosesan material dan permesinan</a><a href="#svc-erp" data-go="svc-erp">ERP dan transparansi real-time</a><a href="#svc-qc" data-go="svc-qc">Inspeksi dan pengendalian mutu</a></div></div>
       <a href="#proses" data-go="proses">Proses</a><a href="#fasilitas" data-go="fasilitas">Fasilitas</a><a href="#mutu" data-go="mutu">Mutu dan ERP</a><a href="#brosur" data-go="brosur">Brosur</a><a href="#faq" data-go="faq">FAQ</a><a class="cta" href="#kontak" data-go="kontak">Hubungi kami</a>
     </nav>
@@ -1594,7 +1622,7 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
   </div>
 </header>
 <div class="mnav" id="mnav">
-  <a href="#tentang" data-go="tentang">Tentang kami</a><a href="#visi" data-go="visi">Visi, misi, dan nilai</a>
+  <a href="#tentang" data-go="tentang">Tentang kami</a><a href="#visi" data-go="visi">Visi, misi, dan kebijakan</a>
   <a href="#layanan" data-go="layanan">Layanan</a>
   <a class="sub" href="#svc-fabrikasi" data-go="svc-fabrikasi">Fabrikasi komponen alat berat</a><a class="sub" href="#svc-struktur" data-go="svc-struktur">Manufaktur struktur baja</a><a class="sub" href="#svc-permesinan" data-go="svc-permesinan">Pemrosesan material dan permesinan</a><a class="sub" href="#svc-erp" data-go="svc-erp">ERP dan transparansi real-time</a><a class="sub" href="#svc-qc" data-go="svc-qc">Inspeksi dan pengendalian mutu</a>
   <a href="#proses" data-go="proses">Proses produksi</a><a href="#fasilitas" data-go="fasilitas">Fasilitas</a><a href="#mutu" data-go="mutu">Mutu dan ERP</a><a href="#klien" data-go="klien">Industri dan klien</a><a href="#tim" data-go="tim">Tim kunci</a><a href="#brosur" data-go="brosur">Brosur dan PDF</a><a href="#faq" data-go="faq">FAQ</a><a href="#kontak" data-go="kontak">Hubungi kami</a>
@@ -1607,7 +1635,7 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
   <div class="hero-in"><div class="wrap hw">
     <div class="hl">
       <h1 class="sp-h" id="h1" data-d0=".95">Fabrikasi presisi untuk industri alat berat</h1>
-      <p class="sub hr" style="--d:.95s">PT Murinda Sentra Baja memproduksi komponen alat berat dan struktur baja dengan kualitas tanpa kompromi dari plant terintegrasi di Kalijati, Subang, dan menyerahkannya tepat waktu sesuai target pelanggan.</p>
+      <p class="sub hr" style="--d:.95s">PT Murinda Sentra Baja telah lebih dari 30 tahun bermitra memproduksi komponen alat berat dan struktur baja built-up dari plant terintegrasi di Kalijati, Subang, dengan mengutamakan mutu dan ketepatan waktu penyerahan kepada pelanggan.</p>
       <div class="acts hr" style="--d:1.1s">
         <a class="btn main" href="#kontak" data-go="kontak">Minta penawaran <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
         <button class="btn" type="button" data-bk="lengkap"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh company profile</button>
@@ -1622,7 +1650,7 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
     </div>
   </div></div>
   <div class="hero-facts hr" style="--d:1.25s">
-    <div class="glass"><b>ISO 9001</b><span>Sistem manajemen mutu yang diterapkan di seluruh departemen</span></div>
+    <div class="glass"><b>ISO 9001</b><span>Sistem manajemen mutu untuk meningkatkan efektivitas dan efisiensi perusahaan</span></div>
     <div class="glass"><b>Kalijati, Subang</b><span>Plant terintegrasi, dekat Exit Tol Kalijati</span></div>
     <div class="glass"><b>ERP buatan sendiri</b><span>Pelacakan produksi dan persetujuan digital real-time</span></div>
   </div>
@@ -1634,9 +1662,9 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
 <section class="panel" id="ringkasan" data-toc="Ringkasan"><div class="wrap">
   <p class="scrub" data-scrub>Dari plat baja menjadi komponen yang menggerakkan industri konstruksi, pertambangan, dan infrastruktur, dibuat presisi, teruji, dan tepat waktu.</p>
   <div class="stats">
-    <div class="st rv" style="--d:0s"><b><small>ISO</small> <span data-count="9001">9001</span></b><h3>Manajemen mutu</h3><p>Diterapkan di seluruh departemen, dari engineering sampai pengiriman.</p></div>
+    <div class="st rv" style="--d:0s"><b><small>ISO</small> <span data-count="9001">9001</span></b><h3>Manajemen mutu</h3><p>Dilaksanakan agar efektivitas dan efisiensi perusahaan terus meningkat.</p></div>
     <div class="st rv" style="--d:.12s"><b><span data-count="3">3</span></b><h3>Lapis pengujian mutu</h3><p>NDT, inspeksi pengelasan, dan verifikasi ketebalan cat sebelum barang dikirim.</p></div>
-    <div class="st rv" style="--d:.24s"><b><span data-count="2">2</span></b><h3>Lini produksi terpadu</h3><p>Komponen alat berat dan struktur baja built-up, dalam satu plant terintegrasi.</p></div>
+    <div class="st rv" style="--d:.24s"><b><span data-count="2">2</span></b><h3>Lini produksi terpadu</h3><p>Satu lini khusus fabrikasi built-up dan satu lini untuk komponen alat berat, dalam satu plant terintegrasi.</p></div>
     <div class="st rv" style="--d:.36s"><b><span data-count="4">4</span></b><h3>Klien terkemuka</h3><p>Komatsu, Sumitomo, SANY, dan VR, mitra nasional dan multinasional.</p></div>
   </div>
 </div></section>
@@ -1656,49 +1684,77 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
   </div>
   <div class="tx">
     <h2 class="sp-h">Menjaga kepercayaan setiap mitra bisnis</h2>
-    <p class="lead rv">PT Murinda Sentra Baja adalah kontraktor umum yang mendalami fabrikasi dan manufaktur komponen alat berat, didukung fasilitas plant terintegrasi dan sumber daya manusia yang kompeten.</p>
-    <p class="rv">Fokus kami adalah counterweight excavator, bucket excavator, dan berbagai komponen dump truck. Kapasitas produksi ditunjang mesin las SAW, mesin potong CNC, mesin milling, fasilitas blasting otomatis dan manual, serta paint booth berstandar tinggi.</p>
-    <p class="rv">Kami terus meningkatkan efisiensi operasional melalui ISO 9001, investasi pada kompetensi tim, dan kepatuhan penuh terhadap standar keselamatan kerja.</p>
+    <p class="lead rv">PT Murinda Sentra Baja adalah kontraktor umum di bidang produksi built-up baja yang berfokus pada komponen alat berat, dan telah bermitra lebih dari 30 tahun memproduksi counterweight excavator, vessel dump truck, serta bucket excavator hingga saat ini.</p>
+    <p class="rv">Kami mengoperasikan dua lini produksi dalam satu plant terintegrasi: satu khusus fabrikasi built-up dan satu untuk komponen alat berat. Kapasitas produksi ditunjang mesin las SAW, mesin potong CNC, mesin milling, fasilitas blasting otomatis dan manual, serta paint booth, dengan sumber daya manusia yang kompeten.</p>
+    <p class="rv">Kami mengutamakan mutu dan ketepatan waktu penyerahan pekerjaan kepada pelanggan, serta menerapkan sistem manajemen mutu ISO 9001 agar efektivitas dan efisiensi perusahaan terus meningkat.</p>
     <ul class="checks rv">
-      <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Plant terintegrasi, dari pemotongan sampai pengecatan</li>
+      <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Dua lini produksi: fabrikasi built-up dan komponen alat berat</li>
       <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Sistem manajemen mutu ISO 9001</li>
       <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>ERP buatan sendiri untuk pelacakan real-time</li>
-      <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Kepatuhan penuh pada standar keselamatan kerja</li>
+      <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Menaati peraturan K3L nasional dan persyaratan terkait</li>
     </ul>
     <div class="chips rv" aria-label="Fokus produk"><b>Counterweight excavator</b><b>Bucket excavator</b><b>Komponen dump truck</b><b>Struktur baja built-up</b></div>
   </div>
 </div></section>
 
-<!-- ================= VISI, MISI, NILAI ================= -->
-<section class="panel" id="visi" data-toc="Visi dan misi"><div class="wrap">
-  <div class="sh"><h2 class="sp-h">Visi, misi, dan nilai kami</h2><p class="lead rv">Arah jangka panjang perusahaan dan prinsip yang kami pegang dalam bekerja setiap hari.</p></div>
+<!-- ================= VISI, MISI, KEBIJAKAN ================= -->
+<section class="panel" id="visi" data-toc="Visi dan kebijakan"><div class="wrap">
+  <div class="sh"><h2 class="sp-h">Visi, misi, dan kebijakan kami</h2><p class="lead rv">Arah jangka panjang perusahaan serta komitmen mutu dan keselamatan yang kami pegang dalam bekerja setiap hari.</p></div>
   <div class="vm">
     <div class="vis rv l"><h3>Visi</h3><p>Menjadi perusahaan manufaktur komponen alat berat dan struktur baja yang unggul dalam kualitas produk, inovasi, dan pelayanan bagi pasar nasional dan internasional.</p></div>
     <div class="mis">
-      <article class="glass rv r" style="--d:.1s"><i><svg viewBox="0 0 24 24"><use href="#i-target"/></svg></i><div><h3>Solusi tepat waktu</h3><p>Memberikan solusi inovatif, efisien, dan tepat waktu bagi pelanggan di sektor konstruksi, industri, pertambangan, dan infrastruktur.</p></div></article>
-      <article class="glass rv r" style="--d:.2s"><i><svg viewBox="0 0 24 24"><use href="#i-users"/></svg></i><div><h3>Kompetensi dan teknologi</h3><p>Meningkatkan kompetensi sumber daya manusia, teknologi produksi, dan sistem manajemen.</p></div></article>
-      <article class="glass rv r" style="--d:.3s"><i><svg viewBox="0 0 24 24"><use href="#i-globe"/></svg></i><div><h3>Pasar yang lebih luas</h3><p>Memperluas pasar domestik dan internasional melalui inovasi produk dan kemitraan yang saling menguntungkan.</p></div></article>
+      <article class="glass rv r" style="--d:.1s"><i><svg viewBox="0 0 24 24"><use href="#i-target"/></svg></i><div><h3>Solusi tepat waktu</h3><p>Memberikan solusi yang inovatif, efisien, dan tepat waktu untuk memenuhi kebutuhan pelanggan di sektor konstruksi, industri, pertambangan, dan infrastruktur.</p></div></article>
+      <article class="glass rv r" style="--d:.2s"><i><svg viewBox="0 0 24 24"><use href="#i-users"/></svg></i><div><h3>Kompetensi dan teknologi</h3><p>Meningkatkan kompetensi sumber daya manusia, teknologi produksi, dan sistem manajemen guna menghasilkan produk yang unggul dan berdaya saing tinggi.</p></div></article>
+      <article class="glass rv r" style="--d:.3s"><i><svg viewBox="0 0 24 24"><use href="#i-globe"/></svg></i><div><h3>Pasar yang lebih luas</h3><p>Memperluas pasar domestik dan internasional melalui inovasi produk serta kemitraan yang saling menguntungkan.</p></div></article>
     </div>
   </div>
   <div class="vals">
-    <div class="val rv" style="--d:0s"><i><svg viewBox="0 0 24 24"><use href="#i-award"/></svg></i><h3>Mutu tanpa kompromi</h3><p>ISO 9001 di seluruh departemen dan pengujian berlapis sebelum barang dikirim.</p></div>
-    <div class="val rv" style="--d:.1s"><i><svg viewBox="0 0 24 24"><use href="#i-clock"/></svg></i><h3>Tepat waktu</h3><p>Perencanaan dan pelacakan produksi real-time lewat ERP agar target pelanggan tercapai.</p></div>
-    <div class="val rv" style="--d:.2s"><i><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></i><h3>Keselamatan kerja</h3><p>Kepatuhan penuh pada standar keselamatan kerja di seluruh area workshop.</p></div>
-    <div class="val rv" style="--d:.3s"><i><svg viewBox="0 0 24 24"><use href="#i-bulb"/></svg></i><h3>Kompetensi dan inovasi</h3><p>Investasi berkelanjutan pada kemampuan tim, teknologi produksi, dan sistem digital sendiri.</p></div>
+    <div class="val rv" style="--d:0s"><i><svg viewBox="0 0 24 24"><use href="#i-award"/></svg></i><h3>Mutu dan kepuasan pelanggan</h3><p>Mengutamakan mutu serta mendengarkan kebutuhan pelanggan sebagai mitra usaha agar kepuasan pelanggan tercapai.</p></div>
+    <div class="val rv" style="--d:.1s"><i><svg viewBox="0 0 24 24"><use href="#i-clock"/></svg></i><h3>Tepat waktu dan sesuai spesifikasi</h3><p>Menyerahkan pekerjaan sesuai target waktu dan spesifikasi.</p></div>
+    <div class="val rv" style="--d:.2s"><i><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></i><h3>Keselamatan dan lingkungan</h3><p>Menyediakan tempat kerja yang aman dan sehat bagi seluruh personel serta menaati peraturan K3L nasional.</p></div>
+    <div class="val rv" style="--d:.3s"><i><svg viewBox="0 0 24 24"><use href="#i-bulb"/></svg></i><h3>Kompetensi dan inovasi</h3><p>Berinovasi terus-menerus sesuai perkembangan teknologi dan melatih sumber daya manusia secara berkala.</p></div>
+  </div>
+
+  <div class="pol">
+    <article class="glass rv l" style="--d:.05s">
+      <div class="pol-h"><i><svg viewBox="0 0 24 24"><use href="#i-award"/></svg></i><h3>Kebijakan Mutu</h3></div>
+      <p class="pol-i">Murinda Sentra Baja adalah perusahaan yang mengutamakan mutu dan tepat waktu dalam penyelesaian / penyerahan pekerjaan kepada pelanggan.</p>
+      <p class="pol-k">Maka, kami berkomitmen untuk:</p>
+      <ol>
+        <li>Mendengarkan keinginan dan kebutuhan pelanggan sebagai mitra usaha dengan memperhatikan persyaratan-persyaratan yang berlaku sehingga kepuasan pelanggan dapat tercapai.</li>
+        <li>Menyerahkan pekerjaan sesuai target waktu dan spesifikasi.</li>
+        <li>Melakukan inovasi secara terus-menerus sesuai dengan perkembangan teknologi.</li>
+        <li>Mengadakan pelatihan sumber daya manusia yang merupakan aset perusahaan secara berkala dan berkesinambungan.</li>
+        <li>Melaksanakan Sistem Manajemen Mutu sesuai dengan ISO 9001 agar efektivitas dan efisiensi perusahaan meningkat.</li>
+      </ol>
+    </article>
+    <article class="glass rv r" style="--d:.15s">
+      <div class="pol-h"><i><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></i><h3>Kebijakan Keselamatan, Kesehatan Kerja dan Lingkungan</h3></div>
+      <p class="pol-i">Murinda Sentra Baja sebagai perusahaan manufaktur komponen alat berat dan struktur baja sangat peduli terhadap Keselamatan dan Kesehatan Kerja serta Lingkungan.</p>
+      <p class="pol-k">Maka, kami berkomitmen untuk:</p>
+      <ol>
+        <li>Menyediakan tempat kerja yang aman dan sehat untuk seluruh personel.</li>
+        <li>Untuk mencapai tujuan, seluruh karyawan diharapkan menghindari kecelakaan; mengendalikan bahaya di tempat kerja dan menjaga keselamatan dan kesehatan sesama pekerja.</li>
+        <li>Menaati Peraturan K3L Nasional dan persyaratan lain yang terkait.</li>
+        <li>Merencanakan, melaksanakan, mengkaji ulang dan memperbaiki sistem, sasaran dan kinerja keselamatan, kesehatan kerja dan lingkungan secara berkesinambungan.</li>
+      </ol>
+    </article>
+    <p class="pol-s rv">Jakarta, 7 Juni 2023 &nbsp;|&nbsp; Sofian Halim, Direktur Utama</p>
   </div>
 
   <div class="vmdoc glass rv" id="vmdoc">
     <div class="vmd-head">
       <i><svg viewBox="0 0 24 24"><use href="#i-doc"/></svg></i>
-      <div><h3>Dokumen Visi, Misi, dan Kebijakan</h3><p>Dokumen resmi PT Murinda Sentra Baja (versi bertanda tangan). Baca langsung di sini atau unduh salinannya.</p></div>
+      <div><h3>Dokumen Visi, Misi, dan Kebijakan</h3><p>Dokumen resmi PT Murinda Sentra Baja (versi bertanda tangan). Lihat pratinjaunya di sini atau buka dan unduh salinan PDF-nya.</p></div>
       <div class="vmd-acts">
-        <a class="btn" href="MurindaSentraBaja_VisiMisiPolicies_ind_signed_260806_172016.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-eye"/></svg> Buka di tab baru</a>
-        <a class="btn main" href="MurindaSentraBaja_VisiMisiPolicies_ind_signed_260806_172016.pdf" download><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh PDF</a>
+        <button class="btn main" type="button" id="vmd-toggle" aria-expanded="false" aria-controls="vmd-view"><svg viewBox="0 0 24 24"><use href="#i-eye"/></svg> <span class="tl">Lihat dokumen lengkap</span></button>
+        <a class="btn" href="MurindaSentraBaja_VisiMisiPolicies_ind_signed_260806_172016.pdf" target="_blank" rel="noopener">Buka PDF</a>
+        <a class="btn" href="MurindaSentraBaja_VisiMisiPolicies_ind_signed_260806_172016.pdf" download><svg viewBox="0 0 24 24"><use href="#i-download"/></svg> Unduh PDF</a>
       </div>
     </div>
-    <div class="vmd-view" id="vmd-view" data-src="MurindaSentraBaja_VisiMisiPolicies_ind_signed_260806_172016.pdf#view=FitH&amp;navpanes=0">
-      <span class="vmd-hint">Klik dokumen untuk menggulir halaman</span>
-      <div class="vmd-fb"><svg viewBox="0 0 24 24"><use href="#i-doc"/></svg><p>Pratinjau dokumen tidak tersedia di perangkat ini. Gunakan tombol di atas untuk membuka atau mengunduh PDF.</p></div>
+    <div class="vmd-view" id="vmd-view">
+      <div class="vmd-sc"><img src="img/Dokumen/Visi_Misi_Kebijakan.jpg" width="2000" height="1416" loading="lazy" decoding="async" alt="Dokumen resmi Visi, Misi, Kebijakan Mutu, dan Kebijakan Keselamatan, Kesehatan Kerja dan Lingkungan PT Murinda Sentra Baja"></div>
+      <span class="vmd-hint">Klik untuk melihat dokumen lengkap</span>
     </div>
   </div>
 </div></section>
@@ -1806,13 +1862,13 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
   <div class="sh"><h2 class="sp-h">Mutu terukur, keselamatan terjaga, produksi terpantau</h2><p class="lead rv">Setiap komponen diperiksa berlapis dan setiap tahap produksi dapat dipantau secara real-time lewat sistem ERP yang kami kembangkan sendiri.</p></div>
   <div class="qe">
     <div class="qa">
-      <div class="iso glass rv l"><div class="seal"><div><b>ISO</b>9001</div></div><div><h3>Sistem manajemen mutu ISO 9001</h3><p>Diterapkan di seluruh lini departemen untuk menjaga konsistensi proses, kualitas produk, dan perbaikan berkelanjutan.</p></div></div>
+      <div class="iso glass rv l"><div class="seal"><div><b>ISO</b>9001</div></div><div><h3>Sistem manajemen mutu ISO 9001</h3><p>Kami melaksanakan Sistem Manajemen Mutu sesuai ISO 9001 agar efektivitas dan efisiensi perusahaan meningkat, sambil mengutamakan mutu dan ketepatan waktu penyerahan pekerjaan kepada pelanggan.</p></div></div>
       <div class="tests">
         <div class="tst glass rv l" style="--d:.08s"><i><svg viewBox="0 0 24 24"><use href="#i-search"/></svg></i><div><h3>Non-Destructive Testing (NDT)</h3><p>Pemeriksaan kondisi material dan sambungan tanpa merusak komponen.</p></div></div>
         <div class="tst glass rv l" style="--d:.16s"><i><svg viewBox="0 0 24 24"><use href="#i-flame"/></svg></i><div><h3>Inspeksi pengelasan</h3><p>Verifikasi kualitas sambungan las pada setiap tahap pengerjaan.</p></div></div>
         <div class="tst glass rv l" style="--d:.24s"><i><svg viewBox="0 0 24 24"><use href="#i-layers"/></svg></i><div><h3>Verifikasi ketebalan cat</h3><p>Pengukuran lapisan cat agar perlindungan permukaan sesuai standar.</p></div></div>
       </div>
-      <div class="k3 glass rv l" style="--d:.3s"><svg viewBox="0 0 24 24" style="flex:none;width:2rem;height:2rem;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><use href="#i-shield"/></svg><p><b>Keselamatan kerja.</b> Kami menerapkan kepatuhan penuh pada standar keselamatan kerja di seluruh area workshop, dari pemotongan dan pengelasan sampai blasting dan pengecatan.</p></div>
+      <div class="k3 glass rv l" style="--d:.3s"><svg viewBox="0 0 24 24" style="flex:none;width:2rem;height:2rem;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><use href="#i-shield"/></svg><p><b>Keselamatan, kesehatan kerja, dan lingkungan.</b> Kami menyediakan tempat kerja yang aman dan sehat bagi seluruh personel, menaati peraturan K3L nasional dan persyaratan terkait, serta terus memperbaiki sistem, sasaran, dan kinerja K3L secara berkesinambungan.</p></div>
       <div class="qph rv l" style="--d:.38s"><div class="ph vis" style="--foto:var(--i-ut1)" role="img" aria-label="Pengujian ultrasonik pada komponen" data-label=""><span>NDT (UT)</span></div><div class="ph vis" style="--foto:var(--i-weld)" role="img" aria-label="Pengukuran sambungan las dengan weld gauge" data-label=""><span>Pengelasan</span></div><div class="ph vis" style="--foto:var(--i-cat)" role="img" aria-label="Pengukuran ketebalan cat" data-label=""><span>Ketebalan cat</span></div></div>
     </div>
     <div class="erp glass rv r" style="--d:.1s">
@@ -1959,7 +2015,7 @@ main #fasilitas.panel{-webkit-backdrop-filter:none;backdrop-filter:none}
   </div>
   <div class="fcols">
     <div><img src="msb-logo.png" alt="PT Murinda Sentra Baja"><p>Fabrikasi dan manufaktur komponen alat berat dan struktur baja, dari plant terintegrasi di Kalijati, Subang.</p><div class="sosial" id="sosial"></div></div>
-    <div><h4>Perusahaan</h4><ul><li><a href="#tentang" data-go="tentang">Tentang kami</a></li><li><a href="#visi" data-go="visi">Visi, misi, dan nilai</a></li><li><a href="#tim" data-go="tim">Tim kunci</a></li><li><a href="#klien" data-go="klien">Industri dan klien</a></li><li><a href="#faq" data-go="faq">FAQ</a></li></ul></div>
+    <div><h4>Perusahaan</h4><ul><li><a href="#tentang" data-go="tentang">Tentang kami</a></li><li><a href="#visi" data-go="visi">Visi, misi, dan kebijakan</a></li><li><a href="#tim" data-go="tim">Tim kunci</a></li><li><a href="#klien" data-go="klien">Industri dan klien</a></li><li><a href="#faq" data-go="faq">FAQ</a></li></ul></div>
     <div><h4>Layanan</h4><ul><li><a href="#svc-fabrikasi" data-go="svc-fabrikasi">Fabrikasi komponen alat berat</a></li><li><a href="#svc-struktur" data-go="svc-struktur">Manufaktur struktur baja</a></li><li><a href="#svc-permesinan" data-go="svc-permesinan">Pemrosesan material</a></li><li><a href="#proses" data-go="proses">Alur produksi</a></li><li><a href="#brosur" data-go="brosur">Brosur dan PDF</a></li></ul></div>
     <div><h4>Kontak</h4><ul><li><a href="mailto:murinda@murinda.com">murinda@murinda.com</a></li><li><a href="mailto:plant@murinda.com">plant@murinda.com</a></li><li><a href="tel:+622128546000">(+6221) 28546000</a></li><li><a href="tel:+622607495467">Workshop (+62260) 7495467</a></li><li><a href="https://www.murinda.com">www.murinda.com</a></li></ul></div>
   </div>
@@ -2141,17 +2197,18 @@ bx=a=>`<div class="bx">${ic(hr(a))}<div><h3>${tx('h3',a)}</h3><p>${tx('p',a)}</p
 
 const cover=t=>`<section class="sheet s-cover"><div class="cv-r">${ph('var(--a-plant)')}</div><div class="cv-st"></div><div class="cv-l"><div class="cv-logo"><img src="msb-logo.png" alt=""></div><h1>${t}</h1><p class="cv-sub">Fabrikasi presisi untuk industri alat berat dan struktur baja</p><div class="cv-facts"><div><b>ISO 9001</b>Manajemen mutu</div><div><b>Subang</b>Plant terintegrasi</div><div><b>2 lini</b>Produksi terpadu</div></div><div class="cv-ft">Jl. Raya Kalijati Purwadadi No. 123A, Kalijati, Subang, Jawa Barat &nbsp;|&nbsp; www.murinda.com</div></div><div class="cv-badge"><i>ISO</i><div><b>ISO 9001</b><span>Sistem manajemen mutu</span></div></div></section>`;
 const about=n=>{const p=$$('#tentang .tx p').map(e=>e.textContent);return sh('s-about',n,'Tentang kami',`<div class="tx"><h2>Menjaga kepercayaan setiap mitra bisnis</h2><p class="lead">${p[0]}</p><p>${p[1]}</p><p>${p[2]}</p><ul class="cks">${$$('#tentang .checks li').map(e=>ck(e.textContent)).join('')}</ul></div><div>${ph('var(--a-plant)','main')}<div class="stt"><div><b>9001</b><span>Sistem manajemen mutu ISO</span></div><div><b>2</b><span>Lini produksi dalam satu plant</span></div><div><b>3</b><span>Lapis pengujian sebelum kirim</span></div></div></div>`,'g2')};
-const vm=n=>sh('s-vm',n,'Visi, misi, dan nilai',`<div class="tp"><div class="vi"><h3>Visi</h3><p>${tx('#visi .vis p')}</p></div><div class="mi">${$$('#visi .mis article').map(bx).join('')}</div></div><div class="sec">Nilai perusahaan</div><div class="nl">${$$('#visi .val').map(a=>`<div>${ic(hr(a))}<h3>${tx('h3',a)}</h3><p>${tx('p',a)}</p></div>`).join('')}</div>`);
+const vm=n=>sh('s-vm',n,'Visi, misi, dan komitmen',`<div class="tp"><div class="vi"><h3>Visi</h3><p>${tx('#visi .vis p')}</p></div><div class="mi">${$$('#visi .mis article').map(bx).join('')}</div></div><div class="sec">Komitmen perusahaan</div><div class="nl">${$$('#visi .val').map(a=>`<div>${ic(hr(a))}<h3>${tx('h3',a)}</h3><p>${tx('p',a)}</p></div>`).join('')}</div>`);
+const kb=n=>sh('s-kb',n,'Kebijakan mutu dan K3L',`${$$('#visi .pol article').map(a=>`<div class="pc"><h2>${tx('h3',a)}</h2><p class="lead">${tx('.pol-i',a)}</p><p class="mk">${tx('.pol-k',a)}</p><ol>${$$('li',a).map(l=>`<li>${l.textContent}</li>`).join('')}</ol></div>`).join('')}<p class="sg">${tx('#visi .pol-s')}</p>`,'g2');
 const svc=n=>sh('s-svc',n,'Layanan dan kapabilitas',hd('Layanan dan kapabilitas','Layanan fabrikasi dan manufaktur terintegrasi, dari pemrosesan material hingga penyelesaian akhir, dengan pengawasan mutu yang ketat.')+`<div class="cs">${svcs.map(s=>`<div class="c">${ph(ft($('.ph',s)))}<div class="t"><h3>${tx('.dt h3',s)}</h3><p>${tx('.dt p',s)}</p>${ch($$('.dt li',s).map(l=>l.textContent))}</div></div>`).join('')}</div>`);
 const fac=n=>sh('s-fac',n,'Fasilitas dan mesin produksi',hd('Fasilitas dan mesin produksi','Area kerja dan mesin utama di plant Kalijati, dari pemotongan dan pengelasan sampai penyelesaian akhir.')+`<div class="gg">${[0,1,2,3,9,12,11,13].map(i=>figs[i]).map(f=>`<figure>${ph(ft($('.ph',f)))}<div class="cap-s">${tx('figcaption',f)}</div></figure>`).join('')}</div><div class="tc">${ch(tech())}</div>`);
 const proc=n=>sh('s-proc',n,'Alur produksi terintegrasi',hd('Alur produksi terintegrasi','Dua lini produksi, dari pemotongan material sampai pemeriksaan akhir, terhubung dalam satu plant dan satu sistem pemantauan.')+`<div class="ln3">${TRK.map(T=>`<div class="ln"><h3>${T.tab}</h3><ol>${T.s.map((x,j)=>`<li><span class="n">${j+1}</span><span>${x[0]}</span></li>`).join('')}</ol></div>`).join('')}</div><div class="p end"><h3>Satu plant, satu sistem</h3><p>Seluruh tahap dipantau lewat ERP buatan sendiri, dari penerimaan material sampai dokumen pengiriman.</p></div>`);
-const qe=n=>sh('s-qe',n,'Mutu, keselamatan, dan ERP',`<div class="l"><div class="iso2"><div class="seal"><div><b>ISO</b>9001</div></div><div><h3>Sistem manajemen mutu ISO 9001</h3><p>${tx('#mutu .iso p')}</p></div></div><div class="tt3">${$$('#mutu .tst').map(bx).join('')}</div><div class="bx"><h3>Keselamatan kerja</h3><p>${tx('#mutu .k3 p').replace('Keselamatan kerja. ','')}</p></div></div><div class="r">${ph('var(--foto-erp)','contain')}<h3>ERP terintegrasi buatan sendiri</h3><ul class="ft">${$$('#mutu .erp .ft li').map(l=>ck(l.textContent)).join('')}</ul></div>`,'g2');
+const qe=n=>sh('s-qe',n,'Mutu, keselamatan, dan ERP',`<div class="l"><div class="iso2"><div class="seal"><div><b>ISO</b>9001</div></div><div><h3>Sistem manajemen mutu ISO 9001</h3><p>${tx('#mutu .iso p')}</p></div></div><div class="tt3">${$$('#mutu .tst').map(bx).join('')}</div><div class="bx"><h3>Keselamatan, kesehatan kerja, dan lingkungan</h3><p>${tx('#mutu .k3 p').replace(/^[^.]*\.\s*/,'')}</p></div></div><div class="r">${ph('var(--foto-erp)','contain')}<h3>ERP terintegrasi buatan sendiri</h3><ul class="ft">${$$('#mutu .erp .ft li').map(l=>ck(l.textContent)).join('')}</ul></div>`,'g2');
 const ind=n=>sh('s-ind',n,'Industri dan klien',`<div class="rw">${$$('.ind').map(a=>`<div class="bx">${ic(hr(a))}<h3>${tx('h3',a)}</h3><p>${tx('p',a)}</p></div>`).join('')}</div><div class="sec">Mengapa memilih PT Murinda Sentra Baja</div><div class="wy">${$$('.why').map(a=>`<div>${ic(hr(a))}<span style="display:block"><h3>${tx('h3',a)}</h3><p>${tx('p',a)}</p></span></div>`).join('')}</div><div class="sec">Klien dan mitra kami</div>${lg('lg')}`);
 const team=n=>sh('s-team',n,'Manajemen dan tim kunci',`<div class="l"><h2>Manajemen dan tim kunci</h2><p class="lead">Jajaran manajemen dan tenaga profesional yang memadukan keahlian strategis, rekayasa teknik, dan pengawasan mutu.</p><div class="bx"><h3>Satu tim, satu sistem kerja</h3><p>Manajemen, engineering, QC, dan produksi bekerja dalam satu sistem untuk menjaga mutu dan ketepatan waktu setiap proyek.</p></div></div><div class="tg">${$$('.tm').map(t=>`<div class="tm2"><div class="ph vis" style="--foto:${ft($('.ph',t))}"><i></i></div><div class="cp"><h3>${tx('h3',t)}</h3><p>${tx('p',t)}</p></div></div>`).join('')}</div>`,'g2');
 const ct=n=>sh('s-ct',n,'Kontak',`<div class="l"><div class="hd2"><h2>Hubungi kami</h2></div><div class="bx"><h3>Head office</h3><p>15 Fl, Permata Kuningan Building, Jalan Kuningan Mulia Kav. 9C, Jakarta 12980</p><dl><dt>Telepon</dt><dd>(+6221) 28546000</dd><dt>Faks</dt><dd>(+6221) 28546001/11</dd><dt>Email</dt><dd>murinda@murinda.com</dd></dl></div><div class="bx"><h3>Workshop</h3><p>Jl. Raya Kalijati Purwadadi No. 123A, Desa Kalijati Barat, Kecamatan Kalijati, Kabupaten Subang, Jawa Barat 41271 (Exit Tol Kalijati)</p><dl><dt>Telepon</dt><dd>(+62260) 7495467</dd><dt>Faks</dt><dd>(+62260) 7495222</dd><dt>Email</dt><dd>plant@murinda.com</dd><dt>Web</dt><dd>www.murinda.com</dd></dl></div></div><div class="r">${ph('var(--a-plant)')}<div class="cta2"><h3>Siap mewujudkan komponen Anda?</h3><p>Ceritakan kebutuhan fabrikasi Anda. Tim kami akan menanggapi dengan penawaran dan jadwal produksi yang jelas.</p></div></div>`,'g2');
 const r2=n=>{const p=$$('#tentang .tx p').map(e=>e.textContent);return sh('s-about s-r2',n,'Tentang kami dan layanan',`<div class="tx pad-t"><h2>Menjaga kepercayaan setiap mitra bisnis</h2><p class="lead">${p[0]}</p><p>${p[1]}</p>${ch(['Counterweight excavator','Bucket excavator','Komponen dump truck','Struktur baja built-up'])}<ul class="cks">${$$('#tentang .checks li').map(e=>ck(e.textContent)).join('')}</ul></div><div class="sv">${svcs.map(s=>`<div class="bx">${ic(hr($('.ic',s)))}<div><h3>${tx('.dt h3',s)}</h3><p>${tx('.dt p',s)}</p></div></div>`).join('')}</div>`,'g2')};
 const r3=n=>sh('s-r3',n,'Fasilitas dan mutu',`<div class="pad-t"><h2>Fasilitas dan mesin produksi</h2><div class="gg3">${[0,1,2,3,9,12].map(i=>ph(ft($('.ph',figs[i])))).join('')}</div>${ch(tech())}</div><div class="rr">${ph('var(--foto-erp)','contain')}<h3>Mutu terukur, produksi terpantau</h3><ul class="cks">${['Sistem manajemen mutu ISO 9001','Non-Destructive Testing (NDT)','Inspeksi pengelasan','Verifikasi ketebalan cat','Persetujuan digital lewat ERP','Pelacakan produksi real-time'].map(ck).join('')}</ul></div>`,'g2');
-const fakta=()=>`<section class="sheet s-fact"><div class="band"><div><h1>Lembar fakta</h1><p>PT Murinda Sentra Baja &nbsp;|&nbsp; Fabrikasi komponen alat berat dan struktur baja</p></div><div class="cv-logo"><img src="msb-logo.png" alt=""></div></div><div class="fb"><div class="col"><div class="sec">Angka kunci</div><div class="kg"><div><b>ISO 9001</b><span>Manajemen mutu di seluruh departemen</span></div><div><b>6</b><span>Tahap produksi umum</span></div><div><b>3</b><span>Lapis pengujian mutu</span></div><div><b>4</b><span>Klien terkemuka</span></div></div><div class="sec">Layanan</div><ul class="ls">${svcs.map(s=>`<li>${ic(hr($('.ic',s)))}<div><b>${tx('.tt',s)}</b>${$$('.dt li',s).map(l=>l.textContent).join(', ')}</div></li>`).join('')}</ul></div><div class="col"><div class="sec">Fasilitas utama</div><div class="ph3">${[0,1,9].map(i=>ph(ft($('.ph',figs[i])))).join('')}</div>${ch(tech())}<div class="sec">Sektor industri</div>${ch(['Konstruksi','Manufaktur industri','Pertambangan','Infrastruktur'])}<div class="sec">Klien dan mitra</div>${lg('lg2')}</div><div class="col"><div class="sec">Kontak</div><p class="ad"><b>Workshop</b><br>Jl. Raya Kalijati Purwadadi No. 123A, Desa Kalijati Barat, Kecamatan Kalijati, Kabupaten Subang, Jawa Barat 41271<br>(+62260) 7495467 &nbsp;|&nbsp; plant@murinda.com</p><p class="ad"><b>Head office</b><br>15 Fl, Permata Kuningan Building, Jalan Kuningan Mulia Kav. 9C, Jakarta 12980<br>(+6221) 28546000 &nbsp;|&nbsp; murinda@murinda.com</p><p class="ad"><b>Web</b><br>www.murinda.com</p><div class="sec">Keunggulan</div><ul class="cks" style="grid-template-columns:1fr">${['Satu plant terintegrasi','Transparansi produksi real-time lewat ERP','Mutu terukur dengan tiga lapis pengujian','Akses logistik mudah di Exit Tol Kalijati'].map(ck).join('')}</ul></div></div></section>`;
+const fakta=()=>`<section class="sheet s-fact"><div class="band"><div><h1>Lembar fakta</h1><p>PT Murinda Sentra Baja &nbsp;|&nbsp; Fabrikasi komponen alat berat dan struktur baja</p></div><div class="cv-logo"><img src="msb-logo.png" alt=""></div></div><div class="fb"><div class="col"><div class="sec">Angka kunci</div><div class="kg"><div><b>ISO 9001</b><span>Sistem manajemen mutu</span></div><div><b>6</b><span>Tahap produksi umum</span></div><div><b>3</b><span>Lapis pengujian mutu</span></div><div><b>4</b><span>Klien terkemuka</span></div></div><div class="sec">Layanan</div><ul class="ls">${svcs.map(s=>`<li>${ic(hr($('.ic',s)))}<div><b>${tx('.tt',s)}</b>${$$('.dt li',s).map(l=>l.textContent).join(', ')}</div></li>`).join('')}</ul></div><div class="col"><div class="sec">Fasilitas utama</div><div class="ph3">${[0,1,9].map(i=>ph(ft($('.ph',figs[i])))).join('')}</div>${ch(tech())}<div class="sec">Sektor industri</div>${ch(['Konstruksi','Manufaktur industri','Pertambangan','Infrastruktur'])}<div class="sec">Klien dan mitra</div>${lg('lg2')}</div><div class="col"><div class="sec">Kontak</div><p class="ad"><b>Workshop</b><br>Jl. Raya Kalijati Purwadadi No. 123A, Desa Kalijati Barat, Kecamatan Kalijati, Kabupaten Subang, Jawa Barat 41271<br>(+62260) 7495467 &nbsp;|&nbsp; plant@murinda.com</p><p class="ad"><b>Head office</b><br>15 Fl, Permata Kuningan Building, Jalan Kuningan Mulia Kav. 9C, Jakarta 12980<br>(+6221) 28546000 &nbsp;|&nbsp; murinda@murinda.com</p><p class="ad"><b>Web</b><br>www.murinda.com</p><div class="sec">Keunggulan</div><ul class="cks" style="grid-template-columns:1fr">${['Satu plant terintegrasi','Transparansi produksi real-time lewat ERP','Mutu terukur dengan tiga lapis pengujian','Akses logistik mudah di Exit Tol Kalijati'].map(ck).join('')}</ul></div></div></section>`;
 
 /* kolase foto: semua foto galeri (area, mesin, inspeksi, produk) masuk brosur dan company profile */
 const AC={area:'#2f5391',mesin:'#f2a30f',inspeksi:'#0f9d8a',produk:'#e8590c'};
@@ -2165,7 +2222,7 @@ pForm=n=>cg(n,'Mesin produksi: pembentukan, las, dan finishing','9 foto','Pemben
 pInsp=n=>cg(n,'Inspeksi dan pengujian mutu','6 foto','Inspeksi mutu','Pengujian ultrasonik (UT), magnetic particle (MPI), penetrant (PT), weld gauge, dan ketebalan cat, diawasi lewat ERP sesuai ISO 9001.',[24,26,27,25,28,29],L7,AC.inspeksi),
 pProd=n=>cg(n,'Produk kami','10 foto','Produk kami','Dari workshop sampai pengiriman: komponen alat berat dan struktur baja untuk konstruksi, industri, pertambangan, dan infrastruktur.',[32,30,33,31,34,36,37,38,39,35],L11,AC.produk,ch(['Counterweight excavator','Bucket excavator','Vessel dump truck','Profil built-up (H-beam)'])),
 pGal=n=>cg(n,'Galeri fasilitas, mesin, dan produk','12 foto','Galeri MSB','Cuplikan area workshop, mesin produksi, inspeksi mutu, dan produk dari plant Kalijati, Subang.',[0,15,32,12,30,24,9,34,16,26,36,1],L13,AC.produk,ch(tech()));
-const FM={lengkap:()=>[cover('Company Profile'),about(2),vm(3),svc(4),pArea(5),pCut(6),pForm(7),pInsp(8),pProd(9),proc(10),qe(11),ind(12),team(13),ct(14)],ringkas:()=>[cover('Brosur'),r2(2),r3(3),pGal(4),ct(5)],fakta:()=>[fakta()]};
+const FM={lengkap:()=>[cover('Company Profile'),about(2),vm(3),kb(4),svc(5),pArea(6),pCut(7),pForm(8),pInsp(9),pProd(10),proc(11),qe(12),ind(13),team(14),ct(15)],ringkas:()=>[cover('Brosur'),r2(2),r3(3),pGal(4),ct(5)],fakta:()=>[fakta()]};
 
 const bk=$('#bk'),pg=$('#bk-pages');
 function scale(){const s=cl(($('#bk-body').clientWidth-2*cl(innerWidth*.026,16,40))/PW,.3,1.6);$$('#bk-pages .sw').forEach(x=>{x.style.setProperty('--s',s);x.style.width=PW*s+'px';x.style.height=PH*s+'px'})}
@@ -2226,11 +2283,13 @@ setTimeout(ready,5200)}
 if(RM)$$('.route svg,.ex-hub svg').forEach(s=>s.pauseAnimations&&s.pauseAnimations());
 document.addEventListener('pointerdown',e=>{const b=e.target.closest('.btn,.ptab,.filt button,.pnb,nav.main>a.cta');if(!b)return;const r=b.getBoundingClientRect();b.style.setProperty('--rx',(e.clientX-r.left)+'px');b.style.setProperty('--ry',(e.clientY-r.top)+'px');b.classList.remove('rip');void b.offsetWidth;b.classList.add('rip');setTimeout(()=>b.classList.remove('rip'),650)},{passive:true});
 
-/* penampil PDF visi, misi, kebijakan: dimuat saat mendekati layar; ponsel tanpa penampil PDF memakai tombol buka/unduh */
-{const v=$('#vmd-view');if(v){const can=navigator.pdfViewerEnabled!==false&&matchMedia('(hover:hover) and (pointer:fine)').matches;
-if(!can)v.classList.add('nofr');
-else{const load=()=>{if($('iframe',v))return;const f=D.createElement('iframe');f.title='Dokumen Visi, Misi, dan Kebijakan PT Murinda Sentra Baja';f.src=v.dataset.src;v.prepend(f);v.classList.add('ld')};
- if('IntersectionObserver' in window){const o=new IntersectionObserver(r=>{if(r[0].isIntersecting){load();o.disconnect()}},{rootMargin:'500px 0px'});o.observe(v)}else load();
- v.addEventListener('click',()=>v.classList.add('act'));v.addEventListener('mouseleave',()=>v.classList.remove('act'))}}}
+/* pratinjau dokumen visi, misi, kebijakan: awalnya hanya potongan atas, klik untuk membuka penuh */
+{const v=$('#vmd-view'),t=$('#vmd-toggle');if(v&&t){const im=$('img',v),tl=$('.tl',t),box=$('#vmdoc'),sc=$('.vmd-sc',v);
+ const fit=()=>{const x=sc.scrollWidth>sc.clientWidth+1?14:0;v.style.setProperty('--full',(im.offsetHeight+x)+'px')};
+ const set=o=>{v.classList.toggle('open',o);t.setAttribute('aria-expanded',o);tl.textContent=o?'Ringkas dokumen':'Lihat dokumen lengkap';if(o)fit();else{sc.scrollLeft=0;if(box.getBoundingClientRect().top<0)box.scrollIntoView({block:'start',behavior:RM?'auto':'smooth'})}};
+ t.addEventListener('click',()=>set(!v.classList.contains('open')));
+ v.addEventListener('click',()=>{if(!v.classList.contains('open'))set(true)});
+ addEventListener('resize',()=>{if(v.classList.contains('open'))fit()});
+ im.addEventListener('load',()=>{if(v.classList.contains('open'))fit()})}}
 })();
 </script></body></html>
